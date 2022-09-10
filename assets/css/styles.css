@@ -13,14 +13,25 @@
   --text-color: hsl(233, 4%, 35%);
   --body-color: hsl(196, 60%, 91%);
 
+  --first-hue: 250;
+  --sat: 66%;
+  --lig: 75%;
+  --second-hue: 219;
+
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: 'Open Sans', sans-serif;
   --second-font: 'Lemon', cursive;
   --biggest-font-size: 2.25rem;
   --normal-font-size: .938rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
 }
 
+  
 img {
   -khtml-user-select: none;
   -o-user-select: none;
@@ -341,6 +352,152 @@ img {
   mix-blend-mode: soft-light;
 }
 
+
+
+/*=============== SERVICES ===============*/
+.section__services {
+  padding: 4.5rem 0 1rem;
+}
+
+.section__title, 
+.section__subtitle {
+  text-align: center;
+}
+
+.section__title {
+  font-size: 1.25rem;
+  color: var(--first-color);
+  margin-bottom: 2rem;
+}
+
+.section__subtitle {
+  display: block;
+  font-size: .813rem;
+  color: black;
+}
+
+.container__services {
+  max-width: 968px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.grid__services {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.services__container {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding-top: 1rem;
+}
+
+.services__card {
+  background-color: hsl(283, 62%, 91%);
+  padding: 3rem 1.5rem 1.5rem;
+  border-radius: 1rem;
+}
+
+.services__title {
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.services__button {
+  color: var(--first-color);
+  font-size: .875rem;
+  display: flex;
+  align-items: center;
+  column-gap: .25rem;
+  cursor: pointer;
+}
+
+.services__button:hover .services__icon {
+  transform: translateX(.25rem);
+}
+
+.services__icon {
+  font-size: 1rem;
+  transition: .4s;
+}
+
+.services__modal {
+  position: fixed;
+  inset: 0;
+  background-color: hsla(var(--second-hue), 28%, 16%, 0.7);
+  padding: 2rem 1rem;
+  display: grid;
+  place-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: .4s;
+  z-index: var(--z-modal);
+}
+
+.services__modal-content {
+  position: relative;
+  background-color: var(--body-color);
+  padding: 4.5rem 1.5rem 2.5rem;
+  border-radius: 1.5rem;
+}
+
+.services__modal-title, 
+.services__modal-description {
+  text-align: center;
+}
+
+.services__modal-title {
+  font-size: 1rem;
+  color: var(--first-color);
+  margin-bottom: 1rem;
+}
+
+.services__modal-description {
+  font-size: .813rem;
+  margin-bottom: 2rem;
+}
+
+.services__modal-list {
+  display: grid;
+  row-gap: .75rem;
+}
+
+.services__modal-item {
+  display: flex;
+  align-items: flex-start;
+  column-gap: .5rem;
+}
+
+.services__modal-icon {
+  font-size: 1.5rem;
+  color: var(--first-color);
+}
+
+.services__modal-info {
+  font-size:  .813rem;
+}
+
+.services__modal-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--title-color);
+  cursor: pointer;
+}
+
+
+
+/*Active modal*/
+.active-modal {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+
 /* Animation juice */
 @keyframes float-juice {
   0% {
@@ -358,79 +515,20 @@ img {
 
 
 /* For small devices */
-@media screen and (max-width: 425px) {
-  .container {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
 
-  .home__images {
-    width: 245px;
-    height: 320px;
-  }
-  .home__liquid {
-    width: 330px;
-    left: -2.3rem;
-    bottom: 3rem;
-  }
-  .home__juice {
-    width: 140px;
-    top: 1rem;
-    left: .5rem;
-  }
-  .home__apple1 {
-    width: 85px;
-    right: -3rem;
-    top: 6rem;
-  }
-   
-  .home__apple2 {
-    width: 80px;
-    right: -1.5rem;
-    bottom: 1.5rem;
-  }
-  .home__leaf:nth-child(1), 
-  .home__leaf:nth-child(6) {
-    width: 70px;
-  }
-  .home__leaf:nth-child(2), 
-  .home__leaf:nth-child(4), 
-  .home__leaf:nth-child(5) {
-    width: 60px;
-  }
-
-  .home__leaf:nth-child(1) {
-    top: -4.5rem;
-    right: 1rem;
-  }
-  .home__leaf:nth-child(2) {
-    top: .5rem;
-    left: -.70rem;
-  }
-  .home__leaf:nth-child(3) {
-    width: 60px;
-    top: 4rem;
-    right: -2rem;
-  }
-  .home__leaf:nth-child(4) {
-    bottom: 1.5rem;
-    left: 5rem;
-  }
-  .home__leaf:nth-child(5) {
-    right: 2.5rem;
-    bottom: -2.5rem;
-  }
-  .home__leaf:nth-child(6) {
-    left: -2rem;
-
-  }
-}
 
 /* For small devices */
 @media screen and (max-width: 375px) {
   .container {
     margin-left: 1rem;
     margin-right: 1rem;
+  }
+
+  .home__container {
+    padding-top: 5rem;
+    height: 100vh;
+    display: grid;
+    row-gap: 1rem;
   }
 
   .home__images {
@@ -492,6 +590,107 @@ img {
     right: 10rem;
 
   }
+  .services__container {
+    grid-template-columns: 145px;
+    justify-content: center;
+  }
+}
+
+
+
+@media screen and (max-width: 425px) {
+  .container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .home__container {
+    padding-top: 4rem;
+    height: 100vh;
+    display: grid;
+    row-gap: 1rem;
+  }
+
+  .home__images {
+    width: 265px;
+    height: 320px;
+  }
+  .home__liquid {
+    width: 330px;
+    left: -2.3rem;
+    bottom: 3rem;
+  }
+  .home__juice {
+    width: 140px;
+    top: 1rem;
+    left: .5rem;
+  }
+  .home__apple1 {
+    width: 85px;
+    right: -3rem;
+    top: 6rem;
+  }
+   
+  .home__apple2 {
+    width: 80px;
+    right: -1.5rem;
+    bottom: 1.5rem;
+  }
+  .home__leaf:nth-child(1), 
+  .home__leaf:nth-child(6) {
+    width: 70px;
+  }
+  .home__leaf:nth-child(2), 
+  .home__leaf:nth-child(4), 
+  .home__leaf:nth-child(5) {
+    width: 60px;
+  }
+
+  .home__leaf:nth-child(1) {
+    top: -4.5rem;
+    right: 1rem;
+  }
+  .home__leaf:nth-child(2) {
+    top: .5rem;
+    left: -.70rem;
+  }
+  .home__leaf:nth-child(3) {
+    width: 60px;
+    top: 4rem;
+    right: -2rem;
+  }
+  .home__leaf:nth-child(4) {
+    bottom: 1.5rem;
+    left: 5rem;
+  }
+  .home__leaf:nth-child(5) {
+    right: 2.5rem;
+    bottom: -2.5rem;
+    display: none;
+  }
+  .home__leaf:nth-child(6) {
+    left: -2rem;
+    display: none;
+
+
+  }
+}
+
+
+@media screen and (min-width: 576px) {
+
+  .services__container {
+    grid-template-columns: repeat(2, 160px);
+    justify-content: center;
+  }
+  .services__modal-content {
+    width: 500px;
+    padding: 4.5rem 2.5rem 2.5rem;
+  }
+  .services__modal-description {
+    padding: 0 3.5rem;
+  }
+
 }
 
 
@@ -517,6 +716,30 @@ img {
     column-gap: 4rem;
     padding-top: 4rem;
   }
+
+}
+
+@media screen and (min-width: 992px) {
+  
+  .section__services {
+    padding: 6.5rem  0 1rem;
+  }
+  .services__container {
+    grid-template-columns: repeat(3, 192px);
+    column-gap: 3rem;
+  }
+  .container__services {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .services__card {
+    padding: 5rem 2rem 1.5rem;
+  }
+
+  .section__title {
+    margin-bottom: 3.5rem;
+  }
+
 }
 
 /* For large devices */
