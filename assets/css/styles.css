@@ -681,15 +681,20 @@ img {
     left: -2rem;
     display: none;
 
-
   }
+  .services__container {
+    grid-template-columns: repeat(1, 250px);
+    justify-content: center;
+    text-align: center;
+  }
+  
 }
 
 
 @media screen and (min-width: 576px) {
 
   .services__container {
-    grid-template-columns: repeat(2, 160px);
+    grid-template-columns: repeat(2, 200px);
     justify-content: center;
   }
   .services__modal-content {
@@ -734,7 +739,7 @@ img {
     padding: 6.5rem  0 1rem;
   }
   .services__container {
-    grid-template-columns: repeat(3, 192px);
+    grid-template-columns: repeat(3, 272px);
     column-gap: 3rem;
   }
   .container__services {
@@ -743,6 +748,9 @@ img {
   }
   .services__card {
     padding: 5rem 2rem 1.5rem;
+    text-align: center;
+   
+
   }
 
   .section__title {
@@ -756,7 +764,7 @@ img {
   .home__images {
     width: 530px;
     height: 590px;
-    top: 2.5rem;
+    top: 1.3rem;
   }
   .home__liquid {
     width: 630px;
