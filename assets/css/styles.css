@@ -600,14 +600,15 @@ img {
 
   }
   .services__container {
-    grid-template-columns: 145px;
+    grid-template-columns: repeat(1, 250px);
     justify-content: center;
+    text-align: center;
   }
 }
 
 
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 445px) {
   .container {
     margin-left: 1rem;
     margin-right: 1rem;
