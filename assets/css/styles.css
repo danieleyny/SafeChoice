@@ -31,6 +31,17 @@
   --z-modal: 1000;
 }
 
+
+/* Page Loader */
+#pageloader {
+	background: #ede3f6 url(../img/SafeChoice.png) no-repeat center center;
+	height: 100vh;
+	width: 100%;
+	position: fixed;
+	z-index: 10000;
+	background-size: 20%;
+	
+  }
   
 img {
   -khtml-user-select: none;

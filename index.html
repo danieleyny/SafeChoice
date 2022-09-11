@@ -34,6 +34,10 @@
 
     </head>
     <body>
+
+        <div id="pageloader"></div>
+
+
         <!--==================== HEADER ====================-->
         <header class="header" id="header">
             <nav class="nav container" >
@@ -305,6 +309,14 @@
 
 
         </main>
+
+        <script>
+            var loader = document.getElementById("pageloader");
+          
+            window.addEventListener("load", function(){
+              loader.style.display = "none";
+            })
+          </script>
 
         <!--=============== GSAP ===============-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
