@@ -387,7 +387,33 @@ img {
 
 .service__shape-bg {
   position: absolute;
-  top: 110%;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: soft-light;
+}
+
+
+.test__shape-big {
+  background-color: hsl(283, 62%, 91%);
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+}
+
+
+.test__shape-big {
+  width: 250px;
+  height: 250px;
+  top: 77rem;
+  right: 8rem;
+}
+
+.test__shape-bg {
+  position: absolute;
+  top: 200%;
   left: 0;
   width: 100%;
   height: 100%;
