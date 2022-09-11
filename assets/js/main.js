@@ -44,6 +44,7 @@ modalClose.forEach((mc) =>{
 })
 
 
+
 /*=============== REMOVE MENU MOBILE ===============*/
 const navLink = document.querySelectorAll('.nav__link')
 

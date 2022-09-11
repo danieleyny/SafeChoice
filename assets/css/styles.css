@@ -98,6 +98,16 @@ img {
   z-index: 100;
 }
 
+.pa-fixed-header {
+	background-color: hsl(196, 60%, 91%) !important;
+	-webkit-transition: background-color .3s ease-out;
+	-moz-transition: background-color .3s ease-out;
+	-o-transition: background-color .3s ease-out;
+	transition: background-color .3s ease-out;
+   
+}
+
+
 .nav {
   position: relative;
   height: var(--header-height);
@@ -353,6 +363,39 @@ img {
 }
 
 
+.service__shape-small, 
+.service__shape-big {
+  background-color: hsl(283, 62%, 91%);
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+}
+
+.service__shape-small {
+  width: 200px;
+  height: 200px;
+  top: 55rem;
+  left: 5rem;
+}
+
+.service__shape-big {
+  width: 250px;
+  height: 250px;
+  top: 77rem;
+  right: 8rem;
+}
+
+.service__shape-bg {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: soft-light;
+}
+
+
 
 /*=============== SERVICES ===============*/
 .section__services {
@@ -394,7 +437,7 @@ img {
 }
 
 .services__card {
-  background-color: hsl(283, 62%, 91%);
+  background-color: hsl(284, 81%, 90%);
   padding: 3rem 1.5rem 1.5rem;
   border-radius: 1rem;
 }
