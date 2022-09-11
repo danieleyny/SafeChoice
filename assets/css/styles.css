@@ -40,6 +40,7 @@
 	position: fixed;
 	z-index: 10000;
 	background-size: 20%;
+  
 	
   }
   
@@ -414,14 +415,16 @@ img {
 }
 
 .services__card {
-  background-color: hsl(284, 81%, 90%);
   padding: 3rem 1.5rem 1.5rem;
   border-radius: 1rem;
+  background: linear-gradient(to top, #bdbcbfba, #84a0ddcc), url(../img/pinkflower-removebg-preview.png) no-repeat top center;
+   
 }
 
 .services__title {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   margin-bottom: 2.5rem;
+  color: var(--text-color);
 }
 
 .services__button {
@@ -431,6 +434,7 @@ img {
   align-items: center;
   column-gap: .25rem;
   cursor: pointer;
+  margin-left: 55%;
 }
 
 .services__button:hover .services__icon {
