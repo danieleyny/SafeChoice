@@ -1,3 +1,31 @@
+ /*=============== Partners ===============*/
+
+ $(document).ready(function(){
+    $('.partners-logos').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoints: 768,
+            settings: {
+                slidesToShow: 4
+            }
+        }, {
+            breakpoints: 520,
+            settings: {
+                slidesToShow: 3
+            }
+        }]
+    });
+});
+
+
+
+ 
 /*=============== SHOW MENU ===============*/
 const navMenu = document.getElementById('nav-menu'),
       navToggle = document.getElementById('nav-toggle'),
@@ -69,3 +97,5 @@ TweenMax.from('.home__leaf:nth-child(3)', 2, {delay: 1.5,opacity: 0,y: -800,ease
 TweenMax.from('.home__leaf:nth-child(4)', 2, {delay: 1.6,opacity: 0,y: -800,ease: Expo.easeInOut})
 TweenMax.from('.home__leaf:nth-child(5)', 2, {delay: 1.7,opacity: 0,y: -800,ease: Expo.easeInOut})
 TweenMax.from('.home__leaf:nth-child(6)', 2, {delay: 1.8,opacity: 0,y: -800,ease: Expo.easeInOut})
+
+
