@@ -427,6 +427,11 @@ img {
 .services__card3 {
   padding: 5rem 1.5rem 1.5rem;
   border-radius: 1rem;
+  background: linear-gradient(to top, #bdbcbfba, #c1cbe2c7), url(../img/blueflower-removebg-preview.png) no-repeat top center;
+}
+.services__card4 {
+  padding: 5rem 1.5rem 1.5rem;
+  border-radius: 1rem;
   background: linear-gradient(to top, #bdbcbfba, #c1cbe2c7), url(../img/salmonflower-removebg-preview.png) no-repeat top center;
 }
 
@@ -435,6 +440,7 @@ img {
   font-size: 1.35rem;
   margin-bottom: 2.5rem;
   color: var(--text-color);
+  text-align: center;
 }
 
 .services__button {
@@ -788,6 +794,10 @@ img {
     padding: 5rem 2rem 1.5rem;
     text-align: center;
   }
+  .services__card4 {
+    padding: 5rem 2rem 1.5rem;
+    text-align: center;
+  }
 
   .section__title {
     margin-bottom: 3.5rem;
@@ -802,6 +812,11 @@ img {
     height: 590px;
     top: 1.3rem;
   }
+  .services__container {
+    grid-template-columns: repeat(4, 272px);
+    column-gap: 3rem;
+  }
+
   .home__liquid {
     width: 630px;
   }
