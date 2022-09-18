@@ -75,6 +75,18 @@ body {
   background: var(--body-color);
   color: var(--text-color);
   overflow-x: hidden;
+  position: relative;
+}
+
+#page-background {
+  background: url(../img/shape-bg.png);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: soft-light;
 }
 
 ul {
@@ -364,15 +376,6 @@ img {
   right: -8rem;
 }
 
-.home__shape-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  mix-blend-mode: soft-light;
-}
 
 
 
@@ -396,16 +399,22 @@ img {
 
 .about__container{
   row-gap: 2rem;
+  
 }
 
 .about__img{
   width: 280px;
   justify-self: center;
   
+  
 }
 
 .about__title{
   margin-bottom: 1rem;
+}
+
+.about__data {
+  z-index: 2;
 }
 
 .about__description{
@@ -439,6 +448,7 @@ img {
 .button--link{
   color: var(--first-color-alt);
   font-weight: var(--font-medium);
+  
 }
 
 .button--link:hover .button__icon{
@@ -537,6 +547,7 @@ img {
   gap: 1.25rem;
 }
 
+
 .services__container {
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
@@ -562,6 +573,13 @@ img {
   padding: 5rem 1.5rem 1.5rem;
   border-radius: 1rem;
   background: linear-gradient(to top, #bdbcbfba, #c1cbe2c7), url(../img/salmonflower-removebg-preview.png) no-repeat top center;
+}
+
+.section__services .services__container .services__card,
+.section__services .services__container .services__card2,
+.section__services .services__container .services__card3,
+.section__services .services__container .services__card4{
+z-index: 1;
 }
 
 
@@ -601,7 +619,7 @@ img {
   visibility: hidden;
   opacity: 0;
   transition: .4s;
-  z-index: var(--z-modal);
+  z-index: 15;
 }
 
 .services__modal-content {
@@ -609,6 +627,7 @@ img {
   background-color: var(--body-color);
   padding: 4.5rem 1.5rem 2.5rem;
   border-radius: 1.5rem;
+  z-index: 15;
 }
 
 .services__modal-title, 
@@ -656,12 +675,16 @@ img {
   cursor: pointer;
 }
 
-
+.modal__Z-index{
+  z-index:1000 !important;
+}
 
 /*Active modal*/
 .active-modal {
   opacity: 1;
   visibility: visible;
+  
+  
 }
 
 
@@ -889,9 +912,11 @@ img {
     grid-template-columns: repeat(2, 200px);
     justify-content: center;
   }
+  
   .services__modal-content {
     width: 500px;
     padding: 4.5rem 2.5rem 2.5rem;
+    z-index: 15;
   }
   .services__modal-description {
     padding: 0 3.5rem;
