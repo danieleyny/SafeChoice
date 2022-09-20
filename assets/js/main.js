@@ -85,8 +85,8 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*=============== GSAP ANIMATION ===============*/
 
-TweenMax.from('.home__liquid',2, {delay: .7, opacity: 0, y: 200,ease: Expo.easeInOut})
-TweenMax.from('.home__juice-animate', 3.5, {delay: 1.2, opacity: 0, y: -800,ease: Expo.easeInOut})
+TweenMax.from('.home__liquid',1.5, {delay: .7, opacity: 0, y: 200,ease: Expo.easeInOut})
+TweenMax.from('.home__juice-animate', 3, {delay: 1.2, opacity: 0, y: -800,ease: Expo.easeInOut})
 TweenMax.from('.home__apple1', 5, {delay: 1.5,opacity: 0,y: -800,ease: Expo.easeInOut})
 TweenMax.from('.home__apple2', 5, {delay: 1.6,opacity: 0,y: -800,ease: Expo.easeInOut})
 TweenMax.from('.home__leaf:nth-child(1)', 7, {delay: 1.3,opacity: 0,y: -800,ease: Expo.easeInOut})
