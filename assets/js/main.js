@@ -84,11 +84,9 @@ function linkAction(){
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*=============== GSAP ANIMATION ===============*/
-TweenMax.from('.home__title', 1, {delay: .2, opacity: 0, y: 20,ease: Expo.easeInOut})
-TweenMax.from('.home__description', 2, {delay: .3, opacity: 0, y: 20,ease: Expo.easeInOut})
-TweenMax.from('.home__button', 3, {delay: .4, opacity: 0, y: 20,ease: Expo.easeInOut})
-TweenMax.from('.home__liquid',6, {delay: .7, opacity: 0, y: 200,ease: Expo.easeInOut})
-TweenMax.from('.home__juice-animate', 7, {delay: 1.2, opacity: 0, y: -800,ease: Expo.easeInOut})
+
+TweenMax.from('.home__liquid',3, {delay: .7, opacity: 0, y: 200,ease: Expo.easeInOut})
+TweenMax.from('.home__juice-animate', 4, {delay: 1.2, opacity: 0, y: -800,ease: Expo.easeInOut})
 TweenMax.from('.home__apple1', 9, {delay: 1.5,opacity: 0,y: -800,ease: Expo.easeInOut})
 TweenMax.from('.home__apple2', 9, {delay: 1.6,opacity: 0,y: -800,ease: Expo.easeInOut})
 TweenMax.from('.home__leaf:nth-child(1)', 11, {delay: 1.3,opacity: 0,y: -800,ease: Expo.easeInOut})
