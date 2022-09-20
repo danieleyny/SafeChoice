@@ -85,15 +85,15 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*=============== GSAP ANIMATION ===============*/
 
-TweenMax.from('.home__liquid',1.5, {delay: .7, opacity: 0, y: 200,ease: Expo.easeInOut})
-TweenMax.from('.home__juice-animate', 2.5, {delay: 1.1, opacity: 0, y: -800,ease: Expo.easeInOut})
-TweenMax.from('.home__apple1', 3, {delay: 1.5,opacity: 0,y: -800,ease: Expo.easeInOut})
-TweenMax.from('.home__apple2', 4, {delay: 1.6,opacity: 0,y: -800,ease: Expo.easeInOut})
-TweenMax.from('.home__leaf:nth-child(1)', 5, {delay: 1.3,opacity: 0,y: -800,ease: Expo.easeInOut})
-TweenMax.from('.home__leaf:nth-child(2)', 5, {delay: 1.4,opacity: 0,y: -800,ease: Expo.easeInOut})
-TweenMax.from('.home__leaf:nth-child(3)', 6, {delay: 1.5,opacity: 0,y: -800,ease: Expo.easeInOut})
-TweenMax.from('.home__leaf:nth-child(4)', 7, {delay: 1.6,opacity: 0,y: -800,ease: Expo.easeInOut})
-TweenMax.from('.home__leaf:nth-child(5)', 8, {delay: 1.7,opacity: 0,y: -800,ease: Expo.easeInOut})
-TweenMax.from('.home__leaf:nth-child(6)', 8, {delay: 1.8,opacity: 0,y: -800,ease: Expo.easeInOut})
+TweenMax.from('.home__liquid',2, {delay: .7, opacity: 0, y: 200,ease: Expo.easeInOut})
+TweenMax.from('.home__juice-animate', 3.5, {delay: 1.1, opacity: 0, y: -800,ease: Expo.easeInOut})
+TweenMax.from('.home__apple1', 4, {delay: 1.5,opacity: 0,y: -800,ease: Expo.easeInOut})
+TweenMax.from('.home__apple2', 5, {delay: 1.6,opacity: 0,y: -800,ease: Expo.easeInOut})
+TweenMax.from('.home__leaf:nth-child(1)', 6.5, {delay: 1.3,opacity: 0,y: -800,ease: Expo.easeInOut})
+TweenMax.from('.home__leaf:nth-child(2)', 6.5, {delay: 1.4,opacity: 0,y: -800,ease: Expo.easeInOut})
+TweenMax.from('.home__leaf:nth-child(3)', 7.5, {delay: 1.5,opacity: 0,y: -800,ease: Expo.easeInOut})
+TweenMax.from('.home__leaf:nth-child(4)', 8, {delay: 1.6,opacity: 0,y: -800,ease: Expo.easeInOut})
+TweenMax.from('.home__leaf:nth-child(5)', 9, {delay: 1.7,opacity: 0,y: -800,ease: Expo.easeInOut})
+TweenMax.from('.home__leaf:nth-child(6)', 9, {delay: 1.8,opacity: 0,y: -800,ease: Expo.easeInOut})
 
 
