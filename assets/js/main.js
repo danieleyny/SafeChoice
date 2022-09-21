@@ -90,10 +90,10 @@ TweenMax.from('.home__juice-animate', 4, {delay: 1.1, opacity: 0, y: -800,ease: 
 TweenMax.from('.home__apple1', 5.5, {delay: 1.5,opacity: 0,y: -800,ease: Expo.easeInOut})
 TweenMax.from('.home__apple2', 5, {delay: 1.6,opacity: 0,y: -800,ease: Expo.easeInOut})
 TweenMax.from('.home__leaf:nth-child(1)', 6.5, {delay: 1.3,opacity: 0,y: -800,ease: Expo.easeInOut})
-TweenMax.from('.home__leaf:nth-child(2)', 6.5, {delay: 1.4,opacity: 0,y: -800,ease: Expo.easeInOut})
-TweenMax.from('.home__leaf:nth-child(3)', 7.5, {delay: 1.5,opacity: 0,y: -800,ease: Expo.easeInOut})
+TweenMax.from('.home__leaf:nth-child(2)', 7.5, {delay: 1.4,opacity: 0,y: -800,ease: Expo.easeInOut})
+TweenMax.from('.home__leaf:nth-child(3)', 8.5, {delay: 1.5,opacity: 0,y: -800,ease: Expo.easeInOut})
 TweenMax.from('.home__leaf:nth-child(4)', 8, {delay: 1.6,opacity: 0,y: -800,ease: Expo.easeInOut})
-TweenMax.from('.home__leaf:nth-child(5)', 9, {delay: 1.7,opacity: 0,y: -800,ease: Expo.easeInOut})
-TweenMax.from('.home__leaf:nth-child(6)', 9, {delay: 1.8,opacity: 0,y: -800,ease: Expo.easeInOut})
+TweenMax.from('.home__leaf:nth-child(5)', 9.5, {delay: 1.7,opacity: 0,y: -800,ease: Expo.easeInOut})
+TweenMax.from('.home__leaf:nth-child(6)', 9.5, {delay: 1.8,opacity: 0,y: -800,ease: Expo.easeInOut})
 
 
