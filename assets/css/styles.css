@@ -603,6 +603,8 @@ img {
 .blog__img {
   border-radius: .5rem;
   box-shadow: 0 4px 16px hsl(355deg 25% 15% / 10%);
+  display: block;
+  border: .1px solid white;
 }
 
 .blog__button {
