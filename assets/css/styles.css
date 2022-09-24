@@ -113,6 +113,21 @@ img {
   overflow: hidden; /* For the animations */
 }
 
+.section__blog {
+  padding: 4.5rem 0 2rem;
+}
+
+.container__blog {
+  max-width: 1024px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.grid__blog {
+  display: grid;
+  gap: 1.5rem;
+}
+
 /*=============== HEADER & NAV ===============*/
 .header {
   position: fixed;
@@ -157,6 +172,9 @@ img {
 }
 
 @media screen and (max-width: 767px) {
+  .section__blog {
+    padding: 7rem 0 2rem;
+  }
   .nav__menu {
     position: fixed;
     background-color: var(--body-color);
@@ -568,6 +586,75 @@ img {
 
 
 
+/*=============== BLOG ===============*/
+.blog__container {
+  padding-bottom: 2rem;
+}
+
+.blog__content {
+  row-gap: 3rem;
+}
+
+.blog__image {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.blog__img {
+  border-radius: .5rem;
+}
+
+.blog__button {
+  display: inline-flex;
+  background-color: #fff;
+  padding: 1.15rem;
+  border-radius: .5rem 0 .5rem 0;
+  font-size: 2rem;
+  color: var(--title-color);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.blog__button i {
+  transform: rotate(-30deg);
+  transition: .4s;
+}
+
+.blog__button:hover i {
+  transform: rotate(-30deg) translateX(.25rem);
+}
+
+.blog__title {
+  font-size: var(--h2-font-size);
+  margin-bottom: .75rem;
+}
+
+.blog__description {
+  margin-bottom: 1.5rem;
+}
+
+.blog__footer, 
+.blog__reaction {
+  display: flex;
+  align-items: center;
+}
+
+.blog__footer {
+  column-gap: 1.5rem;
+}
+
+.blog__reaction {
+  column-gap: .25rem;
+}
+
+.blog__reaction i {
+  font-size: 1.25rem;
+}
+
+.blog__reaction span {
+  font-size: var(--small-font-size);
+}
 
 
 
@@ -781,6 +868,11 @@ z-index: 1;
 /* For small devices */
 @media screen and (max-width: 375px) {
   .container__about{
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .container__blog {
     margin-left: 1rem;
     margin-right: 1rem;
   }
@@ -998,6 +1090,10 @@ z-index: 1;
     grid-template-columns: repeat(2, 200px);
     column-gap: 3rem;
   }
+  .blog__content {
+    grid-template-columns: 450px;
+    justify-content: center;
+  }
 
 }
 
@@ -1186,6 +1282,10 @@ z-index: 1;
     margin-left: auto;
     margin-right: auto;
   }
+  .container__blog {
+    margin-left: auto;
+    margin-right: auto;
+  }
   .specialty__box {
     display: grid;
     grid-template-columns: 2fr .5fr;
@@ -1215,6 +1315,15 @@ z-index: 1;
     width: 80px;
     margin-bottom: 1.5rem;
     z-index: 3;
+  }
+
+  .blog__container {
+    padding-bottom: 5rem;
+  }
+  .blog__content {
+    grid-template-columns: repeat(2, 450px);
+    column-gap: 5rem;
+    padding-top: 2rem;
   }
 
 }
