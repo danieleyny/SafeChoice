@@ -598,6 +598,7 @@ img {
 .blog__image {
   position: relative;
   margin-bottom: 1.5rem;
+  transition: 0.5s all ease-in-out;
 }
 
 .blog__img {
@@ -606,6 +607,10 @@ img {
   display: block;
   border: .1px solid white;
 }
+.blog__image:hover{
+  transform: scale(1.05);
+}
+
 
 .blog__button {
   display: inline-flex;
