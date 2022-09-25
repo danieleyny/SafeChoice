@@ -391,8 +391,8 @@ img {
 .home__shape-big {
   width: 250px;
   height: 250px;
-  top: 17rem;
-  right: -8rem;
+  top: 35rem;
+  right: 0;
 }
 
 
@@ -1282,10 +1282,9 @@ border: .5px solid #9cd1f5;
     left: -15rem;
   }
   .home__shape-big {
-    width: 500px;
+    width: 400px;
     height: 500px;
-    top: 22rem;
-    right: -14rem;
+    top: 42rem;
   }
 }
 
