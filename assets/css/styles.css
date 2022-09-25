@@ -40,8 +40,8 @@
 	position: fixed;
 	z-index: 10000;
 	background-size: 20%;
-  
-	
+  animation: pageloaderspin 4s infinite;
+
   }
   
 img {
@@ -595,6 +595,14 @@ img {
   row-gap: 3rem;
 }
 
+.blog__card{
+  border: .11px solid whitesmoke ;
+  background-color: whitesmoke;
+  border-radius: .5rem;
+  padding: 20px;
+  position: relative;
+}
+
 .blog__image {
   position: relative;
   margin-bottom: 1.5rem;
@@ -636,6 +644,7 @@ img {
 
 .blog__title {
   font-size: var(--h2-font-size);
+  font-weight: 900;
   margin-bottom: .75rem;
 }
 
@@ -846,6 +855,8 @@ border: .5px solid #9cd1f5;
 
 
 
+
+
 /* Animation juice */
 @keyframes float-juice {
   0% {
@@ -856,6 +867,17 @@ border: .5px solid #9cd1f5;
   }
   100% {
     transform: translateY(0) rotate(15deg);
+  }
+}
+@keyframes pageloaderspin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 
@@ -1281,6 +1303,7 @@ border: .5px solid #9cd1f5;
     top: 0;
     left: -15rem;
   }
+  
   .home__shape-big {
     width: 400px;
     height: 500px;
