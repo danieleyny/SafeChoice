@@ -40,10 +40,9 @@
 	position: fixed;
 	z-index: 10000;
 	background-size: 20%;
-  animation: pageloaderspin 4s infinite;
-
   }
   
+
 img {
   -khtml-user-select: none;
   -o-user-select: none;
@@ -622,7 +621,7 @@ img {
 
 .blog__button {
   display: inline-flex;
-  background-color: #fff;
+  background-color: white;
   padding: 1.15rem;
   border-radius: .5rem 0 .5rem 0;
   font-size: 2rem;
@@ -869,17 +868,7 @@ border: .5px solid #9cd1f5;
     transform: translateY(0) rotate(15deg);
   }
 }
-@keyframes pageloaderspin {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
+
 
 /*=============== BREAKPOINTS ===============*/
 
