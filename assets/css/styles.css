@@ -904,7 +904,6 @@ border: .5px solid #9cd1f5;
   }
 
   .footer__logo {
-	margin-bottom: -2rem;
 	margin-left: -25px;
   }
   
@@ -944,10 +943,11 @@ border: .5px solid #9cd1f5;
  
   
   .footer__img1 {
-	top: 65%;
-	right: -3.1rem;
+	top: 35%;
+	right: -.1rem;
 	position: absolute;
-	width: 300px;
+	width: 150px;
+  transform: scaleX(-1);
   }
   
   .footer__img2 {
@@ -987,9 +987,11 @@ border: .5px solid #9cd1f5;
 	}
 	
 	.footer__img1 {
-	  top: 40%;
+	  top: 50%;
 	  left: -20px;
-	  width: 320px;
+	  width: 140px;
+    transform: scaleX(-1);
+    
 
 	}
 	.footer__img2 {
@@ -1004,9 +1006,9 @@ border: .5px solid #9cd1f5;
   @media screen and (max-width: 400px) {
 	.footer__img1 {
 		top: 30%;
-		right: -2.8rem;
+		right: -.8rem;
 		position: absolute;
-		width: 250px;
+		width: 170px;
 	  }
 	  
 	  .footer__img2 {
