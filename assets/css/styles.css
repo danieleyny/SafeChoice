@@ -501,7 +501,7 @@ img {
 .specialty__category {
   margin-top: 4rem;
   display: grid;
-  grid-template-columns: 200px;
+  grid-template-columns: 300px;
   justify-content: center;
   row-gap: 2.5rem;
 }
@@ -514,12 +514,14 @@ img {
 
 .specialty__group {
   text-align: center;
-  position: relative;
+  position: relative; 
 }
 
 .specialty__title {
-  font-size: var(--h2-font-size);
+  font-size: 18px;
   margin-bottom: .25rem;
+  font-weight: 900;
+  margin-bottom: 15px;
 }
 
 .specialty__group:hover .specialty__img {
