@@ -533,28 +533,37 @@ img {
 
 
 /*=============== Partners ===============*/
+
 .container__partners{
-    padding-top: 150px;
+  padding-top: 0px;
 }
+
+
 
 .slide {
   border: 1px solid rgb(252, 248, 252);
   background-color: rgb(252, 248, 252);
   border-radius: 15%;
+
 }
 
-
+.imgsize {
+width: 100px;
+}
 
 .slick-slide{
     margin: 0 20px;
+    
 }
 .slick-slide img{
     width: 100%;
+    
 }
 .slick-slider{
     position: relative;
     display: block;
     box-sizing: border-box;
+
 }
 .slick-list{
     position: relative;
@@ -574,6 +583,7 @@ img {
     float: left;
     height: 100%;
     min-height: 1px;
+    
 }
 .slick-slide img{
     display: block;
@@ -720,22 +730,22 @@ img {
 .services__card {
   padding: 5rem 1.5rem 1.5rem;
   border-radius: 1rem;
-  background: linear-gradient(to top, #bdbcbfba, #c1cbe2c7), url(../img/pinkflower-removebg-preview.png) no-repeat top center;
+  background: linear-gradient(to top, #bdbcbfba, #4769b878), url(../img/blueflower-removebg-preview.png) no-repeat top center;
 }
 .services__card2 {
   padding: 5rem 1.5rem 1.5rem;
   border-radius: 1rem;
-  background: linear-gradient(to top, #bdbcbfba, #c1cbe2c7), url(../img/yellowflower-removebg-preview.png) no-repeat top center;
+  background: linear-gradient(to top, #bdbcbfba, #c4bc4893), url(../img/yellowflower-removebg-preview.png) no-repeat top center;
 }
 .services__card3 {
   padding: 5rem 1.5rem 1.5rem;
   border-radius: 1rem;
-  background: linear-gradient(to top, #bdbcbfba, #c1cbe2c7), url(../img/blueflower-removebg-preview.png) no-repeat top center;
+  background: linear-gradient(to top, #bdbcbfba, #b38dd194), url(../img/pinkflower-removebg-preview.png) no-repeat top center;
 }
 .services__card4 {
   padding: 5rem 1.5rem 1.5rem;
   border-radius: 1rem;
-  background: linear-gradient(to top, #bdbcbfba, #c1cbe2c7), url(../img/salmonflower-removebg-preview.png) no-repeat top center;
+  background: linear-gradient(to top, #bdbcbfba, #de6d3498), url(../img/salmonflower-removebg-preview.png) no-repeat top center;
 }
 
 .section__services .services__container .services__card,
@@ -743,7 +753,7 @@ img {
 .section__services .services__container .services__card3,
 .section__services .services__container .services__card4{
 z-index: 1;  
-box-shadow: 0 4px 16px hsl(355deg 25% 15% / 10%);
+box-shadow: 0px 4px 16px rgba(43, 31, 31, 0.228);
 border: .5px solid #9cd1f5;
 
 }
@@ -1224,6 +1234,8 @@ border: .5px solid #9cd1f5;
     justify-content: center;
     text-align: center;
   }
+
+ 
 }
 
 
@@ -1233,6 +1245,8 @@ border: .5px solid #9cd1f5;
     margin-left: 1rem;
     margin-right: 1rem;
   }
+
+  
 
   .section__title {
     font-size: 1.35rem;
@@ -1321,6 +1335,9 @@ border: .5px solid #9cd1f5;
     margin-top: 25px;
   }
 
+  
+
+
   .services__button {
     color: var(--text-color);
     font-size: .9rem;
@@ -1330,21 +1347,30 @@ border: .5px solid #9cd1f5;
     cursor: pointer;
     margin-left: 55%;
   }
-  .specialty__button {
-    margin-left: 38px;
-    
-  }
+  
  
   
 }
 
 
+@media screen and (max-width: 575px) {
+  .specialty_button_center {
+    text-align: center;
+      }
+      .container__partners{
+        padding-top: 150px;
+    }
+}
 @media screen and (min-width: 576px) {
 
   .services__container {
     grid-template-columns: repeat(2, 200px);
     justify-content: center;
   }
+
+  .container__partners{
+    padding-top: 80px;
+}
   
   .services__modal-content {
     width: 500px;
