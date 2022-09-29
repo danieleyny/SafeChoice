@@ -683,6 +683,11 @@ width: 100px;
 
 .blog__reaction span {
   font-size: var(--small-font-size);
+  cursor: pointer;
+}
+
+.bx {
+  cursor: pointer;
 }
 
 
