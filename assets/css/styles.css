@@ -321,9 +321,9 @@ img {
 
 @media screen and (max-width: 450px) {
   .home__img-main-stats {
-    width: 580px;
+    width: 250px;
     justify-self: center;
-    margin-top: 27px;
+    margin-top: 60px;
   }
   .free__img-main-stats {
     width: 350px;
@@ -366,8 +366,9 @@ img {
   }
 
   .home__img-main-stats {
-    width: 1200px;
-    margin-left: 3rem;
+    width: 450px;
+    height: auto;
+    margin-left: -1rem;
   }
 
   .free__img-main-stats {
