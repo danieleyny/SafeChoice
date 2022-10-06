@@ -161,6 +161,7 @@ img {
 .nav__logo {
   font-family: var(--second-font);
   color: var(--first-color);
+  cursor: default;
 }
 
 .nav__logo span {
@@ -272,12 +273,15 @@ img {
   font-size: 1.5rem;
   line-height: 140%;
   margin-bottom: 0.5rem;
+  cursor: default;
+
 }
 
 .home__description-main-stats {
   font-size: .813rem;
   padding: 0 2rem;
   margin-bottom: 2.5rem;
+  cursor: default;
 }
 
 .container-main-stats {
@@ -426,6 +430,8 @@ img {
   font-family: var(--second-font);
   color: var(--title-color);
   margin-bottom: .75rem;
+  cursor: default;
+
 }
 
 .home__title span {
@@ -440,7 +446,9 @@ img {
 
 .home__description {
   color: var(--title-color);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem; 
+   cursor: default;
+
 }
 
 .home__button {
@@ -834,10 +842,12 @@ width: 100px;
   font-size: var(--h2-font-size);
   font-weight: 900;
   margin-bottom: .75rem;
+  cursor: default;
 }
 
 .blog__description {
   margin-bottom: 1.5rem;
+  cursor: default;
 }
 
 .blog__footer, 
