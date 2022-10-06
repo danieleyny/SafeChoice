@@ -34,7 +34,7 @@
 
 /* Page Loader */
 #pageloader {
-	background: #ede3f6 url(../img/SafeChoice.png) no-repeat center center;
+	background: #ede3f6 url(../img/SafeChoice.webp) no-repeat center center;
 	height: 100vh;
 	width: 100%;
 	position: fixed;
@@ -912,22 +912,22 @@ width: 100px;
 .services__card {
   padding: 5rem 1.5rem 1.5rem;
   border-radius: 1rem;
-  background: linear-gradient(to top, #bdbcbfba, #4769b878), url(../img/blueflower-removebg-preview.png) no-repeat top center;
+  background: linear-gradient(to top, #bdbcbfba, #4769b878), url(../img/blueflower-removebg-preview.webp) no-repeat top center;
 }
 .services__card2 {
   padding: 5rem 1.5rem 1.5rem;
   border-radius: 1rem;
-  background: linear-gradient(to top, #bdbcbfba, #c4bc4893), url(../img/yellowflower-removebg-preview.png) no-repeat top center;
+  background: linear-gradient(to top, #bdbcbfba, #c4bc4893), url(../img/yellowflower-removebg-preview.webp) no-repeat top center;
 }
 .services__card3 {
   padding: 5rem 1.5rem 1.5rem;
   border-radius: 1rem;
-  background: linear-gradient(to top, #bdbcbfba, #b38dd194), url(../img/pinkflower-removebg-preview.png) no-repeat top center;
+  background: linear-gradient(to top, #bdbcbfba, #b38dd194), url(../img/pinkflower-removebg-preview.webp) no-repeat top center;
 }
 .services__card4 {
   padding: 5rem 1.5rem 1.5rem;
   border-radius: 1rem;
-  background: linear-gradient(to top, #bdbcbfba, #de6d3498), url(../img/salmonflower-removebg-preview.png) no-repeat top center;
+  background: linear-gradient(to top, #bdbcbfba, #de6d3498), url(../img/salmonflower-removebg-preview.webp) no-repeat top center;
 }
 
 .section__services .services__container .services__card,
