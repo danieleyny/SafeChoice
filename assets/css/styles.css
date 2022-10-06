@@ -239,8 +239,16 @@ img {
 }
 
 
+.sketchfab-embed-wrapper {
+  position: relative;
+  width: 1000px;
+  height: auto;
+}
 
-
+.vendingsize {
+  width: 500px;
+  height: 400px;
+}
 /*=============== HOME ===============*/
 .home-stats {
   margin-top: 6rem;
