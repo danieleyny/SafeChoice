@@ -813,6 +813,21 @@ width: 100px;
 .blog__image:hover{
   transform: scale(1.05);
 }
+.blog__image {
+  position: relative;
+  margin-bottom: 1.5rem;
+  transition: 0.5s all ease-in-out;
+}
+
+.blog__img {
+  border-radius: .5rem;
+  box-shadow: 0 4px 16px hsl(355deg 25% 15% / 10%);
+  display: block;
+  border: .1px solid white;
+}
+.blog__image:hover{
+  transform: scale(1.05);
+}
 
 
 .blog__button {
@@ -868,6 +883,112 @@ width: 100px;
 }
 
 .blog__reaction span {
+  font-size: var(--small-font-size);
+  cursor: pointer;
+}
+
+.bx {
+  cursor: pointer;
+}
+
+
+
+/*=============== Our Machines ===============*/
+.machine__container {
+  margin-top: 0px;
+}
+
+.machine__content {
+  row-gap: 3rem;
+}
+
+.machine__card{
+  border: .11px solid whitesmoke ;
+  background-color: whitesmoke;
+  border-radius: .5rem;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0px 4px 16px rgba(43, 31, 31, 0.228);
+
+}
+
+.machine__image {
+  position: relative;
+  margin-bottom: 1.5rem;
+  transition: 0.5s all ease-in-out;
+}
+
+.machine__img {
+  border-radius: .5rem;
+  display: block;
+}
+.machine__image:hover{
+  transform: scale(1.05);
+}
+
+
+.machine__button {
+  display: inline-block;
+  background-color: #38afff;
+  color: whitesmoke;
+  padding: 1rem 2rem;
+  font-weight: 500;
+  border-radius: 10px;
+  transition: .3s;
+  text-decoration: none;
+  position: relative;
+}
+
+.machine__button:hover {
+  background-color: #3197db;
+}
+
+.machine__button i {
+  transition: .4s;
+}
+
+.machine__button:hover i {
+  transform: translateY(-.25rem) translateX(.25rem);
+
+}
+
+.machine__title {
+  font-size: 24px;
+  font-weight: 900;
+  margin-bottom: .75rem;
+  cursor: default;
+}
+
+.machine__data {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.machine__description {
+  margin-bottom: 1.5rem;
+  cursor: default;
+}
+
+.machine__footer, 
+.machine__reaction {
+  display: flex;
+  align-items: center;
+}
+
+.machine__footer {
+  column-gap: 1.5rem;
+  justify-content: center;
+}
+
+.machine__reaction {
+  column-gap: .25rem;
+}
+
+.machine__reaction i {
+  font-size: 1.25rem;
+}
+
+.machine__reaction span {
   font-size: var(--small-font-size);
   cursor: pointer;
 }
@@ -1435,6 +1556,10 @@ border: .5px solid #9cd1f5;
   .container {
     margin-left: 1rem;
     margin-right: 1rem;
+  }
+
+  .machine__container {
+    margin-top: 50px;
   }
 
   .blog__card {
