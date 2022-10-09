@@ -259,6 +259,10 @@ img {
   width: 320px;
   justify-self: center;
 }
+.home__img-main-machine {
+  width: 320px;
+  justify-self: center;
+}
 .free__img-main-stats {
   width: 370px;
   justify-self: center;
@@ -328,6 +332,11 @@ img {
     justify-self: center;
     margin-top: 60px;
   }
+  .home__img-main-machine {
+    width: 250px;
+    justify-self: center;
+    margin-top: 60px;
+  }
   .free__img-main-stats {
     width: 350px;
     justify-self: center;
@@ -369,6 +378,12 @@ img {
   }
 
   .home__img-main-stats {
+    width: 450px;
+    height: auto;
+    margin-left: -1rem;
+  }
+
+  .home__img-main-machine {
     width: 450px;
     height: auto;
     margin-left: -1rem;
