@@ -71,6 +71,33 @@
                 })
 
 
+                /*=============== Products MODAL ===============*/
+                const modalViews2 = document.querySelectorAll('.services__modal'),
+                      modalBtns2 = document.querySelectorAll('.products__button'),
+                      modalClose2 = document.querySelectorAll('.services__modal-close')
+
+                let modal2 = function(modalClick){
+                    modalViews[modalClick].classList.add('active-modal')
+                }
+
+                modalBtns2.forEach((mb, i) =>{
+                  mb.addEventListener('click', () =>{
+                    modal2(i)
+                  })
+                })
+
+                modalClose2.forEach((mc) =>{
+                  mc.addEventListener('click', () =>{
+                    modalViews2.forEach((mv) =>{
+                      mv.classList.remove('active-modal')
+                    })
+                  })
+                })
+
+
+
+
+
 
                 /*=============== REMOVE MENU MOBILE ===============*/
                 const navLink = document.querySelectorAll('.nav__link')
@@ -96,3 +123,42 @@
                 TweenMax.from('.home__leaf:nth-child(6)', 9.5, {delay: 1.8,opacity: 0,y: -800,ease: Expo.easeInOut})
 
 
+
+
+
+
+
+                function fn(query) {
+                  const filterButtons = document.querySelector(query).children;
+                  const items = document.querySelector(".blog__content").children;
+              
+                  for (let i = 0; i < filterButtons.length; i++) {
+                      filterButtons[i].addEventListener("click", function () {
+                          for (let j = 0; j < filterButtons.length; j++) {
+                              filterButtons[j].classList.remove("active2");
+                          }
+                          this.classList.add("active2");
+                          const target = this.getAttribute("data-target");
+              
+                          for (let k = 0; k < items.length; k++) {
+                              items[k].style.display = "none";
+                              if (target == items[k].getAttribute("data-id")) {
+                                  items[k].style.display = "block";
+                              }
+                              if (target == "all") {
+                                  items[k].style.display = "block";
+                              }
+                          }
+                      });
+                  }
+              }
+
+
+
+              fn('#filter-btns');
+              fn('#filter-levo1');  
+              fn('#filter-levo2');  
+              fn('#filter-levo3');  
+              fn('#filter-levo4');  
+              fn('#filter-levo5');  
+            

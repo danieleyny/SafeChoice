@@ -330,7 +330,7 @@ img {
   .home__img-main-stats {
     width: 250px;
     justify-self: center;
-    margin-top: 60px;
+    margin-top: 70px;
   }
   .home__img-main-machine {
     width: 250px;
@@ -793,6 +793,44 @@ width: 100px;
 }
 
 
+/*=============== Filter ===============*/
+
+.filter-buttons{
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.filter-buttons ul{
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+.filter-buttons ul li{
+  color:black;
+  font-weight: 500;
+  display: inline-block;
+  margin: 0px 8px;
+  cursor: pointer;
+  padding-bottom: 0px;
+}
+
+.filter-buttons ul li.active2{
+  color: #5f9bce;
+  border: 2px solid #5f9bce;
+  border-radius: 25px;
+  padding: 2px 15px 2px 15px;
+
+}
+
+
+/*=============== Filter End ===============*/
+
+
+
+
 
 /*=============== BLOG ===============*/
 .blog__container {
@@ -952,6 +990,7 @@ width: 100px;
   transition: .3s;
   text-decoration: none;
   position: relative;
+  cursor: pointer;
 }
 
 .machine__button:hover {
@@ -1163,6 +1202,10 @@ border: .5px solid #9cd1f5;
 .services__modal-icon {
   font-size: 1.5rem;
   color: var(--first-color);
+}
+.services__modal-icon-x {
+  font-size: 1.5rem;
+  color: red;
 }
 
 .services__modal-info {

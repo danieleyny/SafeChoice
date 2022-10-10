@@ -120,6 +120,25 @@
 
 
 
+
+ <!--==================== Filter ====================-->
+
+ <div class="filter-buttons">
+    <ul id="filter-btns">
+        <li class="active2" data-target="all">All</li>
+        <li data-target="machine">Machines</li>
+        <li data-target="levo">Levonorgestrel</li>
+        <li data-target="condoms">Condoms</li>
+        <li data-target="femhy">Feminine Hygiene</li>
+        <li data-target="other">Other</li>
+       
+    </ul>
+</div>
+
+ 
+ <!--==================== Filter End ====================-->
+ 
+ 
  <!--==================== BLOG ====================-->
  <section class="blog section__blog" id="blog">
     <br/><br/>  
@@ -131,7 +150,7 @@
 
         
         <div class="blog__content grid__blog">
-            <article  class="machine__container">
+            <article data-id="machine" class="machine__container">
                 <div class="machine__image">
                     <img src="assets/img/basicmachine.png" alt="chart showing increase in stds" class="machine__img"> 
                 </div>
@@ -152,17 +171,77 @@
     
                             </div>
                         </a>
-                            <a href="mailto:danieleyny@gmail.com?bcc=charlieeyny@gmail.com, 214w102@gmail.com&subject=Request A Machine&body=Hello, %0D%0A %0D%0A I am interested in having the Basic SafeChoice vending machine placed in my dorm building. I am reaching out from (Your School Here). %0D%0A%0D%0A%0D%0A Please Add The Following For A Better Response - %0D%0A%0D%0A Name: (Optional) %0D%0A%0D%0A Email: (Optional) %0D%0A%0D%0A Phone Number: (Optional)" class="machine__button">
+                            <a class="machine__button products__button">
                             <div class="blog__reaction">  
-                            <i class='bx bx-question-mark' ></i>
+                            <i class='bx bx-info-circle' ></i>
     
                             </div>
                         </a>
                     </div>
+
+
+
+                    <div class="services__modal modal__Z-index">
+                        <div class="services__modal-content">
+                            <i class='bx bx-x services__modal-close'></i>
+                    
+                            <h3 class="services__modal-title">Basic Vending Machine</h3>
+                            <p class="services__modal-description">
+                                The basic vending machine is your standard vending machine where you type the number of your preferred products location and it gets dropped down to you once you complete your payment.
+                            </p>
+                    
+                            <ul class="services__modal-list">
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check services__modal-icon' ></i>
+                                    <p class="services__modal-info">
+                                        Accepts Cash / Coins
+                                    </p>
+                                </li>
+                    
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check services__modal-icon' ></i>
+                                    <p class="services__modal-info">
+                                        Accepts Credit / Debit Card
+                                    </p>
+                                </li>
+                    
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check services__modal-icon' ></i>
+                                    <p class="services__modal-info">
+                                        Accepts RFID
+                                    </p>
+                                </li>
+                    
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check services__modal-icon' ></i>
+                                    <p class="services__modal-info">
+                                        Keypad
+                                    </p>
+                                </li>
+                    
+                                <li class="services__modal-item">
+                                    <i class='bx bx-x services__modal-icon-x' ></i>
+                                    <p class="services__modal-info">
+                                        Accepts Apple Pay
+                                    </p>
+                                </li>
+                    
+                                <li class="services__modal-item">
+                                    <i class='bx bx-x services__modal-icon-x' ></i>
+                                    <p class="services__modal-info">
+                                        Touch Screen
+                                    </p>
+                                </li>
+                    
+                               
+                            </ul>
+                        </div>
+                    </div>
+
             </article>
 
 
-            <article  class="machine__container">
+            <article data-id="machine" class="machine__container">
                 <div class="machine__image">
                     <img src="assets/img/brandedmachine.png" alt="chart showing increase in stds" class="machine__img"> 
                 </div>
@@ -183,17 +262,87 @@
     
                             </div>
                         </a>
-                            <a href="mailto:danieleyny@gmail.com?bcc=charlieeyny@gmail.com, 214w102@gmail.com&subject=Request A Machine&body=Hello, %0D%0A %0D%0A I am interested in having the Branded SafeChoice vending machine placed in my dorm building. I am reaching out from (Your School Here). %0D%0A%0D%0A%0D%0A Please Add The Following For A Better Response - %0D%0A%0D%0A Name: (Optional) %0D%0A%0D%0A Email: (Optional) %0D%0A%0D%0A Phone Number: (Optional)" class="machine__button">
+                            <a class="machine__button products__button">
                             <div class="blog__reaction">  
-                            <i class='bx bx-question-mark' ></i>
+                            <i class='bx bx-info-circle' ></i>
     
                             </div>
                         </a>
                     </div>
+
+
+
+
+                    <div class="services__modal modal__Z-index">
+                        <div class="services__modal-content">
+                            <i class='bx bx-x services__modal-close'></i>
+                    
+                            <h3 class="services__modal-title">Basic Vending Machine</h3>
+                            <p class="services__modal-description">
+                                The branded vending machine is your standard vending machine where you type the number of your preferred products location and it gets dropped down to you once you complete your payment. The branded vending machine includes a wrap advertisement paid for by sponsors. 
+                            </p>
+                    
+                            <ul class="services__modal-list">
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check services__modal-icon' ></i>
+                                    <p class="services__modal-info">
+                                        Accepts Cash / Coins
+                                    </p>
+                                </li>
+                    
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check services__modal-icon' ></i>
+                                    <p class="services__modal-info">
+                                        Accepts Credit / Debit Card
+                                    </p>
+                                </li>
+                    
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check services__modal-icon' ></i>
+                                    <p class="services__modal-info">
+                                        Accepts RFID
+                                    </p>
+                                </li>
+                    
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check services__modal-icon' ></i>
+                                    <p class="services__modal-info">
+                                        Keypad
+                                    </p>
+                                </li>
+                    
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check services__modal-icon' ></i>
+                                    <p class="services__modal-info">
+                                        Ad Space / Ad Revenue
+                                    </p>
+                                </li>
+                    
+                                <li class="services__modal-item">
+                                    <i class='bx bx-x services__modal-icon-x' ></i>
+                                    <p class="services__modal-info">
+                                        Accepts Apple Pay
+                                    </p>
+                                </li>
+                    
+                                <li class="services__modal-item">
+                                    <i class='bx bx-x services__modal-icon-x' ></i>
+                                    <p class="services__modal-info">
+                                        Touch Screen
+                                    </p>
+                                </li>
+                    
+                               
+                            </ul>
+                        </div>
+                    </div>
+
             </article>
 
 
-            <article class="machine__container">
+
+
+            <article data-id="machine" class="machine__container">
                 <div class="machine__image">
                     <img src="assets/img/3vendingmachines.png" alt="chart showing increase in stds" class="machine__img"> 
                 </div>
@@ -214,18 +363,86 @@
     
                             </div>
                         </a>
-                            <a href="mailto:danieleyny@gmail.com?bcc=charlieeyny@gmail.com, 214w102@gmail.com&subject=Request A Machine&body=Hello, %0D%0A %0D%0A I am interested in having the Digital SafeChoice vending machine placed in my dorm building. I am reaching out from (Your School Here). %0D%0A%0D%0A%0D%0A Please Add The Following For A Better Response - %0D%0A%0D%0A Name: (Optional) %0D%0A%0D%0A Email: (Optional) %0D%0A%0D%0A Phone Number: (Optional)" class="machine__button">
+                            <a class="machine__button products__button">
                             <div class="blog__reaction">  
-                            <i class='bx bx-question-mark' ></i>
+                            <i class='bx bx-info-circle' ></i>
     
                             </div>
                         </a>
                     </div>
+
+
+
+
+                    <div class="services__modal modal__Z-index">
+                        <div class="services__modal-content">
+                            <i class='bx bx-x services__modal-close'></i>
+                    
+                            <h3 class="services__modal-title">Digital Vending Machine</h3>
+                            <p class="services__modal-description">
+                                The digital vending machine is a fully digital vending machine. The front screen is an LCD display which can be used to look through the products and the product pricing. 
+                            </p>
+                    
+                            <ul class="services__modal-list">
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check services__modal-icon' ></i>
+                                    <p class="services__modal-info">
+                                        Accepts Cash / Coins
+                                    </p>
+                                </li>
+                    
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check services__modal-icon' ></i>
+                                    <p class="services__modal-info">
+                                        Accepts Credit / Debit Card
+                                    </p>
+                                </li>
+                    
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check services__modal-icon' ></i>
+                                    <p class="services__modal-info">
+                                        Accepts RFID
+                                    </p>
+                                </li>
+                    
+                                <li class="services__modal-item">
+                                    <i class='bx bx-x services__modal-icon' ></i>
+                                    <p class="services__modal-info">
+                                        Keypad
+                                    </p>
+                                </li>
+                    
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check services__modal-icon' ></i>
+                                    <p class="services__modal-info">
+                                        Ad Space / Ad Revenue
+                                    </p>
+                                </li>
+                    
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check services__modal-icon-x' ></i>
+                                    <p class="services__modal-info">
+                                        Accepts Apple Pay
+                                    </p>
+                                </li>
+                    
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check services__modal-icon-x' ></i>
+                                    <p class="services__modal-info">
+                                        Touch Screen
+                                    </p>
+                                </li>
+                    
+                               
+                            </ul>
+                        </div>
+                    </div>
+
             </article>
 
 
 
-            <article class="machine__container">
+            <article class="machine__container" data-id="machine">
                 <div class="machine__image">
                     <img src="assets/img/wrappedvending.png" alt="chart showing increase in stds" class="machine__img"> 
                 </div>
@@ -246,18 +463,90 @@
 
                         </div>
                     </a>
-                        <a href="mailto:danieleyny@gmail.com?bcc=charlieeyny@gmail.com, 214w102@gmail.com&subject=Request A Machine&body=Hello, %0D%0A %0D%0A I am interested in having the Wrapped SafeChoice vending machine placed in my dorm building. I am reaching out from (Your School Here). %0D%0A%0D%0A%0D%0A Please Add The Following For A Better Response - %0D%0A%0D%0A Name: (Optional) %0D%0A%0D%0A Email: (Optional) %0D%0A%0D%0A Phone Number: (Optional)" class="machine__button">
-                        <div class="blog__reaction">  
-                        <i class='bx bx-question-mark' ></i>
+                    <a class="machine__button products__button">
+                    <div class="blog__reaction">  
+                    <i class='bx bx-info-circle' ></i>
 
-                        </div>
-                    </a>
                     </div>
+                </a>
+                    </div>
+
+
+
+
+                    <div class="services__modal modal__Z-index">
+                        <div class="services__modal-content">
+                            <i class='bx bx-x services__modal-close'></i>
+                    
+                            <h3 class="services__modal-title">Wrapped Vending Machine</h3>
+                            <p class="services__modal-description">
+                                The wrapped vending machine is your standard vending machine where you type the number of your preferred products location and it gets dropped down to you once you complete your payment. The wrapped verson containes a custom wrap of any kind whether it be an organization, sponsor, a special cause or a cool art piece.  
+                            </p>
+                    
+                            <ul class="services__modal-list">
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check services__modal-icon' ></i>
+                                    <p class="services__modal-info">
+                                        Accepts Cash / Coins
+                                    </p>
+                                </li>
+                    
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check services__modal-icon' ></i>
+                                    <p class="services__modal-info">
+                                        Accepts Credit / Debit Card
+                                    </p>
+                                </li>
+                    
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check services__modal-icon' ></i>
+                                    <p class="services__modal-info">
+                                        Accepts RFID
+                                    </p>
+                                </li>
+                    
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check services__modal-icon' ></i>
+                                    <p class="services__modal-info">
+                                        Keypad
+                                    </p>
+                                </li>
+                    
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check services__modal-icon' ></i>
+                                    <p class="services__modal-info">
+                                        Ad Space / Ad Revenue
+                                    </p>
+                                </li>
+                    
+                                <li class="services__modal-item">
+                                    <i class='bx bx-x services__modal-icon-x' ></i>
+                                    <p class="services__modal-info">
+                                        Accepts Apple Pay
+                                    </p>
+                                </li>
+                    
+                                <li class="services__modal-item">
+                                    <i class='bx bx-x services__modal-icon-x' ></i>
+                                    <p class="services__modal-info">
+                                        Touch Screen
+                                    </p>
+                                </li>
+                    
+                               
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+
+
             </article>
 
 
 
-            <article class="machine__container">
+            <article data-id="machine" class="machine__container">
                 <div class="machine__image">
                     <img src="assets/img/wallmountedvendingmachine-removebg-preview.png" alt="chart showing increase in stds" class="machine__img"> 
                 </div>
@@ -278,20 +567,93 @@
 
                         </div>
                     </a>
-                        <a href="mailto:danieleyny@gmail.com?bcc=charlieeyny@gmail.com, 214w102@gmail.com&subject=Request A Machine&body=Hello, %0D%0A %0D%0A I am interested in having the Wall Mounted SafeChoice vending machine placed in my dorm building. I am reaching out from (Your School Here). %0D%0A%0D%0A%0D%0A Please Add The Following For A Better Response - %0D%0A%0D%0A Name: (Optional) %0D%0A%0D%0A Email: (Optional) %0D%0A%0D%0A Phone Number: (Optional)" class="machine__button">
-                        <div class="blog__reaction">  
-                        <i class='bx bx-question-mark' ></i>
+                    <a class="machine__button products__button">
+                    <div class="blog__reaction">  
+                    <i class='bx bx-info-circle' ></i>
 
-                        </div>
-                    </a>
                     </div>
+                </a>
+                    </div>
+
+
+
+
+
+                    <div class="services__modal modal__Z-index">
+                        <div class="services__modal-content">
+                            <i class='bx bx-x services__modal-close'></i>
+                    
+                            <h3 class="services__modal-title">Wall Mounted Vending Machine</h3>
+                            <p class="services__modal-description">
+                                The wall mounted vending machine a smaller version of the digital vending machine. Boasting an LCD display, the wall mounted vending machien is very convenient and easy to use. 
+                            </p>
+                    
+                            <ul class="services__modal-list">
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check services__modal-icon' ></i>
+                                    <p class="services__modal-info">
+                                        Accepts Cash / Coins
+                                    </p>
+                                </li>
+                    
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check services__modal-icon' ></i>
+                                    <p class="services__modal-info">
+                                        Accepts Credit / Debit Card
+                                    </p>
+                                </li>
+                    
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check services__modal-icon' ></i>
+                                    <p class="services__modal-info">
+                                        Accepts RFID
+                                    </p>
+                                </li>
+                    
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check services__modal-icon' ></i>
+                                    <p class="services__modal-info">
+                                        Keypad
+                                    </p>
+                                </li>
+                    
+                                <li class="services__modal-item">
+                                    <i class='bx bx-x services__modal-icon' ></i>
+                                    <p class="services__modal-info">
+                                        Ad Space / Ad Revenue
+                                    </p>
+                                </li>
+                    
+                                <li class="services__modal-item">
+                                    <i class='bx bx-x services__modal-icon-x' ></i>
+                                    <p class="services__modal-info">
+                                        Accepts Apple Pay
+                                    </p>
+                                </li>
+                    
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check services__modal-icon-x' ></i>
+                                    <p class="services__modal-info">
+                                        Touch Screen
+                                    </p>
+                                </li>
+                    
+                               
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+
+                    
             </article>
 
 
 
 
 
-            <article class="machine__container">
+            <article data-id="levo" class="machine__container">
                 <div class="machine__image">
                     <img src="assets/img/planb-products.png" alt="chart showing increase in stds" class="machine__img"> 
                 </div>
@@ -304,16 +666,20 @@
                     <br/>
 
                     <div class="machine__footer">
-                        <a href="mailto:danieleyny@gmail.com?bcc=charlieeyny@gmail.com, 214w102@gmail.com&subject=Request A Machine&body=Hello, %0D%0A %0D%0A I am interested in having the Wall Mounted SafeChoice vending machine placed in my dorm building. I am reaching out from (Your School Here). %0D%0A%0D%0A%0D%0A Please Add The Following For A Better Response - %0D%0A%0D%0A Name: (Optional) %0D%0A%0D%0A Email: (Optional) %0D%0A%0D%0A Phone Number: (Optional)" class="machine__button">
-                        <div class="blog__reaction">  
-
-                            <span>Alternative</span>
-
-                        </div>
-                    </a>
+                        <div id="filter-levo5"> 
+                            <a data-target="levo" href="#filter-btns" class="machine__button">
+                            <div class="blog__reaction">  
+    
+                                <span>Alternative</span>
+    
+                            </div>
+                        </a>
+                    </div>
                         <a href="mailto:danieleyny@gmail.com?bcc=charlieeyny@gmail.com, 214w102@gmail.com&subject=Request A Machine&body=Hello, %0D%0A %0D%0A I am interested in having the Digital SafeChoice vending machine placed in my dorm building. I am reaching out from (Your School Here). %0D%0A%0D%0A%0D%0A Please Add The Following For A Better Response - %0D%0A%0D%0A Name: (Optional) %0D%0A%0D%0A Email: (Optional) %0D%0A%0D%0A Phone Number: (Optional)" class="machine__button">
+                        </a>
+                        <a class="machine__button products__button">
                         <div class="blog__reaction">  
-                        <i class='bx bx-question-mark' ></i>
+                        <i class='bx bx-info-circle' ></i>
 
                         </div>
                     </a>
@@ -323,14 +689,7 @@
 
 
 
-
-
-
-
-
-
-
-            <article class="machine__container">
+            <article data-id="levo" class="machine__container">
                 <div class="machine__image">
                     <img src="assets/img/mychoice-products.png" alt="chart showing increase in stds" class="machine__img"> 
                 </div>
@@ -343,19 +702,22 @@
                     <br/>
 
                     <div class="machine__footer">
-                        <a href="mailto:danieleyny@gmail.com?bcc=charlieeyny@gmail.com, 214w102@gmail.com&subject=Request A Machine&body=Hello, %0D%0A %0D%0A I am interested in having the Wall Mounted SafeChoice vending machine placed in my dorm building. I am reaching out from (Your School Here). %0D%0A%0D%0A%0D%0A Please Add The Following For A Better Response - %0D%0A%0D%0A Name: (Optional) %0D%0A%0D%0A Email: (Optional) %0D%0A%0D%0A Phone Number: (Optional)" class="machine__button">
-                        <div class="blog__reaction">  
+                        <div id="filter-levo4"> 
+                            <a data-target="levo" href="#filter-btns" class="machine__button">
+                            <div class="blog__reaction">  
+    
+                                <span>Alternative</span>
+    
+                            </div>
+                        </a>
+                    </div>
+                </a>
+                <a class="machine__button products__button">
+                <div class="blog__reaction">  
+                <i class='bx bx-info-circle' ></i>
 
-                            <span>Alternative</span>
-
-                        </div>
-                    </a>
-                        <a href="mailto:danieleyny@gmail.com?bcc=charlieeyny@gmail.com, 214w102@gmail.com&subject=Request A Machine&body=Hello, %0D%0A %0D%0A I am interested in having the Digital SafeChoice vending machine placed in my dorm building. I am reaching out from (Your School Here). %0D%0A%0D%0A%0D%0A Please Add The Following For A Better Response - %0D%0A%0D%0A Name: (Optional) %0D%0A%0D%0A Email: (Optional) %0D%0A%0D%0A Phone Number: (Optional)" class="machine__button">
-                        <div class="blog__reaction">  
-                        <i class='bx bx-question-mark' ></i>
-
-                        </div>
-                    </a>
+                </div>
+            </a>
                     </div>
             </article>
 
@@ -366,7 +728,7 @@
 
 
 
-            <article class="machine__container">
+            <article data-id="levo" class="machine__container">
                 <div class="machine__image">
                     <img src="assets/img/takeaction-product.png" alt="chart showing increase in stds" class="machine__img"> 
                 </div>
@@ -379,19 +741,22 @@
                     <br/>
 
                     <div class="machine__footer">
-                        <a href="mailto:danieleyny@gmail.com?bcc=charlieeyny@gmail.com, 214w102@gmail.com&subject=Request A Machine&body=Hello, %0D%0A %0D%0A I am interested in having the Wall Mounted SafeChoice vending machine placed in my dorm building. I am reaching out from (Your School Here). %0D%0A%0D%0A%0D%0A Please Add The Following For A Better Response - %0D%0A%0D%0A Name: (Optional) %0D%0A%0D%0A Email: (Optional) %0D%0A%0D%0A Phone Number: (Optional)" class="machine__button">
-                        <div class="blog__reaction">  
+                        <div id="filter-levo1"> 
+                            <a data-target="levo" href="#filter-btns" class="machine__button">
+                            <div class="blog__reaction">  
+    
+                                <span>Alternative</span>
+    
+                            </div>
+                        </a>
+                    </div>
+                </a>
+                <a class="machine__button products__button">
+                <div class="blog__reaction">  
+                <i class='bx bx-info-circle' ></i>
 
-                            <span>Alternative</span>
-
-                        </div>
-                    </a>
-                        <a href="mailto:danieleyny@gmail.com?bcc=charlieeyny@gmail.com, 214w102@gmail.com&subject=Request A Machine&body=Hello, %0D%0A %0D%0A I am interested in having the Digital SafeChoice vending machine placed in my dorm building. I am reaching out from (Your School Here). %0D%0A%0D%0A%0D%0A Please Add The Following For A Better Response - %0D%0A%0D%0A Name: (Optional) %0D%0A%0D%0A Email: (Optional) %0D%0A%0D%0A Phone Number: (Optional)" class="machine__button">
-                        <div class="blog__reaction">  
-                        <i class='bx bx-question-mark' ></i>
-
-                        </div>
-                    </a>
+                </div>
+            </a>
                     </div>
             </article>
 
@@ -401,7 +766,7 @@
 
 
 
-            <article class="machine__container">
+            <article data-id="levo" class="machine__container">
                 <div class="machine__image">
                     <img src="assets/img/ellaone-product.png" alt="chart showing increase in stds" class="machine__img"> 
                 </div>
@@ -413,19 +778,22 @@
                     <br/>
 
                     <div class="machine__footer">
-                        <a href="mailto:danieleyny@gmail.com?bcc=charlieeyny@gmail.com, 214w102@gmail.com&subject=Request A Machine&body=Hello, %0D%0A %0D%0A I am interested in having the Wall Mounted SafeChoice vending machine placed in my dorm building. I am reaching out from (Your School Here). %0D%0A%0D%0A%0D%0A Please Add The Following For A Better Response - %0D%0A%0D%0A Name: (Optional) %0D%0A%0D%0A Email: (Optional) %0D%0A%0D%0A Phone Number: (Optional)" class="machine__button">
-                        <div class="blog__reaction">  
+                        <div id="filter-levo2"> 
+                            <a data-target="levo" href="#filter-btns" class="machine__button">
+                            <div class="blog__reaction">  
+    
+                                <span>Alternative</span>
+    
+                            </div>
+                        </a>
+                    </div>
+                </a>
+                <a class="machine__button products__button">
+                <div class="blog__reaction">  
+                <i class='bx bx-info-circle' ></i>
 
-                            <span>Alternative</span>
-
-                        </div>
-                    </a>
-                        <a href="mailto:danieleyny@gmail.com?bcc=charlieeyny@gmail.com, 214w102@gmail.com&subject=Request A Machine&body=Hello, %0D%0A %0D%0A I am interested in having the Digital SafeChoice vending machine placed in my dorm building. I am reaching out from (Your School Here). %0D%0A%0D%0A%0D%0A Please Add The Following For A Better Response - %0D%0A%0D%0A Name: (Optional) %0D%0A%0D%0A Email: (Optional) %0D%0A%0D%0A Phone Number: (Optional)" class="machine__button">
-                        <div class="blog__reaction">  
-                        <i class='bx bx-question-mark' ></i>
-
-                        </div>
-                    </a>
+                </div>
+            </a>
                     </div>
             </article>
 
@@ -434,7 +802,7 @@
 
 
 
-            <article class="machine__container">
+            <article data-id="levo" class="machine__container">
                 <div class="machine__image">
                     <img src="assets/img/myway-product.png" alt="chart showing increase in stds" class="machine__img"> 
                 </div>
@@ -446,27 +814,27 @@
                     <br/>
 
                     <div class="machine__footer">
-                        <a href="mailto:danieleyny@gmail.com?bcc=charlieeyny@gmail.com, 214w102@gmail.com&subject=Request A Machine&body=Hello, %0D%0A %0D%0A I am interested in having the Wall Mounted SafeChoice vending machine placed in my dorm building. I am reaching out from (Your School Here). %0D%0A%0D%0A%0D%0A Please Add The Following For A Better Response - %0D%0A%0D%0A Name: (Optional) %0D%0A%0D%0A Email: (Optional) %0D%0A%0D%0A Phone Number: (Optional)" class="machine__button">
+                        <div id="filter-levo3"> 
+                        <a data-target="levo" href="#filter-btns" class="machine__button">
                         <div class="blog__reaction">  
 
                             <span>Alternative</span>
 
                         </div>
                     </a>
-                        <a href="mailto:danieleyny@gmail.com?bcc=charlieeyny@gmail.com, 214w102@gmail.com&subject=Request A Machine&body=Hello, %0D%0A %0D%0A I am interested in having the Digital SafeChoice vending machine placed in my dorm building. I am reaching out from (Your School Here). %0D%0A%0D%0A%0D%0A Please Add The Following For A Better Response - %0D%0A%0D%0A Name: (Optional) %0D%0A%0D%0A Email: (Optional) %0D%0A%0D%0A Phone Number: (Optional)" class="machine__button">
-                        <div class="blog__reaction">  
-                        <i class='bx bx-question-mark' ></i>
+                </div>
+            </a>
+            <a class="machine__button products__button">
+            <div class="blog__reaction">  
+            <i class='bx bx-info-circle' ></i>
 
-                        </div>
-                    </a>
+            </div>
+        </a>
                     </div>
             </article>
 
 
-
-
-
-
+     
 
 
         </div>
@@ -567,8 +935,6 @@
         </main>
 
 
-        
-        
 
         <script>
             var loader = document.getElementById("pageloader");
@@ -587,6 +953,5 @@
         
         <!--=============== MAIN JS ===============-->
         <script src="assets/js/main.js"></script>
-        <script src="assets/js/stats.js"></script>
     </body>
 </html>
