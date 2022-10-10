@@ -818,8 +818,8 @@ width: 100px;
 }
 
 .filter-buttons ul li.active2{
-  color: #5f9bce;
-  border: 2px solid #5f9bce;
+  color: rgb(38, 38, 59);
+  border: 2px solid var(--first-color);
   border-radius: 25px;
   padding: 2px 15px 2px 15px;
 
@@ -984,13 +984,14 @@ width: 100px;
   display: inline-block;
   background-color: #38afff;
   color: whitesmoke;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   font-weight: 500;
   border-radius: 10px;
   transition: .3s;
   text-decoration: none;
   position: relative;
   cursor: pointer;
+  margin-left: -10px;
 }
 
 .machine__button:hover {
@@ -1002,7 +1003,7 @@ width: 100px;
 }
 
 .machine__button:hover i {
-  transform: translateY(-.25rem) translateX(.25rem);
+  transform: translateY(-.15rem) translateX(.15rem);
 
 }
 
@@ -1202,10 +1203,12 @@ border: .5px solid #9cd1f5;
 .services__modal-icon {
   font-size: 1.5rem;
   color: var(--first-color);
+  cursor: default;
 }
 .services__modal-icon-x {
   font-size: 1.5rem;
   color: red;
+  cursor: default;
 }
 
 .services__modal-info {
