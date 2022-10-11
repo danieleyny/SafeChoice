@@ -161,4 +161,9 @@
               fn('#filter-levo3');  
               fn('#filter-levo4');  
               fn('#filter-levo5');  
+              fn('#filter-condoms');  
+              fn('#filter-condoms2');  
+              fn('#filter-condoms3');  
+              fn('#filter-condoms4');  
+              fn('#filter-condoms5');  
             
