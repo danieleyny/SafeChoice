@@ -111,7 +111,15 @@
 
                 /*=============== GSAP ANIMATION ===============*/
 
+                TweenMax.from('.home-title-span-stats',1, {delay: .7, opacity: 0, y: 200,ease: Expo.easeInOut})
+                TweenMax.from('.home__description-main-stats',2.5, {delay: .7, opacity: 0, y: 200,ease: Expo.easeInOut})
+                TweenMax.from('.button-main-stats',3, {delay: .7, opacity: 0, y: 200,ease: Expo.easeInOut})
+
+
+
+
                 TweenMax.from('.home__liquid',2, {delay: .7, opacity: 0, y: 200,ease: Expo.easeInOut})
+                TweenMax.from('.home__juice-animate', 4, {delay: 1.1, opacity: 0, y: -800,ease: Expo.easeInOut})
                 TweenMax.from('.home__juice-animate', 4, {delay: 1.1, opacity: 0, y: -800,ease: Expo.easeInOut})
                 TweenMax.from('.home__apple1', 5.5, {delay: 1.5,opacity: 0,y: -800,ease: Expo.easeInOut})
                 TweenMax.from('.home__apple2', 5, {delay: 1.6,opacity: 0,y: -800,ease: Expo.easeInOut})

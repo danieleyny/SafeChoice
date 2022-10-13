@@ -1,5 +1,6 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lemon&family=Open+Sans:wght@400;600&display=swap");
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -7,7 +8,7 @@
 
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(203, 58%, 65%);
+  --first-color: hsl(0, 0%, 81%);
   --text-color: hsl(38, 8%, 8%);
 
   /*========== Font and typography ==========*/
@@ -85,14 +86,21 @@ img {
   align-items: center;
 }
 
-.nav__logo, 
+ 
 .nav__toggle {
   color: var(--text-color);
   display: inline-flex;
 }
 
 .nav__logo {
-  font-weight: 700;
+  font-family: 'Lemon', cursive;
+  color: #38afff;
+  cursor: pointer;
+  display: inline-flex;
+}
+
+.nav__logo span {
+  color: hsl(233, 32%, 15%);
 }
 
 .nav__toggle {
@@ -173,8 +181,17 @@ img {
 }
 
 .home__button:hover {
-  box-shadow: 0 4px 12px hsla(38, 69%, 8%, .2);
-  
+  background-color: rgb(51, 51, 48);
+}
+
+.home__footer a:hover {
+  color: #38afff;
+  transition: .6s;
+}
+
+.nav__link:hover {
+  color: #38afff;
+  transition: .6s;
 }
 
 .home__img img {

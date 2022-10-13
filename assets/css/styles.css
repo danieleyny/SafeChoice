@@ -159,13 +159,13 @@ img {
 }
 
 .nav__logo {
-  font-family: var(--second-font);
-  color: var(--first-color);
+  font-family: 'Lemon', cursive;
+  color: #38afff;
   cursor: default;
 }
 
 .nav__logo span {
-  color: var(--title-color);
+  color: hsl(233, 32%, 15%);
 }
 
 .nav__toggle {
