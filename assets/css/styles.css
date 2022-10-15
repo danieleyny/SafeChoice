@@ -471,7 +471,7 @@ img {
   color: #fff;
   padding: 1rem 2rem;
   border-radius: 1.5rem .25rem;
-  box-shadow: 0 5px 25px hsla(2, 100%, 45%, .28);
+  box-shadow: 0 5px 20px rgba(31, 5, 5, 0.28);
   transition: background .4s;
   position: relative;
 }
