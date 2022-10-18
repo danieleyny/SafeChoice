@@ -34,7 +34,7 @@
 
 /* Page Loader */
 #pageloader {
-	background: #ede3f6 url(../img/SafeChoice.webp) no-repeat center center;
+	background: #ede3f6 url(../img/3dgifmaker17586.gif) no-repeat center center;
 	height: 100vh;
 	width: 100%;
 	position: fixed;
@@ -673,7 +673,7 @@ img {
 
 /*=============== Why We Do It  ===============*/
 .specialty {
-  margin-top: 250px;
+  margin-top: 100px;
 }
 
 
@@ -841,6 +841,7 @@ width: 100px;
   row-gap: 3rem;
 }
 
+
 .blog__card{
   border: .11px solid whitesmoke ;
   background-color: whitesmoke;
@@ -950,6 +951,8 @@ width: 100px;
 .machine__container {
   margin-top: 0px;
 }
+
+
 
 .machine__content {
   row-gap: 3rem;
@@ -1627,6 +1630,10 @@ border: .5px solid #9cd1f5;
     margin-top: 10px;
   }
 
+  .specialty {
+    margin-top: 40px;
+  }
+
   
 
   .section__title {
@@ -1716,8 +1723,6 @@ border: .5px solid #9cd1f5;
     margin-top: 25px;
   }
 
-  
-
 
   .services__button {
     color: var(--text-color);
@@ -1728,8 +1733,7 @@ border: .5px solid #9cd1f5;
     cursor: pointer;
     margin-left: 55%;
   }
-  
- 
+
   
 }
 
@@ -1766,6 +1770,10 @@ border: .5px solid #9cd1f5;
     column-gap: 3rem;
   }
   .blog__content {
+    grid-template-columns: 450px;
+    justify-content: center;
+  }
+  .machine__content {
     grid-template-columns: 450px;
     justify-content: center;
   }
@@ -1997,6 +2005,11 @@ border: .5px solid #9cd1f5;
   }
   .blog__content {
     grid-template-columns: repeat(2, 450px);
+    column-gap: 5rem;
+    padding-top: 2rem;
+  }
+  .machine__content {
+    grid-template-columns: repeat(3, 300px);
     column-gap: 5rem;
     padding-top: 2rem;
   }

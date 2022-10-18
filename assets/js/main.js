@@ -137,7 +137,7 @@
 
                 function fn(query) {
                   const filterButtons = document.querySelector(query).children;
-                  const items = document.querySelector(".blog__content").children;
+                  const items = document.querySelector(".machine__content").children;
               
                   for (let i = 0; i < filterButtons.length; i++) {
                       filterButtons[i].addEventListener("click", function () {
