@@ -99,6 +99,9 @@
 
 
 
+
+
+
                 /*=============== REMOVE MENU MOBILE ===============*/
                 const navLink = document.querySelectorAll('.nav__link')
 
@@ -176,3 +179,17 @@
             
 
 
+              const filters = document.querySelectorAll('li[data-target]')
+              const targets = document.querySelectorAll('a[data-target]')
+              
+              for (const target of targets) {
+                target.addEventListener('click', e => {
+                  const filterTarget = e.currentTarget.dataset.target
+                  const filter = document.querySelector(`li[data-target=${filterTarget}]`)
+               
+                  for (const filter of filters) {
+                    filter.classList.remove('active2')
+                  }
+                  filter.classList.add('active2')
+                })
+              }
