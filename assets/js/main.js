@@ -176,7 +176,10 @@
               fn('#filter-condoms3');  
               fn('#filter-condoms4');  
               fn('#filter-condoms5');  
-            
+              fn('#filter-hyg1');  
+              fn('#filter-hyg2');  
+              fn('#filter-hyg3');  
+
 
 
               const filters = document.querySelectorAll('li[data-target]')

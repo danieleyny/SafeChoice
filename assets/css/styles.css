@@ -818,6 +818,7 @@ width: 100px;
   flex: 0 0 100%;
   max-width: 100%;
   margin-bottom: 20px;
+  margin-top: -90px;
   position: relative;
 }
 
@@ -975,6 +976,7 @@ width: 100px;
   padding: 20px;
   position: relative;
   box-shadow: 0px 4px 16px rgba(43, 31, 31, 0.228);
+ 
 }
 
 
@@ -1078,7 +1080,14 @@ width: 100px;
 
 .bx {
   cursor: pointer;
+  
 }
+
+.boldaf {
+  font-weight: bolder;
+  color: black;
+}
+
 
 
 
@@ -2270,6 +2279,8 @@ border: .5px solid #9cd1f5;
     margin-top: 150px;
     margin-bottom: 120px;
   }
+
+
   
 }
 
