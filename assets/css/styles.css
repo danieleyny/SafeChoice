@@ -968,6 +968,14 @@ width: 100px;
 
 
 /*=============== Our Machines ===============*/
+
+#more, #more2, #more3, #more4, #more5, #more6, #more7, #more8 {display: none;}
+
+#myBtn, #myBtn2, #myBtn3, #myBtn4, #myBtn5, #myBtn6, #myBtn7, #myBtn8 {
+  border: none;
+  background-color: transparent;
+}
+
 .machine__container {
   margin-top: 0px;
   border: .11px solid rgb(195, 239, 233) ;
@@ -1086,6 +1094,10 @@ width: 100px;
 .boldaf {
   font-weight: bolder;
   color: black;
+}
+.boldish {
+  color: var(--first-color);
+  font-weight: 700;
 }
 
 

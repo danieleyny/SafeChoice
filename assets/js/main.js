@@ -196,3 +196,42 @@
                   filter.classList.add('active2')
                 })
               }
+
+
+
+// More Info Button
+
+
+function myMoreInfoBtn() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "<i class='bx bx-chevron-right services__modal-icon' ></i>"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "<i class='bx bx-chevron-down services__modal-icon' ></i>"; 
+    moreText.style.display = "inline";
+  }
+}
+
+
+function myMoreInfoBtn2() {
+  var dots = document.getElementById("dots2");
+  var moreText = document.getElementById("more2");
+  var btnText = document.getElementById("myBtn2");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "<i class='bx bx-chevron-right services__modal-icon' ></i>"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "<i class='bx bx-chevron-down services__modal-icon' ></i>"; 
+    moreText.style.display = "inline";
+  }
+}
+
