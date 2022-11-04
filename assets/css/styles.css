@@ -969,9 +969,9 @@ width: 100px;
 
 /*=============== Our Machines ===============*/
 
-#more, #more2, #more3, #more4, #more5, #more6, #more7, #more8 {display: none;}
+#more, #more2, #more3, #more4, #more5, #more6, #more7, #more8, #more9, #more10, #more11, #more12, #more13, #more14, #more15, #more16, #more17, #more18  {display: none;}
 
-#myBtn, #myBtn2, #myBtn3, #myBtn4, #myBtn5, #myBtn6, #myBtn7, #myBtn8 {
+#myBtn, #myBtn2, #myBtn3, #myBtn4, #myBtn5, #myBtn6, #myBtn7, #myBtn8, #myBtn9, #myBtn10, #myBtn11, #myBtn12, #myBtn13, #myBtn14, #myBtn15, #myBtn16, #myBtn17, #myBtn18 {
   border: none;
   background-color: transparent;
 }
@@ -1052,6 +1052,13 @@ width: 100px;
   cursor: default;
 }
 
+.machine__title_span {
+  font-size: 20px;
+  font-weight: 100;
+  margin-bottom: .75rem;
+  cursor: default;
+}
+
 .machine__data {
   text-align: center;
   margin-top: 20px;
@@ -1092,9 +1099,17 @@ width: 100px;
 }
 
 .boldaf {
-  font-weight: bolder;
-  color: black;
+  font-weight: 900;
+  color: rgb(86, 86, 86);
 }
+
+.boldaf-dropdown {
+  font-weight: 900;
+  color: rgb(86, 86, 86);
+  cursor: pointer;
+}
+
+
 .boldish {
   color: var(--first-color);
   font-weight: 700;
@@ -1231,11 +1246,13 @@ border: .5px solid #9cd1f5;
   font-size: 1rem;
   color: var(--first-color);
   margin-bottom: 1rem;
+  cursor: default;
 }
 
 .services__modal-description {
   font-size: .813rem;
   margin-bottom: 2rem;
+  cursor: default;
 }
 
 .services__modal-list {
@@ -1249,11 +1266,19 @@ border: .5px solid #9cd1f5;
   column-gap: .5rem;
 }
 
+
 .services__modal-icon {
   font-size: 1.5rem;
   color: var(--first-color);
   cursor: default;
 }
+
+.services__modal-icon-dropdown {
+  font-size: 1.5rem;
+  color: var(--first-color);
+  cursor: pointer;
+}
+
 .services__modal-icon-x {
   font-size: 1.5rem;
   color: red;
@@ -1262,6 +1287,7 @@ border: .5px solid #9cd1f5;
 
 .services__modal-info {
   font-size:  .913rem;
+  cursor: default;
 }
 
 .services__modal-close {
