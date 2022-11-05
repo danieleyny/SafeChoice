@@ -54,6 +54,7 @@
 
                 let modal = function(modalClick){
                     modalViews[modalClick].classList.add('active-modal')
+                    document.querySelector('body').classList.add('no-scroll');
                 }
 
                 modalBtns.forEach((mb, i) =>{
@@ -66,6 +67,7 @@
                   mc.addEventListener('click', () =>{
                     modalViews.forEach((mv) =>{
                       mv.classList.remove('active-modal')
+                      document.querySelector('body').classList.remove('no-scroll');
                     })
                   })
                 })
@@ -78,6 +80,7 @@
 
                 let modal2 = function(modalClick){
                     modalViews[modalClick].classList.add('active-modal')
+                    document.querySelector('body').classList.add('no-scroll');
                 }
 
                 modalBtns2.forEach((mb, i) =>{
@@ -90,6 +93,7 @@
                   mc.addEventListener('click', () =>{
                     modalViews2.forEach((mv) =>{
                       mv.classList.remove('active-modal')
+                      document.querySelector('body').classList.remove('no-scroll');
                     })
                   })
                 })

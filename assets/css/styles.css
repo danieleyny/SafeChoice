@@ -43,6 +43,7 @@
 	position: fixed;
 	z-index: 10000;
 	background-size: 20%;
+  overflow: hidden;
   }
 
 
@@ -860,7 +861,10 @@ width: 100px;
 /*=============== Filter End ===============*/
 
 
-
+.no-scroll {
+  height: 100%;
+  overflow: hidden;
+}
 
 
 /*=============== BLOG ===============*/
@@ -1326,6 +1330,13 @@ border: .5px solid #9cd1f5;
 
 
 /* ===== Contact =====*/
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
 
 .contact section {
   margin-top: -400px;
