@@ -156,7 +156,7 @@ img {
 }
 
 .pa-fixed-header {
-	background-color: hsl(196, 60%, 91%) !important;
+	background-color: #daeef6 !important;
 	-webkit-transition: background-color .3s ease-out;
 	-moz-transition: background-color .3s ease-out;
 	-o-transition: background-color .3s ease-out;
@@ -346,6 +346,15 @@ img {
     margin-left: 1rem;
     margin-right: 1rem;
   }
+  .reachout__img {
+    width: 220px;
+    height: 260px;
+  }
+  
+  .reachout__orbe {
+    width: 236px;
+    height: 280px;
+  }
 
 }
 
@@ -367,6 +376,23 @@ img {
   }
   .home-stats {
     margin-top: 4rem;
+  }
+  .reachout__card {
+    grid-template-columns: repeat(1, 180px);
+    justify-content: center;
+  }
+
+  .section__reachout {
+    padding: 3.5rem 0 1rem;
+  }
+
+  .container__reachout {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .section__reachout {
+    margin-bottom: 150px;
   }
 
 }
@@ -764,6 +790,7 @@ img {
 
 .container__partners{
   padding-top: 0px;
+  margin-bottom: 200px;
 }
 
 
@@ -1329,7 +1356,157 @@ border: .5px solid #9cd1f5;
 
 
 
-/* ===== Contact =====*/
+/*=============== Reach Out  ===============*/
+
+.button-reachout {
+  display: inline-block;
+  background: linear-gradient(101deg,
+                hsl(228, 66%, 53%),
+                hsl(228, 66%, 47%));
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: .5rem;
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  box-shadow: 0 4px 8px hsla(228, 66%, 45%, .25);
+  transition: .3s;
+  cursor: pointer;
+}
+
+.button-reachout:hover {
+  box-shadow: 0 4px 12px hsla(228, 66%, 45%, .25);
+}
+
+
+
+.section__reachout {
+  padding: 4.5rem 0 2rem;
+  margin-bottom: 200px;
+}
+
+.container__reachout {
+  max-width: 1024px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.grid__reachout {
+  display: grid;
+}
+
+
+.reachout__container {
+  row-gap: 2rem;
+}
+
+.reachout__images {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.reachout__orbe {
+  width: 266px;
+  height: 316px;
+  background-color: hsl(228, 24%, 97%);
+  border-radius: 135px 135px 16px 16px;
+}
+
+.reachout__img {
+  position: absolute;
+  width: 250px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 125px 125px 12px 12px;
+  inset: 0;
+  margin: auto;
+  box-shadow: 0 16px 32px hsla(228, 66%, 25%, .25);
+}
+
+.reachout__description {
+  font-size: .813rem;
+  margin-bottom: 2.5rem;
+}
+
+.reachout__card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem .75rem;
+}
+
+.reachout__card-box {
+  background-color: #fff;
+  border: 2px solid hsl(228, 99%, 98%);
+  padding: 1.25rem .75rem;
+  border-radius: .5rem;
+  transition: .3s;
+  position: relative;
+}
+
+.reachout__card-info {
+  display: flex;
+  align-items: flex-start;
+  column-gap: .75rem;
+  margin-bottom: 1.25rem;
+}
+
+.reachout__card i {
+  padding: 6px;
+  background-color: hsl(228, 100%, 97%);
+  border-radius: 6px;
+  font-size: 1.25rem;
+  color: hsl(210, 79%, 68%);
+  cursor: pointer;
+}
+
+.reachout__card-title {
+  font-size: 1rem;
+  cursor: default;
+}
+
+.reachout__card-description {
+  font-size: .813rem;
+}
+
+.reachout__card-button {
+  font-size: .875rem;
+  padding: 14px 0;
+  width: 100%;
+  border-radius: .25rem;
+  background: hsl(228, 100%, 97%);
+  color: hsl(210, 79%, 68%);
+  font-weight: 600;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.reachout__card-button:hover {
+  background-color: hsl(210, 79%, 68%);
+  color: #fff;
+}
+
+.reachout__card-box:hover {
+  box-shadow: 0 8px 24px rgba(38, 38, 39, 0.392);
+}
+
+
+.reachout__quicklink {
+  position: relative;
+  font-weight: bolder;
+  color: #3ea8ee;
+}
+
+
+
+
+
+
+
+
+
+/* ===== Contact  HTML =====*/
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -1795,6 +1972,10 @@ input:-webkit-autofill:active {
   .message__input,
   .message__button {
     width: 60%;
+  }
+  .reachout__card {
+    grid-template-columns: repeat(2, 192px);
+    justify-content: center;
   }
 }
 
@@ -2403,6 +2584,11 @@ input:-webkit-autofill:active {
 .contact__form{
     width: 380px;
 }
+.container__partners{
+  margin-top: 50px;
+  margin-bottom: 150px;
+}
+
 
 }
 
@@ -2449,6 +2635,18 @@ input:-webkit-autofill:active {
     grid-template-columns: repeat(2, 1fr);
   }
  
+  .reachout__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .reachout__images {
+    order: 1;
+  }
+  .reachout__card {
+    justify-content: initial;
+  }
+
 
 }
 
@@ -2693,6 +2891,50 @@ input:-webkit-autofill:active {
     grid-template-columns: repeat(3, 300px);
     column-gap: 5rem;
     padding-top: 2rem;
+  }
+
+  .reachout__container {
+    align-items: flex-start;
+    column-gap: 5rem;
+  }
+ 
+  .reachout__orbe {
+    width: 501px;
+    height: 641px;
+    border-radius: 258px 258px 16px 16px;
+  }
+  
+  .reachout__img {
+    width: 461px;
+    height: 601px;
+    border-radius: 238px 238px 12px 12px;
+  }
+  
+  .reachout__img img {
+    max-width: initial;
+    width: 490px;
+  }
+  
+  .reachout__description {
+    font-size: .938rem;
+    margin-bottom: 2.5rem;
+  }
+
+
+  .reachout__card {
+    grid-template-columns: repeat(2, 200px);
+  }
+  .reachout__card-box {
+    padding: 28px 1.5rem 1.5rem;
+  }
+
+  .section__reachout {
+    padding: 7.5rem  0 1rem;
+  }
+
+  .container__reachout {
+    margin-left: auto;
+    margin-right: auto;
   }
 
 }
