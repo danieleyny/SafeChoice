@@ -1456,7 +1456,7 @@ border: .5px solid #9cd1f5;
   border-radius: 6px;
   font-size: 1.25rem;
   color: hsl(210, 79%, 68%);
-  cursor: pointer;
+  cursor: default;
 }
 
 .reachout__card-title {
