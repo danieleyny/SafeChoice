@@ -361,6 +361,170 @@
       alert('You have copied the link for this article succesfully!');
   });
   
+   /*=============== Copy Link - Article 10 ===============*/
   
+  
+   //the helper function
+   let createCopy10 = function(textToCopy, triggerElementId, callback = null) {
+    //add event listner to elementtrigger
+    let trigger = document.getElementById(triggerElementId);
+    trigger.addEventListener("click", function() {
+      //create the readonly textarea with the text in it and hide it
+      let tarea = document.createElement("textarea");
+      tarea.setAttribute("id", triggerElementId + "-copyarea");
+      tarea.setAttribute("readonly", "readonly");
+      tarea.setAttribute(
+        "style",
+        "opacity: 0; position: absolute; z-index: -1; top: 0; left: -9999px;"
+      );
+      tarea.appendChild(document.createTextNode(textToCopy));
+      document.body.appendChild(tarea);
+  
+      //select and copy the text in the readonly text area
+      tarea.select();
+      document.execCommand("copy");
+  
+      //remove the element from the DOM
+      document.body.removeChild(tarea);
+  
+      //fire callback function if provided
+      if (typeof callback === "function" && callback()) {
+        callback();
+      }
+    });
+  };
+  
+  
+  //usage example
+  createCopy10('https://www.bluecrossnc.com/understanding-insurance/how-drug-benefits-work/over-counter-medications#:~:text=OTC%20medications%20are%20typically%20used,much%20less%20than%20prescription%20medications.&text=Savings%3A%20A%20difference%20of%20more,a%20visit%20to%20your%20physician.', 'elementId10', function () {
+      alert('You have copied the link for this article succesfully!');
+  });
+  
+
+
+   /*=============== Copy Link - Article 11 ===============*/
+  
+  
+   //the helper function
+   let createCopy11 = function(textToCopy, triggerElementId, callback = null) {
+    //add event listner to elementtrigger
+    let trigger = document.getElementById(triggerElementId);
+    trigger.addEventListener("click", function() {
+      //create the readonly textarea with the text in it and hide it
+      let tarea = document.createElement("textarea");
+      tarea.setAttribute("id", triggerElementId + "-copyarea");
+      tarea.setAttribute("readonly", "readonly");
+      tarea.setAttribute(
+        "style",
+        "opacity: 0; position: absolute; z-index: -1; top: 0; left: -9999px;"
+      );
+      tarea.appendChild(document.createTextNode(textToCopy));
+      document.body.appendChild(tarea);
+  
+      //select and copy the text in the readonly text area
+      tarea.select();
+      document.execCommand("copy");
+  
+      //remove the element from the DOM
+      document.body.removeChild(tarea);
+  
+      //fire callback function if provided
+      if (typeof callback === "function" && callback()) {
+        callback();
+      }
+    });
+  };
+  
+  
+  //usage example
+  createCopy11('https://www.who.int/news-room/fact-sheets/detail/sexually-transmitted-infections-(stis)', 'elementId11', function () {
+      alert('You have copied the link for this article succesfully!');
+  });
+  
+
+
+   /*=============== Copy Link - Article 12 ===============*/
+  
+  
+   //the helper function
+   let createCopy12 = function(textToCopy, triggerElementId, callback = null) {
+    //add event listner to elementtrigger
+    let trigger = document.getElementById(triggerElementId);
+    trigger.addEventListener("click", function() {
+      //create the readonly textarea with the text in it and hide it
+      let tarea = document.createElement("textarea");
+      tarea.setAttribute("id", triggerElementId + "-copyarea");
+      tarea.setAttribute("readonly", "readonly");
+      tarea.setAttribute(
+        "style",
+        "opacity: 0; position: absolute; z-index: -1; top: 0; left: -9999px;"
+      );
+      tarea.appendChild(document.createTextNode(textToCopy));
+      document.body.appendChild(tarea);
+  
+      //select and copy the text in the readonly text area
+      tarea.select();
+      document.execCommand("copy");
+  
+      //remove the element from the DOM
+      document.body.removeChild(tarea);
+  
+      //fire callback function if provided
+      if (typeof callback === "function" && callback()) {
+        callback();
+      }
+    });
+  };
+  
+  
+  //usage example
+  createCopy12('https://www.who.int/news/item/01-05-2020-massive-proportion-world-population-living-with-herpes-infection', 'elementId12', function () {
+      alert('You have copied the link for this article succesfully!');
+  });
+  
+  
+   /*=============== Copy Link - Article 13 ===============*/
+  
+  
+   //the helper function
+   let createCopy13 = function(textToCopy, triggerElementId, callback = null) {
+    //add event listner to elementtrigger
+    let trigger = document.getElementById(triggerElementId);
+    trigger.addEventListener("click", function() {
+      //create the readonly textarea with the text in it and hide it
+      let tarea = document.createElement("textarea");
+      tarea.setAttribute("id", triggerElementId + "-copyarea");
+      tarea.setAttribute("readonly", "readonly");
+      tarea.setAttribute(
+        "style",
+        "opacity: 0; position: absolute; z-index: -1; top: 0; left: -9999px;"
+      );
+      tarea.appendChild(document.createTextNode(textToCopy));
+      document.body.appendChild(tarea);
+  
+      //select and copy the text in the readonly text area
+      tarea.select();
+      document.execCommand("copy");
+  
+      //remove the element from the DOM
+      document.body.removeChild(tarea);
+  
+      //fire callback function if provided
+      if (typeof callback === "function" && callback()) {
+        callback();
+      }
+    });
+  };
+  
+  
+  //usage example
+  createCopy13('https://www.cdc.gov/nchhstp/newsroom/2021/2018-STI-incidence-prevalence-estimates.html', 'elementId13', function () {
+      alert('You have copied the link for this article succesfully!');
+  });
+  
+  
+
+
+
    /*=============== Copy Link - End ===============*/
   
