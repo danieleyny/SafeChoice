@@ -776,6 +776,11 @@ img {
   margin-bottom: .25rem;
   font-weight: 900;
   margin-bottom: 15px;
+  cursor: default;
+}
+
+.specialty__description {
+  cursor: default;
 }
 
 .specialty__group:hover .specialty__img {
