@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^www.safechoiceusa.com$
+RewriteRule ^(.*)$ http://www.safechoiceusa.com/$1 [R=301,L]
