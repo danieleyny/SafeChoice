@@ -321,9 +321,27 @@ img {
   border-radius: 3rem;
   transition: .3s;
   text-decoration: none;
+  margin-right: 10px;
+
 }
 
 .button-main-stats:hover {
+  background-color: #3197db;
+}
+
+.button-main-stats-right {
+  display: inline-block;
+  background-color: #38afff;
+  color: #fff;
+  padding: 1.15rem 2.75rem;
+  font-weight: 500;
+  border-radius: 3rem;
+  transition: .3s;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.button-main-stats-right:hover {
   background-color: #3197db;
 }
 
@@ -907,6 +925,30 @@ width: 100px;
 .blog__content {
   row-gap: 3rem;
 }
+
+.aboutus-button{
+  font-size: .905rem;
+  padding: 15px 25px;
+  width: 100%;
+  border-radius: 25px;
+  background-color: hsl(0, 0%, 100%);
+  color: rgb(96, 94, 94);
+  font-weight: 500;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  border: .5px solid rgb(96, 94, 94);
+  box-shadow: 2px 2px 6px rgba(4, 4, 4, 0.148);
+  cursor: pointer;
+}
+
+.aboutus-button:hover {
+  background-color: hsl(210, 79%, 68%);
+  color: #fff;
+  transition: .3s;
+}
+
 
 
 .blog__card{
