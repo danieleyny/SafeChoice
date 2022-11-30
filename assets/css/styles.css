@@ -1471,6 +1471,7 @@ border: .5px solid #9cd1f5;
 
 .reachout__card-description {
   font-size: .813rem;
+  color: var(--text-color);
 }
 
 .reachout__card-button {
