@@ -854,7 +854,7 @@ img {
 }
 
 .celebrate__img {
-  width: 940px;
+  width: 400px;
   justify-self: center;
   position: relative;
   animation: floaty 1.5s infinite alternate;
@@ -2809,8 +2809,8 @@ input:-webkit-autofill:active {
     padding: 6.5rem 0 2rem;
   }
   .celebrate__img {
-  width: 600px;
-  margin-left: 350px;
+  width: 400px;
+  margin-left: 400px;
   position: absolute;
   }
 
@@ -2924,8 +2924,8 @@ input:-webkit-autofill:active {
 }
 
 .celebrate__img {
-  width: 700px;
-  margin-left: 500px;
+  width: 420px;
+  margin-left: 400px;
   position: absolute;
 }
 .celebrate__description {
