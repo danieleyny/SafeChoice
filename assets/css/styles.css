@@ -865,8 +865,14 @@ img {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(15px);
+    transform: translateY(20px);
   }
+}
+
+.generate-pdf {
+  margin-left: 10px;
+  font-size: 1.2rem;
+  transition: .3s;
 }
 
 .button-celebrate {
@@ -884,6 +890,11 @@ img {
 .button-celebrate:hover {
   background-color: var(--first-color-alt);
 }
+.button-celebrate:hover .generate-pdf{
+  transform: translateX(.30rem);
+}
+
+
 
 /*=============== Download PDF End  ===============*/
 
@@ -2798,7 +2809,7 @@ input:-webkit-autofill:active {
     padding: 6.5rem 0 2rem;
   }
   .celebrate__img {
-    width: 600px;
+  width: 600px;
   margin-left: 350px;
   position: absolute;
   }
