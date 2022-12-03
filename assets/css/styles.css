@@ -356,6 +356,12 @@ img {
     margin-left: 1rem;
     margin-right: 1rem;
   }
+
+  .container-celebrate {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
   .q-container{
     margin-left: 1rem;
     margin-right: 1rem;
@@ -373,6 +379,8 @@ img {
     width: 236px;
     height: 280px;
   }
+
+
 
 }
 
@@ -743,6 +751,7 @@ img {
 
 .button--link:hover .button__icon{
   transform: translateX(.25rem);
+  transition: .3s;
 }
 
 
@@ -807,6 +816,80 @@ img {
 
 
 /*=============== Why We Do It End  ===============*/
+
+
+
+/*=============== Download PDF  ===============*/
+
+
+/*=============== CELEBRATE ===============*/
+.section-celebrate {
+  padding: 4.5rem 0 1rem;
+}
+
+.container-celebrate {
+  max-width: 968px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.grid-celebrate {
+  display: grid;
+}
+
+.celebrate__container {
+  row-gap: 1rem;
+}
+
+.celebrate__data {
+  text-align: center;
+}
+
+.celebrate__title {
+  margin-bottom: 1.5rem;
+}
+
+.celebrate__description {
+  margin-bottom: 2.5rem;
+}
+
+.celebrate__img {
+  width: 940px;
+  justify-self: center;
+  position: relative;
+  animation: floaty 1.5s infinite alternate;
+}
+
+@keyframes floaty {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(15px);
+  }
+}
+
+.button-celebrate {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: #fff;
+  padding: 1.15rem 2.75rem;
+  font-weight: 600;
+  border-radius: 3rem;
+  transition: .3s;
+  position: relative;
+  
+}
+
+.button-celebrate:hover {
+  background-color: var(--first-color-alt);
+}
+
+/*=============== Download PDF End  ===============*/
+
+
+
+
 
 
 /*=============== Partners ===============*/
@@ -2025,6 +2108,10 @@ input:-webkit-autofill:active {
     grid-template-columns: repeat(2, 192px);
     justify-content: center;
   }
+  .celebrate__description {
+    padding: 0 4rem;
+  }
+  
 }
 
 @media screen and (min-width: 767px) {
@@ -2695,6 +2782,26 @@ input:-webkit-autofill:active {
     justify-content: initial;
   }
 
+  .celebrate__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .celebrate__data, 
+  .celebrate__title {
+    text-align: initial;
+  }
+  .celebrate__description {
+    padding: 0;
+  }
+  .section-celebrate {
+    padding: 6.5rem 0 2rem;
+  }
+  .celebrate__img {
+    width: 600px;
+  margin-left: 350px;
+  position: absolute;
+  }
 
 }
 
@@ -2703,6 +2810,11 @@ input:-webkit-autofill:active {
 @media screen and (min-width: 992px) {
   
   .container__about{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .container-celebrate {
     margin-left: auto;
     margin-right: auto;
   }
@@ -2800,6 +2912,14 @@ input:-webkit-autofill:active {
   margin-bottom: 110px;
 }
 
+.celebrate__img {
+  width: 700px;
+  margin-left: 500px;
+  position: absolute;
+}
+.celebrate__description {
+  padding-right: 6rem;
+}
 
 }
 
