@@ -1679,8 +1679,6 @@ input:-webkit-autofill:active {
   font-family: 'Montserrat', sans-serif;;
   cursor: default;
 }
-
-
  
 
 .contact__text{
@@ -1779,7 +1777,7 @@ input:-webkit-autofill:active {
   background-color: white;
   border-radius: .25rem;
 }
-
+ 
 .questions__item-title{
   font-size:  .89rem;
   font-weight: 500;
@@ -2112,6 +2110,9 @@ input:-webkit-autofill:active {
   }
   .celebrate__description {
     padding: 0 4rem;
+  }
+  .section__title-center {
+    text-align: initial;
   }
   
 }
@@ -2888,6 +2889,11 @@ input:-webkit-autofill:active {
 .questions__description{
   padding: 0 3.5rem 2.25rem 2.75rem;
 }
+
+.q-section{
+  padding: 8rem 0 1rem;
+}
+
 .q-container{
   margin-left: auto;
   margin-right: auto;
@@ -2899,10 +2905,6 @@ input:-webkit-autofill:active {
 
 .section__title-center{
   font-size: 1.8rem;
-}
-
-.q-section{
-  padding: 8rem 0 1rem;
 }
 
 .request__title{
