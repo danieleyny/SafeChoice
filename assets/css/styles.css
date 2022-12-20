@@ -1155,8 +1155,8 @@ width: 100px;
   margin: auto; /* Center the map */
   display: block; /* Make the map a block-level element */
   position: relative;
-  border: 3px solid white;
-  border-radius: 25px;
+  border: 5px solid white;
+  border-radius: 15px;
 }
 
 #map:hover {
@@ -1188,8 +1188,8 @@ width: 100px;
 
 @media (max-width: 445px) {
   #map {
-    width: 90%;
-    height: 50vh;
+    width: 92%;
+    height: 70vh;
   }
   .location__description {
     font-size: .8.5rem;

@@ -409,6 +409,10 @@
                             <i class='bx bx-copy' ></i>
                             <span>Copy Article Link</span>
                         </div>
+                        <div class="blog__reaction" id="elementId">
+                            <i class='bx bx-copy' ></i>
+                            <button id="share-button">Share Article Link</button>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -1010,8 +1014,9 @@
         </main>
 
 
+       
         
-        
+
 
         <script>
             var loader = document.getElementById("pageloader");
@@ -1022,6 +1027,33 @@
           </script>
 
 
+<script>
+    // Get the share button
+    var shareButton = document.getElementById('share-button');
+  
+    // Add a click event listener to the button
+    shareButton.addEventListener('click', function() {
+      // Specify the URL that you want to share
+      var urlToShare = 'https://www.example.com';
+  
+      // Use the Web Share API (if it's available) to share the URL
+      if (navigator.share) {
+        navigator.share({
+          title: 'Example Page',
+          url: urlToShare
+        }).then(function() {
+          console.log('Thanks for sharing!');
+        })
+        .catch(function(error) {
+          console.log('Error sharing:', error);
+        });
+      } else {
+        // If the Web Share API is not available, fall back to a URL-based approach
+        var shareUrl = 'https://twitter.com/share?url=' + encodeURIComponent(urlToShare);
+        window.open(shareUrl, '_blank');
+      }
+    });
+  </script>
      
         
         <!--=============== MAIN JS ===============-->
