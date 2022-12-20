@@ -612,58 +612,41 @@
 
 
    /*=============== Copy Link - End ===============*/
-  
-
-// Get the share button
-var shareButton = document.getElementById('share-button');
-  
-// Add a click event listener to the button
-shareButton.addEventListener('click', function() {
-  // Specify the URL that you want to share
-  var urlToShare = 'https://medium.com/@celestegreeneblogs/1-in-5-people-in-the-us-have-an-std-something-must-be-done-e864473662f1';
-
-  // Use the Web Share API (if it's available) to share the URL
-  if (navigator.share) {
-    navigator.share({
-      title: '1 in 5 People In The US Have An STI. Something Must Be Done.',
-      url: urlToShare
-    }).then(function() {
-      console.log('Thanks for sharing!');
-    })
-    .catch(function(error) {
-      console.log('Error sharing:', error);
+   function addShareEventListener(buttonId, urlToShare, title) {
+    // Get the share button
+    var shareButton = document.getElementById(buttonId);
+    
+    // Add a click event listener to the button
+    shareButton.addEventListener('click', function() {
+      // Use the Web Share API (if it's available) to share the URL
+      if (navigator.share) {
+        navigator.share({
+          title: title,
+          url: urlToShare
+        }).then(function() {
+          console.log('Thanks for sharing!');
+        })
+        .catch(function(error) {
+          console.log('Error sharing:', error);
+        });
+      } else {
+        // If the Web Share API is not available, fall back to a URL-based approach
+        var shareUrl = 'https://twitter.com/share?url=' + encodeURIComponent(urlToShare);
+        window.open(shareUrl, '_blank');
+      }
     });
-  } else {
-    // If the Web Share API is not available, fall back to a URL-based approach
-    var shareUrl = 'https://twitter.com/share?url=' + encodeURIComponent(urlToShare);
-    window.open(shareUrl, '_blank');
   }
-});
   
-
-// Get the share button
-var shareButton2 = document.getElementById('share-button2');
-  
-// Add a click event listener to the button
-shareButton2.addEventListener('click', function() {
-  // Specify the URL that you want to share
-  var urlToShare = 'https://medium.com/@abdullyr/1-in-4-college-students-has-an-sti-we-need-to-do-something-fb555bf7bf8b';
-
-  // Use the Web Share API (if it's available) to share the URL
-  if (navigator.share) {
-    navigator.share({
-      title: '1 in 4 college students has an STI… We need to do something.',
-      url: urlToShare
-    }).then(function() {
-      console.log('Thanks for sharing!');
-    })
-    .catch(function(error) {
-      console.log('Error sharing:', error);
-    });
-  } else {
-    // If the Web Share API is not available, fall back to a URL-based approach
-    var shareUrl = 'https://twitter.com/share?url=' + encodeURIComponent(urlToShare);
-    window.open(shareUrl, '_blank');
-  }
-});
+  // Add share event listeners for each button
+  addShareEventListener('share-button', 'https://medium.com/@celestegreeneblogs/1-in-5-people-in-the-us-have-an-std-something-must-be-done-e864473662f1', '1 in 5 People In The US Have An STI. Something Must Be Done.');
+  addShareEventListener('share-button2', 'https://medium.com/@abdullyr/1-in-4-college-students-has-an-sti-we-need-to-do-something-fb555bf7bf8b', '1 in 4 college students has an STI… We need to do something.');
+  addShareEventListener('share-button3', 'https://medium.com/@charlieeyny/sexually-transmitted-diseases-are-highest-in-the-lgbtq-community-674569e54634', 'Sexually transmitted diseases are highest in the LGBTQ community');
+  addShareEventListener('share-button4', 'https://medium.com/@celestegreeneblogs/the-std-epidemic-affecting-americas-youth-a7c88a74cd01', 'The STD Epidemic Affecting America’s Youth');
+  addShareEventListener('share-button5', 'https://medium.com/@celestegreeneblogs/effect-of-condom-availability-programs-509df6e28762', 'Effect of condom availability programs');
+  addShareEventListener('share-button6', 'https://medium.com/@charlieeyny/benefits-of-emergency-contraceptives-6be5e4277e5', 'Benefits of emergency contraceptives');
+  addShareEventListener('share-button7', 'https://medium.com/@abigailcohen/what-is-safechoice-c6dd7018d270', 'What is SafeChoice?');
+  addShareEventListener('share-button8', 'https://medium.com/@abigailcohen/safechoice-vending-machines-providing-convenient-access-to-condoms-for-college-students-e3520bd184d', 'SafeChoice Vending Machines: Providing Convenient Access to Condoms for College Students');
+  addShareEventListener('share-button9', 'https://medium.com/@abigailcohen/how-does-safechoice-support-feminism-479fb8a14dfc', 'How Does SafeChoice Support Feminism?');
+  addShareEventListener('share-button10', 'https://medium.com/@abigailcohen/the-surprising-benefits-of-condoms-protecting-your-health-and-more-54df1f3e591', 'The Surprising Benefits of Condoms: Protecting Your Health and More');
+  addShareEventListener('share-button11', 'https://medium.com/@abigailcohen/24-7-convenience-provided-only-by-safechoice-dfa2dd91e771', '24/7 Convenience Provided only by SafeChoice');
   
