@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Find our current Safe Choice vending machine locations. Visit a location near you to see our machine in action. ">
+        <meta name="keywords" content="Safe Choice, SafeChoice, safechoiceusa. safe choice usa, plan b, condoms, trojan, skyn, lyfestyle, contraceptive, vending machine, JavaScript, Web, Development, Kumala, Kumala Web Development, Daniel Eyny Web Developer, Daniel Eyny Kumala, Kumala Daniel Eyny, Kumala Website Development, statistics page, sex, college, dorms, students, health, sexual health, std, sexually transmitted disease, sti, sexually transmitted infection">
+        <meta name="author" content="Daniel Eyny">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="assets/img/SafeChoice.webp" type="image/x-icon">
+
+        <!--=============== REMIXICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=============== BOXICONS ===============-->
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+        <script src="https://kit.fontawesome.com/0043dc8ce8.js" crossorigin="anonymous"></script>
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>Safe Choice Locations</title>
+
+        <link rel="apple-touch-icon" href="assets/img/SafeChoice.webp">
+        
+
+        <meta name="theme-color" content="hsl(196, 60%, 91%)">
+        
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="yes">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    
+
+            <!-- Include Google Maps JavaScript library -->
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJ38qFz5u6N2KbmtQueqC3hfoav0T4mTA"></script>
+            
+            <!-- Include Google Maps Geocoding library -->
+            <script src="https://maps.googleapis.com/maps/api/geocode/js?key=AIzaSyDJ38qFz5u6N2KbmtQueqC3hfoav0T4mTA"></script>
+
+            <!-- Include Google Maps Places API library -->
+            <script src="https://maps.googleapis.com/maps/api/place/js?key=AIzaSyDJ38qFz5u6N2KbmtQueqC3hfoav0T4mTA"></script>
+
+            <!-- Include Google Maps Directions API library -->
+  <script src="https://maps.googleapis.com/maps/api/directions/js?key=AIzaSyDJ38qFz5u6N2KbmtQueqC3hfoav0T4mTA"></script>
+
+    </head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V3QE1KNP08"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-V3QE1KNP08');
+</script>
+
+
+    <body>
+        <div id="page-background" class="home__shape-bg"></div>
+
+        <div id="pageloader"></div>
+
+
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+           
+            <nav class="nav container" >
+                <a href="#" class="nav__logo">
+                    Safe<span>Choice</span>
+                </a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="articles.html" class="nav__link">Articles</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="locations.html" class="nav__link active-link">Locations</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="products.html" class="nav__link">Our Products</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="contact.html" class="nav__link">Contact</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav__close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+
+                    <img src="assets/img/greenleaf.webp" alt="Nav image" class="nav__img">
+                </div>
+
+                <!-- Toggle button -->
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </nav>
+        </header>
+
+        <!--==================== MAIN ====================-->
+        <main class="main">
+
+            <!--==================== HOME ====================-->
+
+            <div class="home__shape-small"></div>
+                <div class="home__shape-big"></div>
+
+
+
+
+                <section class="home-stats" id="home-stats">
+                    <div class="home__container-main-stats container-main-stats grid-main-stats">
+                        
+                        <video class="home__img-main-locations" autoplay loop muted playsinline>
+                            <source src="assets/img/gifusingvendingmachine.mp4" type="video/mp4">
+                          </video>
+
+                  
+                        <div class="home__data-main-stats">
+                            <h1 class="home__title-main-stats"> <br> <span class="home-title-span-stats">Our Locations </span></h1>
+                            <p class="home__description-main-stats">
+                                Check out our &nbsp;<a href="#" class="nav__logo"> Safe<span>Choice</span> </a> &nbsp;  vending machine locations using the map below! See all of our currently available machines and click the location nearest to you to generate directions.
+                            </p>
+                            <a href="#locationsmap" class="button-main-stats">About Us</a>
+                        </div>
+                    </div>
+                  </section>
+
+                
+<!--=============== End of Home ===============-->
+
+
+
+
+
+
+<br/><br/><br/>
+<div id="locationsmap"></div>
+<br/><br/>
+
+<div class="reachout__content">
+    <div class="reachout__data">
+        <span class="section__subtitle">Find Us</span>
+        <h2 class="section__title">
+            Our Available Locations<span>.</span>
+        </h2>
+        <p class="location__description">
+            We currently have  <span class="location__quicklink"> 5 </span> active Safe Choice vending machines. See all of our currently available machines and click the location nearest to you to generate directions.
+        </p>
+    </div>
+    </div>
+
+
+    <br/><br/><br/>
+    
+<div id="map"></div>
+
+
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+
+
+
+
+<!--==================== reachout ====================-->
+<section class="reachout section__reachout" id="reachout">
+    <div class="reachout__container container__reachout grid__reachout">
+        <div class="reachout__images">
+            <div class="reachout__orbe"></div>
+
+            <div class="reachout__img">
+                <img src="assets/img/studentsstudying.webp" alt="a group of students studying">
+            </div>
+        </div>
+
+        <div class="reachout__content">
+            <div class="reachout__data">
+                <span class="section__subtitle">Contact Us</span>
+                <h2 class="section__title">
+                    Easy to reach out to us<span>.</span>
+                </h2>
+                <p class="reachout__description">
+                    Reach out to us using our quick links below or head over to our <a class="reachout__quicklink" href="contact.html"> contact page </a> to use our contact form or to request a product.
+                </p>
+            </div>
+
+            <div class="reachout__card">
+
+
+                <div class="reachout__card-box">
+                    <div class="reachout__card-info">
+                        <i class='bx bxs-envelope'></i>
+                        
+                        <div>
+                            <h3 class="reachout__card-title">
+                                Email
+                            </h3>
+                            <p class="reachout__card-description">
+                                SafeChoiceUSA
+                            </p>
+                        </div>
+                    </div>
+                    <a href="mailto:safechoiceusa@gmail.com">
+                        <button class="button-reachout reachout__card-button">
+                            Write Us Now
+                        </button>
+                    </a> 
+                </div>
+
+
+
+                <div class="reachout__card-box">
+                    <div class="reachout__card-info">
+                        <i class='bx bxs-phone-call'></i>
+                        
+                        <div>
+                            <h3 class="reachout__card-title">
+                                Call
+                            </h3>
+                            <p class="reachout__card-description">
+                                (646) 418-9226
+                            </p>
+                        </div>
+                    </div>
+                    <a href="tel:6464189226">
+                        <button class="button-reachout reachout__card-button">
+                            Call Now
+                        </button>
+                    </a>
+                </div>
+             
+
+                <div class="reachout__card-box">
+                    <div class="reachout__card-info">
+                        <i class='fab fa-instagram' ></i>
+                        
+                        <div>
+                            <h3 class="reachout__card-title">
+                                Follow Us
+                            </h3>
+                            <p class="reachout__card-description">
+                                SafeChoiceUSA
+                            </p>
+                        </div>
+                    </div>
+                    <a href="https://www.instagram.com/safechoiceusa/?hl=en">
+                        <button class="button-reachout reachout__card-button">
+                            Follow Now
+                        </button>
+                    </a>
+                </div>
+
+                
+
+                <div class="reachout__card-box">
+                    <div class="reachout__card-info">
+                        <i class='bx bxs-message-rounded-dots' ></i>
+                        
+                        <div>
+                            <h3 class="reachout__card-title">
+                                Request
+                            </h3>
+                            <p class="reachout__card-description">
+
+                            </p>
+                        </div>
+                    </div>
+                    <a href="contact.html#request">
+                    <button class="button-reachout reachout__card-button">
+                        Go To Form
+                    </button>
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+      <!--==================== FOOTER ====================-->
+      <footer class="footer section-main">
+        <div class="footer__container container-main grid-main">
+            <div>
+                <a class="footer__logo">
+                    <img src="assets/img/SafeChoice.webp" alt="safe choice footer logo" class="footer__logo-img"> 
+                        Safe<span>Choice</span>
+                </a>
+
+                
+            </div>
+
+            <div>
+                <h3 class="footer__title">Our Pages</h3>
+
+                <ul class="footer__links">
+                  <li>
+                    <a href="index.html" class="footer__link">Home</a>
+                </li>
+                    
+                    <li>
+                        <a href="articles.html" class="footer__link">Articles</a>
+                    </li>
+                    <li>
+                        <a href="products.html" class="footer__link">Products</a>
+                    </li>
+                   
+                    <li>
+                        <a href="contact.html" class="footer__link">Contact</a>
+                    </li>
+                   
+                    
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="footer__title">Our Sections</h3>
+
+                <ul class="footer__links">
+                    
+                    <li>
+                        <a href="index.html#about" class="footer__link">What We Do</a>
+                    </li>
+                    <li>
+                        <a href="index.html#whatweprovide" class="footer__link">What We Provide</a>
+                    </li>
+                    <li>
+                        <a href="index.html#specialty" class="footer__link">Why We Do It</a>
+                    </li>
+                    <li>
+                      <a href="index.html#ourpartners" class="footer__link">Our Partners</a>
+                  </li>
+                    <li>
+                      <a href="products.html#blog" class="footer__link">Products</a>
+                  </li>
+                    <li>
+                      <a href="contact.html#faqs" class="footer__link">FAQ</a>
+                  </li>
+                    <li>
+                      <a href="contact.html#request" class="footer__link">Request A Machine</a>
+                  </li>
+                    
+                    
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="footer__title">Our Socials</h3>
+
+              
+                  <div class="social-icons">
+                    <a target="_blank" href="https://www.tiktok.com/@safechoiceusa">
+                      <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a target="_blank" href="https://www.instagram.com/safechoiceusa/?hl=en">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a target="_blank" href="https://www.linkedin.com/company/safechoiceusa/">
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a target="_blank" href="https://twitter.com/SafeChoiceUSA">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+            
+
+
+
+
+        </div>
+
+        <span class="footer__copy">&#169; Eyny. All rights reserved</span>
+    </footer>
+
+
+
+
+
+        </main>
+
+
+        
+        
+
+        <script>
+            var loader = document.getElementById("pageloader");
+          
+            window.addEventListener("load", function(){
+              loader.style.display = "none";
+            })
+          </script>
+
+
+
+
+     
+        
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/maps.js"></script>
+    </body>
+</html>
