@@ -1043,6 +1043,8 @@ width: 100px;
 
 
 
+
+
 .blog__card{
   border: .11px solid whitesmoke ;
   background-color: whitesmoke;
@@ -1120,7 +1122,8 @@ width: 100px;
 }
 
 .blog__footer, 
-.blog__reaction {
+.blog__reaction,
+.blog__reaction-share {
   display: flex;
   align-items: center;
 }
@@ -1129,8 +1132,12 @@ width: 100px;
   column-gap: 1.5rem;
 }
 
+.blog__reaction-share {
+  column-gap: 7rem;
+}
+
 .blog__reaction {
-  column-gap: .25rem;
+  column-gap: .35rem;
 }
 
 .blog__reaction i {
@@ -1138,6 +1145,14 @@ width: 100px;
 }
 
 .blog__reaction span {
+  font-size: var(--small-font-size);
+  cursor: pointer;
+}
+.blog__reaction-share i {
+  font-size: 1.25rem;
+}
+
+.blog__reaction-share span {
   font-size: var(--small-font-size);
   cursor: pointer;
 }
@@ -2757,6 +2772,10 @@ input:-webkit-autofill:active {
   .request {
     margin-top: 150px;
     margin-bottom: 120px;
+  }
+
+  .blog__reaction-share {
+    column-gap: 1rem;
   }
 
 

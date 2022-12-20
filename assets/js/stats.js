@@ -614,3 +614,56 @@
    /*=============== Copy Link - End ===============*/
   
 
+// Get the share button
+var shareButton = document.getElementById('share-button');
+  
+// Add a click event listener to the button
+shareButton.addEventListener('click', function() {
+  // Specify the URL that you want to share
+  var urlToShare = 'https://medium.com/@celestegreeneblogs/1-in-5-people-in-the-us-have-an-std-something-must-be-done-e864473662f1';
+
+  // Use the Web Share API (if it's available) to share the URL
+  if (navigator.share) {
+    navigator.share({
+      title: '1 in 5 People In The US Have An STI. Something Must Be Done.',
+      url: urlToShare
+    }).then(function() {
+      console.log('Thanks for sharing!');
+    })
+    .catch(function(error) {
+      console.log('Error sharing:', error);
+    });
+  } else {
+    // If the Web Share API is not available, fall back to a URL-based approach
+    var shareUrl = 'https://twitter.com/share?url=' + encodeURIComponent(urlToShare);
+    window.open(shareUrl, '_blank');
+  }
+});
+  
+
+// Get the share button
+var shareButton2 = document.getElementById('share-button2');
+  
+// Add a click event listener to the button
+shareButton2.addEventListener('click', function() {
+  // Specify the URL that you want to share
+  var urlToShare = 'https://medium.com/@abdullyr/1-in-4-college-students-has-an-sti-we-need-to-do-something-fb555bf7bf8b';
+
+  // Use the Web Share API (if it's available) to share the URL
+  if (navigator.share) {
+    navigator.share({
+      title: '1 in 4 college students has an STI… We need to do something.',
+      url: urlToShare
+    }).then(function() {
+      console.log('Thanks for sharing!');
+    })
+    .catch(function(error) {
+      console.log('Error sharing:', error);
+    });
+  } else {
+    // If the Web Share API is not available, fall back to a URL-based approach
+    var shareUrl = 'https://twitter.com/share?url=' + encodeURIComponent(urlToShare);
+    window.open(shareUrl, '_blank');
+  }
+});
+  
