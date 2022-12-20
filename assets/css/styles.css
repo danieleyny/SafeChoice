@@ -2775,7 +2775,7 @@ input:-webkit-autofill:active {
   }
 
   .blog__reaction-share {
-    column-gap: 1rem;
+    column-gap: .5rem;
   }
 
 
