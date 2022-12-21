@@ -1,6 +1,7 @@
 var directionsService = new google.maps.DirectionsService();
 var directionsRenderer = new google.maps.DirectionsRenderer();
 
+
 function initMap() {
   // Create the map
   var map = new google.maps.Map(document.getElementById('map'), {
@@ -9,10 +10,17 @@ function initMap() {
   });
 
   // Add a marker to the map
-var marker1 = new google.maps.Marker({
+  var marker1 = new google.maps.Marker({
     position: {lat: 40.79816525932935, lng: -73.96851680216488},
     map: map,
+    icon: new google.maps.MarkerImage(
+      'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=%E2%80%A2|' + 'daeef6',
+      new google.maps.Size(21, 34),
+      new google.maps.Point(0,0),
+      new google.maps.Point(10, 34)
+    )
   });
+  
 
   
   // Add another marker to the map
