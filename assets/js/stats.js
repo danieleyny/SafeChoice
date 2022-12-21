@@ -612,6 +612,10 @@
 
 
    /*=============== Copy Link - End ===============*/
+
+
+
+   
    function addShareEventListener(buttonId, urlToShare, title) {
     // Get the share button
     var shareButton = document.getElementById(buttonId);

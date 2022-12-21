@@ -2,11 +2,19 @@ var directionsService = new google.maps.DirectionsService();
 var directionsRenderer = new google.maps.DirectionsRenderer();
 
 function initMap() {
-  // Create the map
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 11.5,
-    center: {lat: 40.7977815, lng: -73.9711954}
+  // Get the user's current location
+  navigator.geolocation.getCurrentPosition(function(position) {
+    var lat = position.coords.latitude;
+    var lng = position.coords.longitude;
+    // Create the map
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 11.5,
+      center: {lat: lat, lng: lng}
+    });
+    // Add the markers and event listeners as before
   });
+}
+
 
   // Add a marker to the map
 var marker1 = new google.maps.Marker({
