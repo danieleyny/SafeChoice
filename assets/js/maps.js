@@ -1,19 +1,19 @@
 var directionsService = new google.maps.DirectionsService();
 var directionsRenderer = new google.maps.DirectionsRenderer();
+var map; // Declare the map variable in the global scope
 
 function initMap() {
   // Get the user's current location
   navigator.geolocation.getCurrentPosition(function(position) {
     var lat = position.coords.latitude;
     var lng = position.coords.longitude;
-    // Create the map
-    var map = new google.maps.Map(document.getElementById('map'), {
+    // Initialize the map
+    map = new google.maps.Map(document.getElementById('map'), {
       zoom: 11.5,
       center: {lat: lat, lng: lng}
     });
     // Add the markers and event listeners as before
-  });
-}
+
 
 
   // Add a marker to the map
