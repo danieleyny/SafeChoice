@@ -170,60 +170,78 @@ function getDirections(origin, destination) {
   });
 }
 
-window.addEventListener('load', initMap);
 
 
 
-// Add an event listener to the form's submit event
-document.getElementById('zip-code-form').addEventListener('submit', function(event) {
+function sortMarkersByDistance(zipCode) {
+  // Convert the zip code to latitude and longitude coordinates using the Geocoder API
+  var geocoder = new google.maps.Geocoder();
+  geocoder.geocode({ address: zipCode }, function(results, status) {
+    if (status === 'OK') {
+      var zipLatLng = results[0].geometry.location;
+
+      // Calculate the distance between the zip code and each marker
+      markers.forEach(function(marker) {
+        var markerLatLng = marker.getPosition();
+        marker.distance = getDistance(zipLatLng, markerLatLng);
+      });
+
+      // Sort the markers by distance
+      markers.sort(function(a, b) {
+        return a.distance - b.distance;
+      });
+    } else {
+      // If the Geocoder API returns an error, display an error message
+      alert('Error: ' + status);
+    }
+  });
+}
+
+// Haversine formula to calculate the distance between two points on a sphere
+function getDistance(latLng1, latLng2) {
+  var earthRadius = 6371; // Radius of the Earth in kilometers
+  var lat1 = latLng1.lat();
+  var lng1 = latLng1.lng();
+  var lat2 = latLng2.lat();
+  var lng2 = latLng2.lng();
+  var dLat = toRadians(lat2 - lat1);
+  var dLng = toRadians(lng2 - lng1);
+  var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+          Math.cos(toRadians(lat1)) * Math.cos(toRadians(lat2)) *
+          Math.sin(dLng / 2) * Math.sin(dLng / 2);
+  var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  var distance = earthRadius * c; // Distance in kilometers
+  return distance;
+}
+
+function toRadians(degrees) {
+  return degrees * (Math.PI / 180);
+}
+
+
+
+
+// Get the form element
+var form = document.getElementById('zip-form');
+
+// Add a submit event listener to the form
+form.addEventListener('submit', function(event) {
+  // Prevent the default form submission behavior
   event.preventDefault();
 
-  // Get the user's zip code from the form
-  var zipCode = document.getElementById('zip-code').value;
+  // Get the zip code from the form input
+  var zipCode = document.getElementById('zip-input').value;
 
-  // Send an HTTP request to a server-side script or API endpoint with the user's zip code as a parameter
-  fetch('/api/markers?zipCode=' + zipCode)
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(markers) {
-      // Display the list of markers to the user
-      displayMarkers(markers);
-    });
+  // Sort the markers by distance from the zip code
+  sortMarkersByDistance(zipCode);
 });
 
 
 
-function displayMarkers(markers) {
-  // Clear any existing markers from the map
-  clearMarkers();
 
-  // Add the markers to the map
-  markers.forEach(function(marker) {
-    addMarker(marker);
-  });
-}
 
-function addMarker(marker) {
-  // Create a new marker on the map
-  var mapMarker = new google.maps.Marker({
-    position: {lat: marker.lat, lng: marker.lng},
-    map: map
-  });
 
-  // Add the marker to the list of markers
-  markers.push(mapMarker);
-}
-
-function clearMarkers() {
-  // Remove the markers from the map
-  markers.forEach(function(marker) {
-    marker.setMap(null);
-  });
-
-  // Clear the list of markers
-  markers = [];
-}
+window.addEventListener('load', initMap);
 
 
 
