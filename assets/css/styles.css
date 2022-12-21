@@ -1174,6 +1174,10 @@ width: 100px;
   border-radius: 15px;
 }
 
+#zip-code-form {
+  position: relative;
+}
+
 #map:hover {
   box-shadow: 0 10px 26px rgba(38, 38, 39, 0.392);
   transition: .3s;
