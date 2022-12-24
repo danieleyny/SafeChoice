@@ -1,7 +1,7 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Lemon&family=Open+Sans:wght@400;600&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
@@ -1354,12 +1354,26 @@ width: 100px;
   box-shadow: 0 6px 24px hsla(244, 75%, 48%, .5);
   margin-bottom: 1rem;
   cursor: pointer;
+  border: 1px solid black;
+}
+.login__button:hover {
+  background:hsla(244, 16%, 92%, .6);
+  color: hsl(244, 75%, 57%);
+  border: 1px solid hsl(244, 75%, 57%);
 }
 
 .login__button-ghost {
   background: hsla(244, 16%, 92%, .6);
-  border: 2px solid hsl(244, 75%, 57%);
+  border: 1px solid hsl(244, 75%, 57%);
   color: hsl(244, 75%, 57%);
+  box-shadow: none;
+}
+.login__button-ghost:hover {
+  background: linear-gradient(180deg, 
+  hsl(244, 75%, 57%), 
+  hsl(249, 64%, 47%));
+  border: 1px solid black;
+  color: #fff;
   box-shadow: none;
 }
 
@@ -1406,6 +1420,7 @@ width: 100px;
     justify-self: flex-end;
     margin-right: 4.5rem;
   }
+  
 }
 
 @media screen and (min-width: 1200px) {
@@ -1441,7 +1456,7 @@ width: 100px;
     margin-bottom: 1.25rem;
   }
   .login__button-ghost {
-    border: 2.5px solid hsl(244, 75%, 57%);
+    border: 1px solid hsl(244, 75%, 57%);
   }
 }
 
@@ -1496,6 +1511,10 @@ width: 100px;
     margin: auto;
 }
 
+.login__form{
+  background-color: hsla(244, 16%, 92%, .6);
+}
+
 .home__img-main-locations {
   width: 280px;
   justify-self: center;
@@ -1524,10 +1543,196 @@ width: 100px;
   }
 }
 
-
-
-
 /*=============== Our Locations Test End ===============*/
+
+
+/*=============== Home - Portals ===============*/
+.container-portals {
+  max-width: 1024px;
+  margin-inline: 1.5rem;
+}
+
+.grid-portals {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section-portals {
+  padding-block: 5rem 1.5rem;
+}
+
+.section__title-portals {
+  font-size: 1.5rem;
+  font-family: 'Butcherman', cursive;;
+  font-weight: initial;
+  line-height: 130%;
+  color: var(--first-color);
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+
+.home-portals {
+  position: relative;
+  margin-top: -40px;
+}
+
+.home__container-portals {
+  padding-top: 3.5rem;
+}
+
+.home__data-portals {
+  text-align: center;
+}
+
+.home__title-portals {
+  position: relative;
+  font-size: 20px;
+  line-height: 140%;
+  width: max-content;
+  margin: 0 auto .5rem;
+}
+
+.home__title-portals span {
+  display: block;
+  font-family: 'Oswald', sans-serif;
+  font-weight: initial;
+  color: var(--first-color);
+  font-size: 35px;
+  margin-top: 12px;
+  margin-bottom: 40px;
+
+}
+
+.home__title-img-1, 
+.home__title-img-2 {
+  width: 40px;
+  position: absolute;
+}
+
+.home__title-img-1 {
+  top: -2rem;
+  left: -6.5rem;
+  transform: rotate(-15deg);
+  animation: animate-star-1 5s infinite ease-in-out;
+}
+
+.home__title-img-2 {
+  bottom: 2.5rem;
+  right: -3.5rem;
+  transform: rotate(15deg);
+  animation: animate-star-2 5s infinite ease-in-out;
+}
+
+.home__description-portals {
+  margin-bottom: 2.5rem;
+}
+
+.home__img-portals {
+  width: 300px;
+  justify-self: center;
+  margin-top: 1.5rem;
+}
+
+.home__tree-1, 
+.home__tree-2 {
+  width: 120px;
+  position: absolute;
+  top: 18rem;
+}
+
+.home__tree-1 {
+  left: -2rem;
+  margin-top: -2rem;
+  animation: animate-star-1 4s infinite ease-in-out;
+
+}
+
+.home__tree-2 {
+  right: -2rem;
+  margin-top: 7rem;
+  animation: animate-star-2 3.5s infinite ease-in-out;
+
+}
+
+.button-portals {
+  display: inline-block;
+  background-color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 4rem;
+  color: var(--first-color);
+  font-weight: 600;
+  transition: background .3s, color .3s;
+}
+
+.button-portals:hover {
+  background-color: var(--first-color);
+  color: #fff;
+}
+
+.shape__small, 
+.shape__big {
+  position: absolute;
+  background-color: var(--first-color);
+  border-radius: 50%;
+  filter: blur(96px);
+  z-index: -1;
+}
+
+.shape__small {
+  width: 150px;
+  height: 150px;
+}
+
+.shape__big {
+  width: 250px;
+  height: 250px;
+  opacity: .8;
+}
+
+/* Star animation */
+@keyframes animate-star-1 {
+  0% {
+    transform: scale(.7) rotate(-15deg);
+    opacity: .2;
+  }
+  50% {
+    transform: scale(1) rotate(-15deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(.7) rotate(-15deg);
+    opacity: .2;
+  }
+}
+
+@keyframes animate-star-2 {
+  0% {
+    transform: scale(1) rotate(15deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(.7) rotate(15deg);
+    opacity: .2;
+  }
+  100% {
+    transform: scale(1) rotate(15deg);
+    opacity: 1;
+  }
+}
+
+.home-portals .shape__small {
+  top: -3rem;
+  left: -3rem;
+}
+
+.home-portals .shape__big {
+  bottom: 5rem;
+  right: -10rem;
+}
+/*=============== Home End - Portals ===============*/
+
+
 
 
 /*=============== Our Machines ===============*/
@@ -3061,6 +3266,43 @@ input:-webkit-autofill:active {
     column-gap: .7rem;
   }
 
+  .container-portals {
+    margin-inline: 1rem;
+  }
+
+  .home__title-portals {
+    font-size: 1.5rem;
+  }
+
+  
+  
+  .home__title-img-1 {
+    top: 0rem;
+    left: -2.5rem;
+    transform: rotate(85deg);
+  }
+
+  .home__title-img-2 {
+    bottom: 4rem;
+    right: -3rem;
+    transform: rotate(35deg);
+  }
+  
+  .home__tree-1 {
+    left: -3rem;
+    margin-top: 35px;
+  }
+  .home__tree-2 {
+    right: -2rem;
+    margin-top: 350px;
+
+  }
+
+  .home__img-portals {
+    width: 400px;
+    margin-top: -35px;
+  }
+
 
   
 }
@@ -3119,6 +3361,16 @@ input:-webkit-autofill:active {
   margin-top: 50px;
   margin-bottom: 150px;
 }
+
+.home__tree-1,
+.home__tree-2 {
+    width: 200px;
+  }
+
+  .home__container-portals{
+    grid-template-columns: .6fr;
+    justify-content: center;
+  }
 
 
 }
@@ -3198,6 +3450,14 @@ input:-webkit-autofill:active {
   margin-left: 400px;
   position: absolute;
   }
+
+  .section-portals {
+    padding-block: 7rem 1.5rem;
+  }
+  .section__title-portals {
+    margin-bottom: 4rem;
+  }
+
 
 }
 
@@ -3318,6 +3578,44 @@ input:-webkit-autofill:active {
   padding-right: 6rem;
 }
 
+}
+
+@media screen and (min-width: 1024px) {
+  .container-portals {
+    margin-inline: auto;
+  }
+  .home__title-img-1, 
+  .home__title-img-2 {
+    width: 60px;
+  }
+  .home__title-img-2 {
+    bottom: 4.75rem;
+  }
+  .home__description-portals {
+    padding: 0 7.5rem;
+  }
+  .home__tree-1, 
+  .home__tree-2 {
+    width: 300px;
+    top: 14rem;
+  }
+  .home__img-portals {
+    width: 400px;
+    margin-top: -50px;
+  }
+  .shape__small,
+  .shape__big {
+    filter: blur(132px);
+    opacity: .5;
+  }
+  .shape__small {
+    width: 350px;
+    height: 350px;
+  }
+  .shape__big {
+    width: 450px;
+    height: 450px;
+  }
 }
 
 /* For large devices */

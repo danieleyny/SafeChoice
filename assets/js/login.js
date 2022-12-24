@@ -4,8 +4,8 @@ function checkLogin() {
     var password = document.getElementById("password").value;
   
     // Check the entered credentials against a set of predefined login credentials and URLs
-    if (username == "user1" && password == "pass1") {
-      window.location.href = "http://www.google.com";
+    if (username == "test" && password == "test") {
+      window.location.href = "/portals/columbia.html";
     } else if (username == "user2" && password == "pass2") {
       window.location.href = "http://www.example2.com";
     } else if (username == "user3" && password == "pass3") {
