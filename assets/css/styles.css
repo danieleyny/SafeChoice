@@ -1742,6 +1742,61 @@ width: 100px;
 
 
 /*=============== Supported Club Slider - Portals ===============*/
+.overlay-comingsoon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(255,164,216);
+  background: radial-gradient(circle, rgba(255,164,216,1) 0%, rgba(151,216,255,1) 100%);
+  border-radius: 25px;
+  filter: blur(1px);
+}
+
+.overlay-comingsoon::after {
+  content: 'Coming Soon';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  font-weight: 500;
+  text-align: center;
+}
+.overlay-comingsoon1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(255,164,216);
+  background: radial-gradient(circle, rgba(255,164,216,1) 0%, rgba(151,216,255,1) 100%);
+  border-radius: 25px;
+  filter: blur(1px);
+}
+
+
+.card-image-comingsoon{
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: transparent;
+  padding: 3px;
+}
+.card-image-comingsoon .card-img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid transparent;
+}
+
+
 .slide-container{
   max-width: 1120px;
   width: 100%;
@@ -1758,6 +1813,7 @@ width: 100px;
 .card{
   border-radius: 25px;
   background-color: #FFF;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 .image-content,
 .card-content{
@@ -2067,6 +2123,27 @@ width: 100px;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*=============== Our Machines ===============*/
 
 #more, #more2, #more3, #more4, #more5, #more6, #more7, #more8, #more9, #more10, #more11, #more12, #more13, #more14, #more15, #more16, #more17, #more18  {display: none;}
@@ -2329,6 +2406,19 @@ border: .5px solid #9cd1f5;
   z-index: 15;
 }
 
+.availability__modal {
+  position: fixed;
+  inset: 0;
+  background-color: hsla(var(--second-hue), 28%, 16%, 0.7);
+  padding: 2rem 1rem;
+  display: grid;
+  place-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: .4s;
+  z-index: 15;
+}
+
 .services__modal-content {
   position: relative;
   background-color: var(--body-color);
@@ -2364,8 +2454,15 @@ border: .5px solid #9cd1f5;
   display: flex;
   align-items: flex-start;
   column-gap: .5rem;
+  align-items: center;
 }
 
+
+.services__modal-icon-green {
+  font-size: 1.5rem;
+  color: rgb(31, 209, 31);
+  cursor: default;
+}
 
 .services__modal-icon {
   font-size: 1.5rem;
@@ -2391,6 +2488,15 @@ border: .5px solid #9cd1f5;
 }
 
 .services__modal-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--title-color);
+  cursor: pointer;
+}
+
+.availability__modal-close {
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;

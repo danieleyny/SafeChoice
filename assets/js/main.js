@@ -79,7 +79,7 @@
                       modalClose2 = document.querySelectorAll('.services__modal-close')
 
                 let modal2 = function(modalClick){
-                    modalViews[modalClick].classList.add('active-modal')
+                    modalViews2[modalClick].classList.add('active-modal')
                     document.querySelector('body').classList.add('no-scroll');
                 }
 
@@ -92,6 +92,32 @@
                 modalClose2.forEach((mc) =>{
                   mc.addEventListener('click', () =>{
                     modalViews2.forEach((mv) =>{
+                      mv.classList.remove('active-modal')
+                      document.querySelector('body').classList.remove('no-scroll');
+                    })
+                  })
+                })
+
+
+                /*=============== Products MODAL ===============*/
+                const modalViews3 = document.querySelectorAll('.availability__modal'),
+                      modalBtns3 = document.querySelectorAll('.availability__button'),
+                      modalClose3 = document.querySelectorAll('.availability__modal-close')
+
+                let modal3 = function(modalClick){
+                    modalViews3[modalClick].classList.add('active-modal')
+                    document.querySelector('body').classList.add('no-scroll');
+                }
+
+                modalBtns3.forEach((mb, i) =>{
+                  mb.addEventListener('click', () =>{
+                    modal3(i)
+                  })
+                })
+
+                modalClose3.forEach((mc) =>{
+                  mc.addEventListener('click', () =>{
+                    modalViews3.forEach((mv) =>{
                       mv.classList.remove('active-modal')
                       document.querySelector('body').classList.remove('no-scroll');
                     })
