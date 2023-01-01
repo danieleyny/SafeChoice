@@ -513,29 +513,6 @@ img {
 }
 
 
-#pollForm label {
-  display: inline-block;
-  margin-right: 20px;
-}
-
-#pollForm img {
-  width: 200px;
-  height: 200px;
-  border: 2px solid #ccc;
-}
-
-.result {
-  display: inline-block;
-  margin-right: 20px;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-#pollForm {
-  position: relative;
-}
-
-
 /*=============== HOME ===============*/
 .home,
 .home__container{
@@ -1599,7 +1576,7 @@ width: 100px;
 
 .home-portals {
   position: relative;
-  margin-top: -40px;
+  margin-top: -60px;
 }
 
 .home__container-portals {
@@ -2139,6 +2116,19 @@ width: 100px;
   }
 }
 /*=============== Neon Cards - Portals End ===============*/
+
+
+/*=============== Voting Poll - Portals ===============*/
+.votingpoll {
+  width: 700px;
+  height: 750px;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+}
+
+
+/*=============== Voting Poll - Portals End ===============*/
 
 
 
@@ -3777,7 +3767,13 @@ input:-webkit-autofill:active {
     margin-bottom: 45px; 
   }
 
-  
+  .votingpoll {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+  }
   
 }
 

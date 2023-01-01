@@ -560,6 +560,3 @@ function myMoreInfoBtn18() {
 
 
 
-
-
-
