@@ -228,6 +228,25 @@ img {
   color: var(--first-color);
 }
 
+
+.nav__link-login {
+  font-weight: 600;
+  transition: .4s;
+  border: 1px solid var(--first-color);
+  border-radius: 130px;
+  padding: 13px 23px 13px 23px ;
+  background-color: var(--first-color);
+  color: white;
+}
+
+.nav__link-login:hover {
+  background-color: #3197db;
+  color: white;
+  border: 1px solid var(--first-color);
+}
+
+
+
 .nav__close {
   position: absolute;
   top: 1rem;
@@ -252,6 +271,12 @@ img {
 .active-link {
   color: var(--first-color);
 }
+.active-link-login {
+  color: var(--first-color);
+  background-color: white;
+  border: 1px solid white;
+}
+
 
 
 
@@ -883,7 +908,6 @@ img {
   border-radius: 3rem;
   transition: .3s;
   position: relative;
-  
 }
 
 .button-celebrate:hover {
@@ -1343,7 +1367,6 @@ width: 100px;
 }
 
 .login__button {
-  width: 100%;
   padding: 14px 2rem;
   border-radius: 6px;
   background: linear-gradient(180deg, 
