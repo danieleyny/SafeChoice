@@ -230,19 +230,20 @@ img {
 
 
 .nav__link-login {
-  font-weight: 600;
+  font-weight: 900;
   transition: .4s;
-  border: 1px solid var(--first-color);
-  border-radius: 130px;
-  padding: 13px 23px 13px 23px ;
-  background-color: var(--first-color);
-  color: white;
+  border: 1.3px solid var(--first-color);
+  border-radius: 200px;
+  padding: 10px 23px 10px 23px ;
+  background-color: transparent;
+  color: var(--first-color);
 }
 
 .nav__link-login:hover {
   background-color: #3197db;
   color: white;
-  border: 1px solid var(--first-color);
+  border: 1.3px solid var(--first-color);
+
 }
 
 
