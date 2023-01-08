@@ -232,17 +232,17 @@ img {
 .nav__link-login {
   font-weight: 900;
   transition: .4s;
-  border: 1.3px solid var(--first-color);
+  border: 1.3px solid #3197db;
   border-radius: 200px;
   padding: 10px 23px 10px 23px ;
-  background-color: transparent;
-  color: var(--first-color);
+  background-color: #3197db;
+  color: white;
 }
 
 .nav__link-login:hover {
-  background-color: #3197db;
+  background-color: #3180b6;
   color: white;
-  border: 1.3px solid var(--first-color);
+  border: 1.3px solid white;
 
 }
 
