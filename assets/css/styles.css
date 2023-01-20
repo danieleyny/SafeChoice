@@ -11,7 +11,7 @@
   --hue: 112;
 
   --first-color: #38afff;
-  --first-color-alt: hsl(204, 94%, 52%);
+  --first-color-alt: #129cf8;
   --title-color: hsl(233, 32%, 15%);
   --text-color: hsl(233, 4%, 35%);
   --body-color: #daeef6;
@@ -1416,6 +1416,12 @@ width: 100px;
   .login__buttons {
     flex-direction: column;
   }
+  .join__img {
+    width: 100px;
+  }
+  .join-section {
+    padding: 3.5rem 0 1rem;
+  }
 }
 
 /* For medium devices */
@@ -1973,6 +1979,83 @@ width: 100px;
   }
 }
 /*=============== Supported Club Slider - Portals End ===============*/
+
+
+
+
+
+/*=============== Join Group - Portals ===============*/
+
+
+/*=============== join ===============*/
+.join-section {
+  padding: 4.5rem 0 1rem;
+  position: relative;
+}
+
+.join-button-link {
+color: white;
+background-color: #000000;
+border-radius: 25px;
+border: 1px solid black;
+padding: 8px 16px;
+font-size: 16px;
+margin-top: 10px;
+}
+
+.join-section__title, .join-section__title-center {
+  font-size: 1.7rem;
+  color: hsl(200, 4%, 15%);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+
+.join-container {
+  max-width: 968px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.join-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.join__container {
+  padding-top: 1rem;
+}
+
+.join__data {
+  display: grid;
+  row-gap: 1rem;
+  background-color: #FFF;
+  box-shadow: 0px 2px 6px hsla(45, 100%, 15%, 0.15);
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  transition: .6s;
+}
+
+.join__data:hover {
+  box-shadow: 0px 9px 25px hsla(200, 100%, 15%, 0.15);
+
+}
+
+.join__img {
+  width: 135px;
+  justify-self: center;
+  margin-bottom: .5rem;
+}
+
+
+/*=============== Join Group - Portals End ===============*/
+
+
+
+
+
+
 
 
 /*=============== Neon Cards - Portals ===============*/
@@ -3833,6 +3916,10 @@ input:-webkit-autofill:active {
     margin-right: 13px;
   
   }
+
+  .join-section {
+    padding: 6.5rem 0 2rem;
+}
   
 }
 
@@ -3850,6 +3937,10 @@ input:-webkit-autofill:active {
   .services__container {
     grid-template-columns: repeat(2, 200px);
     justify-content: center;
+  }
+
+  .join__container {
+    grid-template-columns: repeat(2, 1fr);
   }
 
 
@@ -3987,6 +4078,9 @@ input:-webkit-autofill:active {
     margin-bottom: 4rem;
   }
 
+  .join-section {
+    padding: 6rem 0 2rem;
+  }
 
 }
 
@@ -4107,6 +4201,10 @@ input:-webkit-autofill:active {
   padding-right: 6rem;
 }
 
+.join__container {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 }
 
 @media screen and (min-width: 1024px) {
@@ -4144,6 +4242,11 @@ input:-webkit-autofill:active {
   .shape__big {
     width: 450px;
     height: 450px;
+  }
+
+  .join-container {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
