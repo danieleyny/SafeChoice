@@ -151,6 +151,17 @@
 
 
 
+                TweenMax.from('.home__liquid',1.4, {delay: .7, opacity: 0, y: 200,ease: Expo.easeInOut})
+                TweenMax.from('.home__juice-animate', 2.5, {delay: 1.1, opacity: 0, y: -800,ease: Expo.easeInOut})
+                TweenMax.from('.home__apple1', 3.8, {delay: 1.5,opacity: 0,y: -800,ease: Expo.easeInOut})
+                TweenMax.from('.home__apple2', 4.5, {delay: 1.6,opacity: 0,y: -800,ease: Expo.easeInOut})
+                TweenMax.from('.home__leaf:nth-child(1)', 6, {delay: 1.3,opacity: 0,y: -800,ease: Expo.easeInOut})
+                TweenMax.from('.home__leaf:nth-child(2)', 7, {delay: 1.4,opacity: 0,y: -800,ease: Expo.easeInOut})
+                TweenMax.from('.home__leaf:nth-child(3)', 8.5, {delay: 1.5,opacity: 0,y: -800,ease: Expo.easeInOut})
+                TweenMax.from('.home__leaf:nth-child(4)', 8, {delay: 1.6,opacity: 0,y: -800,ease: Expo.easeInOut})
+                TweenMax.from('.home__leaf:nth-child(5)', 9.5, {delay: 1.7,opacity: 0,y: -800,ease: Expo.easeInOut})
+                TweenMax.from('.home__leaf:nth-child(6)', 9.5, {delay: 1.8,opacity: 0,y: -800,ease: Expo.easeInOut})
+
 
 
 
