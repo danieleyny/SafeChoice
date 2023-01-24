@@ -211,3 +211,17 @@
               }
 
 
+              
+
+              imageFiles.forEach(function(imageFile) {
+                let reader = new FileReader();
+                reader.onload = function() {
+                    let exif = EXIF.readFromBinaryFile(new BinaryFile(this.result));
+                    delete exif.GPSInfo; // remove GPS information (where section)
+                    let newImage = new Image();
+                    newImage.src = EXIF.getDataUrl(exif);
+                    /* Do something with the new image, such as displaying it on the page */
+                }
+                reader.readAsArrayBuffer(imageFile);
+            });
+            
