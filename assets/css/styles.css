@@ -97,7 +97,7 @@ body {
 }
 
 #page-background {
-  background: url(../img/shape-bg.webp);
+  background: url(../img/shape-bg.png);
   position: absolute;
   top: 0;
   left: 0;
@@ -613,14 +613,18 @@ img {
 }
 
 .home__juice {
-  width: 150px;
-  box-shadow: 0 8px 24px rgba(9, 9, 9, 0.596);
+  width: 160px;
   transform: rotate(15deg);
   left: -0.5rem;
   right: 0;
-  top: 1.2rem;
+  top: 1.3rem;
   margin: 0 auto;
   animation: float-juice 4s ease-in-out infinite;
+
+  -webkit-filter: drop-shadow(0 8px 24px rgba(9, 9, 9, 0.596)) 
+                    drop-shadow(-1px -1px 0 white);
+    filter:drop-shadow(0 8px 24px rgba(9, 9, 9, 0.596)) 
+          ;
 }
 
 .home__apple2 {
@@ -2461,22 +2465,22 @@ margin-top: 10px;
 .services__card {
   padding: 5rem 1.5rem 1.5rem;
   border-radius: 1rem;
-  background: linear-gradient(to top, #bdbcbfba, #4769b878), url(../img/blueflower-removebg-preview.webp) no-repeat top center;
+  background: linear-gradient(to top, #bdbcbfba, #4769b878), url(../img/blueflower-removebg-preview.png) no-repeat top center;
 }
 .services__card2 {
   padding: 5rem 1.5rem 1.5rem;
   border-radius: 1rem;
-  background: linear-gradient(to top, #bdbcbfba, #c4bc4893), url(../img/yellowflower-removebg-preview.webp) no-repeat top center;
+  background: linear-gradient(to top, #bdbcbfba, #c4bc4893), url(../img/yellowflower-removebg-preview.png) no-repeat top center;
 }
 .services__card3 {
   padding: 5rem 1.5rem 1.5rem;
   border-radius: 1rem;
-  background: linear-gradient(to top, #bdbcbfba, #b38dd194), url(../img/pinkflower-removebg-preview.webp) no-repeat top center;
+  background: linear-gradient(to top, #bdbcbfba, #b38dd194), url(../img/pinkflower-removebg-preview.png) no-repeat top center;
 }
 .services__card4 {
   padding: 5rem 1.5rem 1.5rem;
   border-radius: 1rem;
-  background: linear-gradient(to top, #bdbcbfba, #de6d3498), url(../img/salmonflower-removebg-preview.webp) no-repeat top center;
+  background: linear-gradient(to top, #bdbcbfba, #de6d3498), url(../img/salmonflower-removebg-preview.png) no-repeat top center;
 }
 
 .section__services .services__container .services__card,
@@ -3587,13 +3591,13 @@ input:-webkit-autofill:active {
 /* Animation juice */
 @keyframes float-juice {
   0% {
-    transform: translateY(0) rotate(15deg);
+    transform: translateY(0) rotate(10deg);
   }
   50% {
-    transform: translateY(-2rem) rotate(15deg);
+    transform: translateY(-2rem) rotate(10deg);
   }
   100% {
-    transform: translateY(0) rotate(15deg);
+    transform: translateY(0) rotate(10deg);
   }
 }
 
@@ -3767,9 +3771,9 @@ input:-webkit-autofill:active {
     bottom: 3rem;
   }
   .home__juice {
-    width: 140px;
-    top: 1rem;
-    left: .5rem;
+    width: 160px;
+    top: 0.5rem;
+    left: 0.5rem;
   }
   .home__apple1 {
     width: 85px;
@@ -4271,9 +4275,9 @@ input:-webkit-autofill:active {
     width: 630px;
   }
   .home__juice {
-    width: 270px;
-    left: 3rem;
-    top: 1rem;
+    width: 310px;
+    left: 3.8rem;
+    top: .8rem;
   }
   .home__apple1 {
     width: 150px;
