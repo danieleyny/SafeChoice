@@ -1010,12 +1010,17 @@ width: 100px;
 
 /*=============== Filter ===============*/
 
+
 .filter-buttons{
   flex: 0 0 100%;
   max-width: 100%;
   margin-bottom: 20px;
   margin-top: -90px;
   position: relative;
+  font-family: 'Poppins', sans-serif;;
+  font-weight: 500;
+  font-size: 16px;
+
 }
 
 .filter-buttons ul{
