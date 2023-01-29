@@ -190,6 +190,10 @@ img {
   cursor: pointer;
 }
 
+.nav__menu-icon {
+  font-size: 1.6rem;
+}
+
 @media screen and (max-width: 767px) {
   .section__blog {
     padding: 7rem 0 2rem;
@@ -764,12 +768,14 @@ img {
   display: inline-flex;
   column-gap: .5rem;
   font-size: .813rem;
+  align-items: center;
 }
 
 .about__details-icon{
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--first-color);
   margin-top: .15rem;
+  
 }
 
 .button--flex{
@@ -786,6 +792,11 @@ img {
 
 .button--link:hover .button__icon{
   transform: translateX(.25rem);
+  transition: .3s;
+}
+
+.button--link:hover .button__icon-right{
+  transform: translateX(-.25rem);
   transition: .3s;
 }
 
