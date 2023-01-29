@@ -176,7 +176,7 @@
 
                         <div class="login__box">
                             <input type="password" id="password" name="password" placeholder="Enter your password" required class="login__input" id="input-pass">
-                            <i class="ri-eye-off-line login__eye" id="input-icon"></i>
+                            <i class="bx bx-hide login__eye" id="input-icon"></i>
                         </div>
                     </div>
                 </div>
@@ -472,17 +472,17 @@ const showHiddenPass = (inputPass, inputIcon) =>{
             input.type = 'text'
 
             // Add icon
-            iconEye.classList.add('ri-eye-line')
+            iconEye.classList.add('bx-show')
             // Remove icon
-            iconEye.classList.remove('ri-eye-off-line')
+            iconEye.classList.remove('bx-hide')
         }else{
             // Change to password
             input.type = 'password'
 
             // Remove icon
-            iconEye.classList.remove('ri-eye-line')
+            iconEye.classList.remove('bx-show')
             // Add icon
-            iconEye.classList.add('ri-eye-off-line')
+            iconEye.classList.add('bx-hide')
         }
     })
 }
