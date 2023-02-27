@@ -643,7 +643,7 @@
   
   // Add share event listeners for each button
   addShareEventListener('share-button', 'https://medium.com/@celestegreeneblogs/1-in-5-people-in-the-us-have-an-std-something-must-be-done-e864473662f1', '1 in 5 People In The US Have An STI. Something Must Be Done.');
-  addShareEventListener('share-button2', 'https://medium.com/@abdullyr/1-in-4-college-students-has-an-sti-we-need-to-do-something-fb555bf7bf8b', '1 in 4 college students has an STI… We need to do something.');
+  addShareEventListener('share-button2', '/articles/1-in-4-college-students-has-an-STI…-We-need-to-do-something...html', '1 in 4 college students has an STI… We need to do something.');
   addShareEventListener('share-button3', 'https://medium.com/@charlieeyny/sexually-transmitted-diseases-are-highest-in-the-lgbtq-community-674569e54634', 'Sexually transmitted diseases are highest in the LGBTQ community');
   addShareEventListener('share-button4', 'https://medium.com/@celestegreeneblogs/the-std-epidemic-affecting-americas-youth-a7c88a74cd01', 'The STD Epidemic Affecting America’s Youth');
   addShareEventListener('share-button5', 'https://medium.com/@celestegreeneblogs/effect-of-condom-availability-programs-509df6e28762', 'Effect of condom availability programs');
@@ -653,4 +653,7 @@
   addShareEventListener('share-button9', 'https://medium.com/@abigailcohen/how-does-safechoice-support-feminism-479fb8a14dfc', 'How Does SafeChoice Support Feminism?');
   addShareEventListener('share-button10', 'https://medium.com/@abigailcohen/the-surprising-benefits-of-condoms-protecting-your-health-and-more-54df1f3e591', 'The Surprising Benefits of Condoms: Protecting Your Health and More');
   addShareEventListener('share-button11', 'https://medium.com/@abigailcohen/24-7-convenience-provided-only-by-safechoice-dfa2dd91e771', '24/7 Convenience Provided only by SafeChoice');
+  addShareEventListener('share-button12', 'https://www.statista.com/chart/19597/total-reported-std-cases-in-the-us/', 'U.S. STD Cases Rise To Record High');
+  
+  addShareEventListener('share-button12', '', '');
   
