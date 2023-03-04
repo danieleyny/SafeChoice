@@ -4102,7 +4102,210 @@ input:-webkit-autofill:active {
     padding: 6rem 0 2rem;
   }
 
+
+
+
+
+  
+  .home__images {
+    position: relative;
+    width: 410px;
+    height: 378px;
+    justify-self: center;
+  }
+  
+  .home__images img {
+    position: absolute;
+  }
+  
+  .home__liquid {
+    max-width: initial;
+    width: 430px;
+    left: -1rem;
+    bottom: 0rem;
+  }
+  
+  .home__juice {
+    width: 210px;
+    transform: rotate(15deg);
+    left: -1.3rem;
+    right: 0;
+    top: 2rem;
+    margin: 0 auto;
+    animation: float-juice 4s ease-in-out infinite;
+  
+    -webkit-filter: drop-shadow(0 8px 24px rgba(9, 9, 9, 0.596)) 
+                      drop-shadow(-1px -1px 0 white);
+      filter:drop-shadow(0 8px 24px rgba(9, 9, 9, 0.596)) 
+            ;
+  }
+  
+  .home__apple2 {
+    width: 80px;
+    right: 0rem;
+    bottom: 0.5rem;
+  }
+  
+  .home__apple1 {
+    width: 85px;
+    transform: rotate(-25deg);
+    top: 7rem;
+    left: -2rem;
+  }
+  
+  .home__leaf:nth-child(1), 
+  .home__leaf:nth-child(6) {
+    width: 50px;
+    transform: rotate(30deg);
+  }
+  
+  .home__leaf:nth-child(2), 
+  .home__leaf:nth-child(4), 
+  .home__leaf:nth-child(5) {
+    width: 65px;
+  }
+  
+  /* Move sheets into position */
+  .home__leaf:nth-child(1) {
+    top: -5rem;
+    right: 5rem;
+  }
+  
+  .home__leaf:nth-child(2) {
+    transform: rotate(-60deg);
+    top: -3rem;
+    left: -5.25rem;
+  }
+  
+  .home__leaf:nth-child(3) {
+    width: 60px;
+    transform: rotate(-15deg);
+    top: 4rem;
+    right: 2rem;
+  }
+  
+  .home__leaf:nth-child(4) {
+    bottom: 2.5rem;
+    left: 2.5rem;
+  }
+  
+  .home__leaf:nth-child(5) {
+    transform: rotate(-30deg);
+    bottom: -4rem;
+    right: 9rem;
+  }
+  
+  .home__leaf:nth-child(6) {
+    bottom: -2rem;
+    left: -5rem;
+  }
+
+
+
 }
+
+
+
+
+
+
+@media screen and (min-width: 890px) {
+  .home__images {
+    position: relative;
+    width: 525px;
+    height: 378px;
+    justify-self: center;
+  }
+  
+  .home__images img {
+    position: absolute;
+  }
+  
+  .home__liquid {
+    max-width: initial;
+    width: 470px;
+    left: 2rem;
+    bottom: 2rem;
+  }
+  
+  .home__juice {
+    width: 260px;
+    transform: rotate(15deg);
+    left: 1.2rem;
+    right: 0;
+    top: -2rem;
+    margin: 0 auto;
+    animation: float-juice 4s ease-in-out infinite;
+  
+    -webkit-filter: drop-shadow(0 8px 24px rgba(9, 9, 9, 0.596)) 
+                      drop-shadow(-1px -1px 0 white);
+      filter:drop-shadow(0 8px 24px rgba(9, 9, 9, 0.596)) 
+            ;
+  }
+  
+  .home__apple2 {
+    width: 90px;
+    right: 1rem;
+    bottom: 4.5rem;
+  }
+  
+  .home__apple1 {
+    width: 100px;
+    transform: rotate(-25deg);
+    top: 7rem;
+    left: -2rem;
+  }
+  
+  .home__leaf:nth-child(1), 
+  .home__leaf:nth-child(6) {
+    width: 80px;
+    transform: rotate(30deg);
+  }
+  
+  .home__leaf:nth-child(2), 
+  .home__leaf:nth-child(4), 
+  .home__leaf:nth-child(5) {
+    width: 75px;
+  }
+  
+  /* Move sheets into position */
+  .home__leaf:nth-child(1) {
+    top: -10rem;
+    right: 6rem;
+  }
+  
+  .home__leaf:nth-child(2) {
+    transform: rotate(-60deg);
+    top: -3rem;
+    left: 1.25rem;
+  }
+  
+  .home__leaf:nth-child(3) {
+    width: 60px;
+    transform: rotate(-15deg);
+    top: 8rem;
+    right: .8em;
+  }
+  
+  .home__leaf:nth-child(4) {
+    bottom: 4.5rem;
+    left: 3.5rem;
+  }
+  
+  .home__leaf:nth-child(5) {
+    transform: rotate(-30deg);
+    bottom: 0;
+    right: 5rem;
+  }
+  
+  .home__leaf:nth-child(6) {
+    bottom: -1rem;
+    left: -3rem;
+  }
+}
+
+
+
 
 
 
@@ -4270,6 +4473,107 @@ input:-webkit-autofill:active {
   }
 }
 
+
+@media screen and (min-width: 1060px) {
+  .home__images {
+    position: relative;
+    width: 525px;
+    height: 378px;
+    justify-self: center;
+  }
+  
+  .home__images img {
+    position: absolute;
+  }
+  
+  .home__liquid {
+    max-width: initial;
+    width: 600px;
+    left: 1rem;
+    bottom: -4.5rem;
+  }
+  
+  .home__juice {
+    width: 300px;
+    transform: rotate(15deg);
+    left: 6.5rem;
+    right: 0;
+    top: -2rem;
+    margin: 0 auto;
+    animation: float-juice 4s ease-in-out infinite;
+  
+    -webkit-filter: drop-shadow(0 8px 24px rgba(9, 9, 9, 0.596)) 
+                      drop-shadow(-1px -1px 0 white);
+      filter:drop-shadow(0 8px 24px rgba(9, 9, 9, 0.596)) 
+            ;
+  }
+  
+  .home__apple2 {
+    width: 90px;
+    right: -5rem;
+    bottom: 2.5rem;
+  }
+  
+  .home__apple1 {
+    width: 100px;
+    transform: rotate(-25deg);
+    top: 6rem;
+    left: -2rem;
+  }
+  
+  .home__leaf:nth-child(1), 
+  .home__leaf:nth-child(6) {
+    width: 80px;
+    transform: rotate(30deg);
+  }
+  
+  .home__leaf:nth-child(2), 
+  .home__leaf:nth-child(4), 
+  .home__leaf:nth-child(5) {
+    width: 75px;
+  }
+  
+  /* Move sheets into position */
+  .home__leaf:nth-child(1) {
+    top: -10rem;
+    right: 2rem;
+  }
+  
+  .home__leaf:nth-child(2) {
+    transform: rotate(-60deg);
+    top: -4rem;
+    left: 2.25rem;
+  }
+  
+  .home__leaf:nth-child(3) {
+    width: 65px;
+    transform: rotate(-15deg);
+    top: 2rem;
+    right: -2.8em;
+  }
+  
+  .home__leaf:nth-child(4) {
+    bottom: 3.5rem;
+    left: 4.5rem;
+  }
+  
+  .home__leaf:nth-child(5) {
+    transform: rotate(-30deg);
+    bottom: -5rem;
+    right: 4rem;
+  }
+  
+  .home__leaf:nth-child(6) {
+    bottom: -3rem;
+    left: -5rem;
+  }
+}
+
+
+
+
+
+
 /* For large devices */
 @media screen and (min-width: 1224px) {
   .home__images {
@@ -4288,8 +4592,12 @@ input:-webkit-autofill:active {
   }
 
   .home__liquid {
+    max-width: initial;
     width: 630px;
+    left: -1.5rem;
+    bottom: 4rem;
   }
+  
   .home__juice {
     width: 310px;
     left: 3.8rem;
