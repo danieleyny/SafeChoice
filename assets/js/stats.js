@@ -615,45 +615,39 @@
 
 
 
-   
-   function addShareEventListener(buttonId, urlToShare, title) {
-    // Get the share button
-    var shareButton = document.getElementById(buttonId);
-    
-    // Add a click event listener to the button
-    shareButton.addEventListener('click', function() {
-      // Use the Web Share API (if it's available) to share the URL
-      if (navigator.share) {
-        navigator.share({
-          title: title,
-          url: urlToShare
-        }).then(function() {
-          console.log('Thanks for sharing!');
-        })
-        .catch(function(error) {
-          console.log('Error sharing:', error);
+        // Add event listeners to each share button
+        var shareButton2 = document.getElementById('share-button2');
+        shareButton2.addEventListener('click', function() {
+          // Share the link for the 1 in 4 college students article
+          var urlToShare = 'https://safechoiceusa.com/articles/1-in-4-college-students-has-an-STI-We-need-to-do-something...html';
+          var title = '1 in 4 college students has an STI… We need to do something.';
+          shareLink(urlToShare, title);
         });
-      } else {
-        // If the Web Share API is not available, fall back to a URL-based approach
-        var shareUrl = 'https://twitter.com/share?url=' + encodeURIComponent(urlToShare);
-        window.open(shareUrl, '_blank');
-      }
-    });
-  }
-  
-  // Add share event listeners for each button
-  addShareEventListener('share-button', 'https://medium.com/@celestegreeneblogs/1-in-5-people-in-the-us-have-an-std-something-must-be-done-e864473662f1', '1 in 5 People In The US Have An STI. Something Must Be Done.');
-  addShareEventListener('share-button2', '/articles/1-in-4-college-students-has-an-STI…-We-need-to-do-something...html', '1 in 4 college students has an STI… We need to do something.');
-  addShareEventListener('share-button3', 'https://medium.com/@charlieeyny/sexually-transmitted-diseases-are-highest-in-the-lgbtq-community-674569e54634', 'Sexually transmitted diseases are highest in the LGBTQ community');
-  addShareEventListener('share-button4', 'https://medium.com/@celestegreeneblogs/the-std-epidemic-affecting-americas-youth-a7c88a74cd01', 'The STD Epidemic Affecting America’s Youth');
-  addShareEventListener('share-button5', 'https://medium.com/@celestegreeneblogs/effect-of-condom-availability-programs-509df6e28762', 'Effect of condom availability programs');
-  addShareEventListener('share-button6', 'https://medium.com/@charlieeyny/benefits-of-emergency-contraceptives-6be5e4277e5', 'Benefits of emergency contraceptives');
-  addShareEventListener('share-button7', 'https://medium.com/@abigailcohen/what-is-safechoice-c6dd7018d270', 'What is SafeChoice?');
-  addShareEventListener('share-button8', 'https://medium.com/@abigailcohen/safechoice-vending-machines-providing-convenient-access-to-condoms-for-college-students-e3520bd184d', 'SafeChoice Vending Machines: Providing Convenient Access to Condoms for College Students');
-  addShareEventListener('share-button9', 'https://medium.com/@abigailcohen/how-does-safechoice-support-feminism-479fb8a14dfc', 'How Does SafeChoice Support Feminism?');
-  addShareEventListener('share-button10', 'https://medium.com/@abigailcohen/the-surprising-benefits-of-condoms-protecting-your-health-and-more-54df1f3e591', 'The Surprising Benefits of Condoms: Protecting Your Health and More');
-  addShareEventListener('share-button11', 'https://medium.com/@abigailcohen/24-7-convenience-provided-only-by-safechoice-dfa2dd91e771', '24/7 Convenience Provided only by SafeChoice');
-  addShareEventListener('share-button12', 'https://www.statista.com/chart/19597/total-reported-std-cases-in-the-us/', 'U.S. STD Cases Rise To Record High');
-  
-  addShareEventListener('share-button12', '', '');
-  
+
+        var shareButton3 = document.getElementById('share-button3');
+        shareButton3.addEventListener('click', function() {
+          // Share the link for the STDs in the LGBTQ community article
+          var urlToShare = 'https://safechoiceusa.com/articles/Sexually%20transmitted%20diseases%20are%20highest%20in%20the%20LGBTQ%20community.html';
+          var title = 'Sexually transmitted diseases are highest in the LGBTQ community';
+          shareLink(urlToShare, title);
+        });
+
+        function shareLink(urlToShare, title) {
+          // Use the Web Share API (if it's available) to share the link
+          if (navigator.share) {
+            navigator.share({
+              title: title,
+              url: urlToShare
+            })
+              .then(function() {
+                console.log('Thanks for sharing!');
+              })
+              .catch(function(error) {
+                console.log('Error sharing:', error);
+              });
+          } else {
+            // If the Web Share API is not available, fall back to a URL-based approach
+            var shareUrl = 'https://twitter.com/share?url=' + encodeURIComponent(urlToShare);
+            window.open(shareUrl, '_blank');
+          }
+        }
