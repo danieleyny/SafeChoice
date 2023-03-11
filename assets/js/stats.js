@@ -1,653 +1,150 @@
+const shareButtons = [
+  {
+    id: 'share-button2',
+    title: '1 in 4 college students has an STI… We need to do something.',
+    url: 'https://safechoiceusa.com/articles/1-in-4-college-students-has-an-STI-We-need-to-do-something...html'
+  },
+  {
+    id: 'share-button3',
+    title: 'Sexually transmitted diseases are highest in the LGBTQ community',
+    url: 'https://safechoiceusa.com/articles/Sexually%20transmitted%20diseases%20are%20highest%20in%20the%20LGBTQ%20community.html'
+  },
+  {
+    id: 'share-button4',
+    title: 'The STD Epidemic Affecting America’s Youth',
+    url: 'https://safechoiceusa.com/articles/The%20STD%20Epidemic%20Affecting%20America%E2%80%99s%20Youth.html'
+  },
+  {
+    id: 'share-button7',
+    title: 'What is SafeChoice?',
+    url: 'https://safechoiceusa.com/articles/What is SafeChoice.html'
+  },
+  {
+    id: 'share-button8',
+    title: 'Providing Convenient Access to Condoms for College Students',
+    url: 'https://safechoiceusa.com/articles/SafeChoice Vending Machines: Providing Convenient Access to Condoms for College Students.html'
+  },
+  {
+    id: 'share-button9',
+    title: 'How Does SafeChoice Support Feminism?',
+    url: 'https://safechoiceusa.com/articles/How Does SafeChoice Support Feminism.html'
+  },
+  {
+    id: 'share-button10',
+    title: 'Benefits of Condoms: Protecting Your Health and More',
+    url: 'https://safechoiceusa.com/articles/The Surprising Benefits of Condoms: Protecting Your Health and More.html'
+  },
+  {
+    id: 'share-button11',
+    title: '24/7 Convenience Provided only by SafeChoice',
+    url: 'https://safechoiceusa.com/articles/24_7 Convenience Provided only by SafeChoice.html'
+  },
+  {
+    id: 'share-button13',
+    title: 'U.S. STD Cases Rise To Record High',
+    url: 'https://safechoiceusa.com/articles/U.S. STD Cases Rise To Record High.html'
+  },
+  {
+    id: 'share-button14',
+    title: 'STDs reach all-time high for 6th consecutive year',
+    url: 'https://safechoiceusa.com/articles/STDs reach all-time high for 6th consecutive year.html'
+  },
 
- /*=============== Copy Link - Stats ===============*/
 
 
- //the helper function
- let createCopy = function(textToCopy, triggerElementId, callback = null) {
-    //add event listner to elementtrigger
-    let trigger = document.getElementById(triggerElementId);
-    trigger.addEventListener("click", function() {
-      //create the readonly textarea with the text in it and hide it
-      let tarea = document.createElement("textarea");
-      tarea.setAttribute("id", triggerElementId + "-copyarea");
-      tarea.setAttribute("readonly", "readonly");
-      tarea.setAttribute(
-        "style",
-        "opacity: 0; position: absolute; z-index: -1; top: 0; left: -9999px;"
-      );
-      tarea.appendChild(document.createTextNode(textToCopy));
-      document.body.appendChild(tarea);
-  
-      //select and copy the text in the readonly text area
-      tarea.select();
-      document.execCommand("copy");
-  
-      //remove the element from the DOM
-      document.body.removeChild(tarea);
-  
-      //fire callback function if provided
-      if (typeof callback === "function" && callback()) {
-        callback();
-      }
+
+  {
+    id: 'share-button15',
+    title: "CDC study showing prevalence for STD's",
+    url: "https://safechoiceusa.com/articles/CDC study showing prevalence for STD's.html"
+  },
+
+
+
+
+  {
+    id: 'share-button16',
+    title: 'Unintended Pregnancy Age Demographic',
+    url: 'https://safechoiceusa.com/articles/Unintended Pregnancy Age Demographic.html'
+  },
+  {
+    id: 'share-button17',
+    title: 'STD Rates among LGBTQ+ Community',
+    url: 'https://safechoiceusa.com/articles/STD Rates among LGBTQ+ Community.html'
+  },
+  {
+    id: 'share-button18',
+    title: 'STD Surveillance Data',
+    url: 'https://safechoiceusa.com/articles/STD Surveillance Data.html'
+  },
+
+  {
+    id: 'share-button19',
+    title: 'Effect of condom availability programs.html',
+    url: 'https://safechoiceusa.com/articles/Effect of condom availability programs.html'
+  },
+  {
+    id: 'share-button20',
+    title: 'Plan B Effectivity',
+    url: 'https://safechoiceusa.com/articles/Plan B Effectivity.html'
+  },
+  {
+    id: 'share-button21',
+    title: 'Demand for emergency contraceptives increase after Roe vs Wade',
+    url: 'https://safechoiceusa.com/articles/Demand for emergency contraceptives increase after Roe vs Wade.html'
+  },
+  {
+    id: 'share-button22',
+    title: 'Benefits of Over-The-Counter Medications',
+    url: 'https://safechoiceusa.com/articles/Benefits of Over-The-Counter Medications.html'
+  },
+  {
+    id: 'share-button23',
+    title: 'Rate of Newly Transmitted Sexual Diseases',
+    url: 'https://safechoiceusa.com/articles/Rate of Newly Transmitted Sexual Diseases.html'
+  },
+  {
+    id: 'share-button24',
+    title: 'Rate of Genital Herpe Infections',
+    url: 'https://safechoiceusa.com/articles/Rate of Genital Herpe Infections.html'
+  },
+  {
+    id: 'share-button25',
+    title: 'Nearly Half of All New STD Infections Occur Among Nation’s Youth',
+    url: 'https://safechoiceusa.com/articles/Nearly Half of All New STD Infections Occur Among Nation’s Youth.html'
+  },
+  {
+    id: 'share-button26',
+    title: 'Period pains: Can anti-inflammatory drugs help?',
+    url: 'https://safechoiceusa.com/articles/Period pains: Can anti-inflammatory drugs help.html'
+  },
+  {
+    id: 'share-button27',
+    title: 'Oral contraceptive pill for primary dysmenorrhoea - PMC',
+    url: 'https://safechoiceusa.com/articles/Oral contraceptive pill for primary dysmenorrhoea - PMC.html'
+  },
+
+
+];
+
+if (navigator.share) {
+  shareButtons.forEach(button => {
+    const shareButton = document.getElementById(button.id);
+    shareButton.addEventListener('click', () => {
+      navigator.share({
+        title: button.title,
+        url: button.url
+      })
+        .then(() => console.log('Successfully shared article'))
+        .catch(error => console.log('Error sharing article:', error));
     });
-  };
-  
-  
-  //usage example
-  createCopy('https://www.statista.com/chart/19597/total-reported-std-cases-in-the-us/', 'elementId', function () {
-      alert('You have copied the link for this article succesfully!');
   });
-  
-  
-  
-   /*=============== Copy Link - Article 2 ===============*/
-  
-  
-   //the helper function
-   let createCopy2 = function(textToCopy, triggerElementId, callback = null) {
-    //add event listner to elementtrigger
-    let trigger = document.getElementById(triggerElementId);
-    trigger.addEventListener("click", function() {
-      //create the readonly textarea with the text in it and hide it
-      let tarea = document.createElement("textarea");
-      tarea.setAttribute("id", triggerElementId + "-copyarea");
-      tarea.setAttribute("readonly", "readonly");
-      tarea.setAttribute(
-        "style",
-        "opacity: 0; position: absolute; z-index: -1; top: 0; left: -9999px;"
-      );
-      tarea.appendChild(document.createTextNode(textToCopy));
-      document.body.appendChild(tarea);
-  
-      //select and copy the text in the readonly text area
-      tarea.select();
-      document.execCommand("copy");
-  
-      //remove the element from the DOM
-      document.body.removeChild(tarea);
-  
-      //fire callback function if provided
-      if (typeof callback === "function" && callback()) {
-        callback();
-      }
+} else {
+  shareButtons.forEach(button => {
+    const shareButton = document.getElementById(button.id);
+    shareButton.addEventListener('click', () => {
+      const shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(button.url)}&text=${encodeURIComponent(button.title)}`;
+      window.open(shareUrl, '_blank');
     });
-  };
-  
-  
-  //usage example
-  createCopy2('https://www.cdc.gov/media/releases/2021/p0125-sexualy-transmitted-infection.html#:~:text=CDC%20Newsroom%20Releases-,CDC%20estimates%201%20in%205%20people%20in,have%20a%20sexually%20transmitted%20infection&text=New%20data%20published%20by%20the,sexually%20transmitted%20infection%20(STI).', 'elementId2', function () {
-      alert('You have copied the link for this article succesfully!');
   });
-  
-   /*=============== Copy Link - Article 3 ===============*/
-  
-  
-   //the helper function
-   let createCopy3 = function(textToCopy, triggerElementId, callback = null) {
-    //add event listner to elementtrigger
-    let trigger = document.getElementById(triggerElementId);
-    trigger.addEventListener("click", function() {
-      //create the readonly textarea with the text in it and hide it
-      let tarea = document.createElement("textarea");
-      tarea.setAttribute("id", triggerElementId + "-copyarea");
-      tarea.setAttribute("readonly", "readonly");
-      tarea.setAttribute(
-        "style",
-        "opacity: 0; position: absolute; z-index: -1; top: 0; left: -9999px;"
-      );
-      tarea.appendChild(document.createTextNode(textToCopy));
-      document.body.appendChild(tarea);
-  
-      //select and copy the text in the readonly text area
-      tarea.select();
-      document.execCommand("copy");
-  
-      //remove the element from the DOM
-      document.body.removeChild(tarea);
-  
-      //fire callback function if provided
-      if (typeof callback === "function" && callback()) {
-        callback();
-      }
-    });
-  };
-  
-  
-  //usage example
-  createCopy3('https://www.aclu.org/other/laws-restricting-teenagers-access-abortion', 'elementId3', function () {
-      alert('You have copied the link for this article succesfully!');
-  });
-  
-   /*=============== Copy Link - Article 4 ===============*/
-  
-  
-   //the helper function
-   let createCopy4 = function(textToCopy, triggerElementId, callback = null) {
-    //add event listner to elementtrigger
-    let trigger = document.getElementById(triggerElementId);
-    trigger.addEventListener("click", function() {
-      //create the readonly textarea with the text in it and hide it
-      let tarea = document.createElement("textarea");
-      tarea.setAttribute("id", triggerElementId + "-copyarea");
-      tarea.setAttribute("readonly", "readonly");
-      tarea.setAttribute(
-        "style",
-        "opacity: 0; position: absolute; z-index: -1; top: 0; left: -9999px;"
-      );
-      tarea.appendChild(document.createTextNode(textToCopy));
-      document.body.appendChild(tarea);
-  
-      //select and copy the text in the readonly text area
-      tarea.select();
-      document.execCommand("copy");
-  
-      //remove the element from the DOM
-      document.body.removeChild(tarea);
-  
-      //fire callback function if provided
-      if (typeof callback === "function" && callback()) {
-        callback();
-      }
-    });
-  };
-  
-  
-  //usage example
-  createCopy4('https://www.cdc.gov/msmhealth/STD.htm', 'elementId4', function () {
-      alert('You have copied the link for this article succesfully!');
-  });
-  
-  
-   /*=============== Copy Link - Article 5 ===============*/
-  
-  
-   //the helper function
-   let createCopy5 = function(textToCopy, triggerElementId, callback = null) {
-    //add event listner to elementtrigger
-    let trigger = document.getElementById(triggerElementId);
-    trigger.addEventListener("click", function() {
-      //create the readonly textarea with the text in it and hide it
-      let tarea = document.createElement("textarea");
-      tarea.setAttribute("id", triggerElementId + "-copyarea");
-      tarea.setAttribute("readonly", "readonly");
-      tarea.setAttribute(
-        "style",
-        "opacity: 0; position: absolute; z-index: -1; top: 0; left: -9999px;"
-      );
-      tarea.appendChild(document.createTextNode(textToCopy));
-      document.body.appendChild(tarea);
-  
-      //select and copy the text in the readonly text area
-      tarea.select();
-      document.execCommand("copy");
-  
-      //remove the element from the DOM
-      document.body.removeChild(tarea);
-  
-      //fire callback function if provided
-      if (typeof callback === "function" && callback()) {
-        callback();
-      }
-    });
-  };
-  
-  
-  //usage example
-  createCopy5('https://www.cdc.gov/std/statistics/2021/default.htm', 'elementId5', function () {
-      alert('You have copied the link for this article succesfully!');
-  });
-  
-  
-  
-   /*=============== Copy Link - Article 6 ===============*/
-  
-  
-   //the helper function
-   let createCopy6 = function(textToCopy, triggerElementId, callback = null) {
-    //add event listner to elementtrigger
-    let trigger = document.getElementById(triggerElementId);
-    trigger.addEventListener("click", function() {
-      //create the readonly textarea with the text in it and hide it
-      let tarea = document.createElement("textarea");
-      tarea.setAttribute("id", triggerElementId + "-copyarea");
-      tarea.setAttribute("readonly", "readonly");
-      tarea.setAttribute(
-        "style",
-        "opacity: 0; position: absolute; z-index: -1; top: 0; left: -9999px;"
-      );
-      tarea.appendChild(document.createTextNode(textToCopy));
-      document.body.appendChild(tarea);
-  
-      //select and copy the text in the readonly text area
-      tarea.select();
-      document.execCommand("copy");
-  
-      //remove the element from the DOM
-      document.body.removeChild(tarea);
-  
-      //fire callback function if provided
-      if (typeof callback === "function" && callback()) {
-        callback();
-      }
-    });
-  };
-  
-  
-  //usage example
-  createCopy6('https://www.cdc.gov/nchhstp/newsroom/2021/2019-STD-surveillance-report.html', 'elementId6', function () {
-      alert('You have copied the link for this article succesfully!');
-  });
-  
-  
-  
-   /*=============== Copy Link - Article 7 ===============*/
-  
-  
-   //the helper function
-   let createCopy7 = function(textToCopy, triggerElementId, callback = null) {
-    //add event listner to elementtrigger
-    let trigger = document.getElementById(triggerElementId);
-    trigger.addEventListener("click", function() {
-      //create the readonly textarea with the text in it and hide it
-      let tarea = document.createElement("textarea");
-      tarea.setAttribute("id", triggerElementId + "-copyarea");
-      tarea.setAttribute("readonly", "readonly");
-      tarea.setAttribute(
-        "style",
-        "opacity: 0; position: absolute; z-index: -1; top: 0; left: -9999px;"
-      );
-      tarea.appendChild(document.createTextNode(textToCopy));
-      document.body.appendChild(tarea);
-  
-      //select and copy the text in the readonly text area
-      tarea.select();
-      document.execCommand("copy");
-  
-      //remove the element from the DOM
-      document.body.removeChild(tarea);
-  
-      //fire callback function if provided
-      if (typeof callback === "function" && callback()) {
-        callback();
-      }
-    });
-  };
-  
-  
-  //usage example
-  createCopy7('https://www.cdc.gov/healthyyouth/healthservices/caps/index.htm#:~:text=Condom%20availability%20programs%20(CAPs)%20began,and%20students%20at%20high%20risk.', 'elementId7', function () {
-      alert('You have copied the link for this article succesfully!');
-  });
-  
-  
-  
-  
-   /*=============== Copy Link - Article 8 ===============*/
-  
-  
-   //the helper function
-   let createCopy8 = function(textToCopy, triggerElementId, callback = null) {
-    //add event listner to elementtrigger
-    let trigger = document.getElementById(triggerElementId);
-    trigger.addEventListener("click", function() {
-      //create the readonly textarea with the text in it and hide it
-      let tarea = document.createElement("textarea");
-      tarea.setAttribute("id", triggerElementId + "-copyarea");
-      tarea.setAttribute("readonly", "readonly");
-      tarea.setAttribute(
-        "style",
-        "opacity: 0; position: absolute; z-index: -1; top: 0; left: -9999px;"
-      );
-      tarea.appendChild(document.createTextNode(textToCopy));
-      document.body.appendChild(tarea);
-  
-      //select and copy the text in the readonly text area
-      tarea.select();
-      document.execCommand("copy");
-  
-      //remove the element from the DOM
-      document.body.removeChild(tarea);
-  
-      //fire callback function if provided
-      if (typeof callback === "function" && callback()) {
-        callback();
-      }
-    });
-  };
-  
-  
-  //usage example
-  createCopy8('https://www.cbsnews.com/news/emergency-contraception-roe-v-wade-plan-b-spike-in-sales-wisp/', 'elementId8', function () {
-      alert('You have copied the link for this article succesfully!');
-  });
-  
-  
-   /*=============== Copy Link - Article 9 ===============*/
-  
-  
-   //the helper function
-   let createCopy9 = function(textToCopy, triggerElementId, callback = null) {
-    //add event listner to elementtrigger
-    let trigger = document.getElementById(triggerElementId);
-    trigger.addEventListener("click", function() {
-      //create the readonly textarea with the text in it and hide it
-      let tarea = document.createElement("textarea");
-      tarea.setAttribute("id", triggerElementId + "-copyarea");
-      tarea.setAttribute("readonly", "readonly");
-      tarea.setAttribute(
-        "style",
-        "opacity: 0; position: absolute; z-index: -1; top: 0; left: -9999px;"
-      );
-      tarea.appendChild(document.createTextNode(textToCopy));
-      document.body.appendChild(tarea);
-  
-      //select and copy the text in the readonly text area
-      tarea.select();
-      document.execCommand("copy");
-  
-      //remove the element from the DOM
-      document.body.removeChild(tarea);
-  
-      //fire callback function if provided
-      if (typeof callback === "function" && callback()) {
-        callback();
-      }
-    });
-  };
-  
-  
-  //usage example
-  createCopy9('https://planb.ca/en/faq/', 'elementId9', function () {
-      alert('You have copied the link for this article succesfully!');
-  });
-  
-   /*=============== Copy Link - Article 10 ===============*/
-  
-  
-   //the helper function
-   let createCopy10 = function(textToCopy, triggerElementId, callback = null) {
-    //add event listner to elementtrigger
-    let trigger = document.getElementById(triggerElementId);
-    trigger.addEventListener("click", function() {
-      //create the readonly textarea with the text in it and hide it
-      let tarea = document.createElement("textarea");
-      tarea.setAttribute("id", triggerElementId + "-copyarea");
-      tarea.setAttribute("readonly", "readonly");
-      tarea.setAttribute(
-        "style",
-        "opacity: 0; position: absolute; z-index: -1; top: 0; left: -9999px;"
-      );
-      tarea.appendChild(document.createTextNode(textToCopy));
-      document.body.appendChild(tarea);
-  
-      //select and copy the text in the readonly text area
-      tarea.select();
-      document.execCommand("copy");
-  
-      //remove the element from the DOM
-      document.body.removeChild(tarea);
-  
-      //fire callback function if provided
-      if (typeof callback === "function" && callback()) {
-        callback();
-      }
-    });
-  };
-  
-  
-  //usage example
-  createCopy10('https://www.bluecrossnc.com/understanding-insurance/how-drug-benefits-work/over-counter-medications#:~:text=OTC%20medications%20are%20typically%20used,much%20less%20than%20prescription%20medications.&text=Savings%3A%20A%20difference%20of%20more,a%20visit%20to%20your%20physician.', 'elementId10', function () {
-      alert('You have copied the link for this article succesfully!');
-  });
-  
-
-
-   /*=============== Copy Link - Article 11 ===============*/
-  
-  
-   //the helper function
-   let createCopy11 = function(textToCopy, triggerElementId, callback = null) {
-    //add event listner to elementtrigger
-    let trigger = document.getElementById(triggerElementId);
-    trigger.addEventListener("click", function() {
-      //create the readonly textarea with the text in it and hide it
-      let tarea = document.createElement("textarea");
-      tarea.setAttribute("id", triggerElementId + "-copyarea");
-      tarea.setAttribute("readonly", "readonly");
-      tarea.setAttribute(
-        "style",
-        "opacity: 0; position: absolute; z-index: -1; top: 0; left: -9999px;"
-      );
-      tarea.appendChild(document.createTextNode(textToCopy));
-      document.body.appendChild(tarea);
-  
-      //select and copy the text in the readonly text area
-      tarea.select();
-      document.execCommand("copy");
-  
-      //remove the element from the DOM
-      document.body.removeChild(tarea);
-  
-      //fire callback function if provided
-      if (typeof callback === "function" && callback()) {
-        callback();
-      }
-    });
-  };
-  
-  
-  //usage example
-  createCopy11('https://www.who.int/news-room/fact-sheets/detail/sexually-transmitted-infections-(stis)', 'elementId11', function () {
-      alert('You have copied the link for this article succesfully!');
-  });
-  
-
-
-   /*=============== Copy Link - Article 12 ===============*/
-  
-  
-   //the helper function
-   let createCopy12 = function(textToCopy, triggerElementId, callback = null) {
-    //add event listner to elementtrigger
-    let trigger = document.getElementById(triggerElementId);
-    trigger.addEventListener("click", function() {
-      //create the readonly textarea with the text in it and hide it
-      let tarea = document.createElement("textarea");
-      tarea.setAttribute("id", triggerElementId + "-copyarea");
-      tarea.setAttribute("readonly", "readonly");
-      tarea.setAttribute(
-        "style",
-        "opacity: 0; position: absolute; z-index: -1; top: 0; left: -9999px;"
-      );
-      tarea.appendChild(document.createTextNode(textToCopy));
-      document.body.appendChild(tarea);
-  
-      //select and copy the text in the readonly text area
-      tarea.select();
-      document.execCommand("copy");
-  
-      //remove the element from the DOM
-      document.body.removeChild(tarea);
-  
-      //fire callback function if provided
-      if (typeof callback === "function" && callback()) {
-        callback();
-      }
-    });
-  };
-  
-  
-  //usage example
-  createCopy12('https://www.who.int/news/item/01-05-2020-massive-proportion-world-population-living-with-herpes-infection', 'elementId12', function () {
-      alert('You have copied the link for this article succesfully!');
-  });
-  
-  
-   /*=============== Copy Link - Article 13 ===============*/
-  
-  
-   //the helper function
-   let createCopy13 = function(textToCopy, triggerElementId, callback = null) {
-    //add event listner to elementtrigger
-    let trigger = document.getElementById(triggerElementId);
-    trigger.addEventListener("click", function() {
-      //create the readonly textarea with the text in it and hide it
-      let tarea = document.createElement("textarea");
-      tarea.setAttribute("id", triggerElementId + "-copyarea");
-      tarea.setAttribute("readonly", "readonly");
-      tarea.setAttribute(
-        "style",
-        "opacity: 0; position: absolute; z-index: -1; top: 0; left: -9999px;"
-      );
-      tarea.appendChild(document.createTextNode(textToCopy));
-      document.body.appendChild(tarea);
-  
-      //select and copy the text in the readonly text area
-      tarea.select();
-      document.execCommand("copy");
-  
-      //remove the element from the DOM
-      document.body.removeChild(tarea);
-  
-      //fire callback function if provided
-      if (typeof callback === "function" && callback()) {
-        callback();
-      }
-    });
-  };
-  
-  
-  //usage example
-  createCopy13('https://www.cdc.gov/nchhstp/newsroom/2021/2018-STI-incidence-prevalence-estimates.html', 'elementId13', function () {
-      alert('You have copied the link for this article succesfully!');
-  });
-  
-  
-
-  
-  
-   /*=============== Copy Link - Article 14 ===============*/
-  
-  
-   //the helper function
-   let createCopy14 = function(textToCopy, triggerElementId, callback = null) {
-    //add event listner to elementtrigger
-    let trigger = document.getElementById(triggerElementId);
-    trigger.addEventListener("click", function() {
-      //create the readonly textarea with the text in it and hide it
-      let tarea = document.createElement("textarea");
-      tarea.setAttribute("id", triggerElementId + "-copyarea");
-      tarea.setAttribute("readonly", "readonly");
-      tarea.setAttribute(
-        "style",
-        "opacity: 0; position: absolute; z-index: -1; top: 0; left: -9999px;"
-      );
-      tarea.appendChild(document.createTextNode(textToCopy));
-      document.body.appendChild(tarea);
-  
-      //select and copy the text in the readonly text area
-      tarea.select();
-      document.execCommand("copy");
-  
-      //remove the element from the DOM
-      document.body.removeChild(tarea);
-  
-      //fire callback function if provided
-      if (typeof callback === "function" && callback()) {
-        callback();
-      }
-    });
-  };
-  
-  
-  //usage example
-  createCopy14('https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7154221/', 'elementId14', function () {
-      alert('You have copied the link for this article succesfully!');
-  });
-  
-  
-
-  
-   /*=============== Copy Link - Article 14 ===============*/
-  
-  
-   //the helper function
-   let createCopy15 = function(textToCopy, triggerElementId, callback = null) {
-    //add event listner to elementtrigger
-    let trigger = document.getElementById(triggerElementId);
-    trigger.addEventListener("click", function() {
-      //create the readonly textarea with the text in it and hide it
-      let tarea = document.createElement("textarea");
-      tarea.setAttribute("id", triggerElementId + "-copyarea");
-      tarea.setAttribute("readonly", "readonly");
-      tarea.setAttribute(
-        "style",
-        "opacity: 0; position: absolute; z-index: -1; top: 0; left: -9999px;"
-      );
-      tarea.appendChild(document.createTextNode(textToCopy));
-      document.body.appendChild(tarea);
-  
-      //select and copy the text in the readonly text area
-      tarea.select();
-      document.execCommand("copy");
-  
-      //remove the element from the DOM
-      document.body.removeChild(tarea);
-  
-      //fire callback function if provided
-      if (typeof callback === "function" && callback()) {
-        callback();
-      }
-    });
-  };
-  
-  
-  //usage example
-  createCopy15('https://www.ncbi.nlm.nih.gov/books/NBK279323/', 'elementId15', function () {
-      alert('You have copied the link for this article succesfully!');
-  });
-  
-  
-
-
-
-   /*=============== Copy Link - End ===============*/
-
-
-
-        // Add event listeners to each share button
-        var shareButton2 = document.getElementById('share-button2');
-        shareButton2.addEventListener('click', function() {
-          // Share the link for the 1 in 4 college students article
-          var urlToShare = 'https://safechoiceusa.com/articles/1-in-4-college-students-has-an-STI-We-need-to-do-something...html';
-          var title = '1 in 4 college students has an STI… We need to do something.';
-          shareLink(urlToShare, title);
-        });
-
-        var shareButton3 = document.getElementById('share-button3');
-        shareButton3.addEventListener('click', function() {
-          // Share the link for the STDs in the LGBTQ community article
-          var urlToShare = 'https://safechoiceusa.com/articles/Sexually%20transmitted%20diseases%20are%20highest%20in%20the%20LGBTQ%20community.html';
-          var title = 'Sexually transmitted diseases are highest in the LGBTQ community';
-          shareLink(urlToShare, title);
-        });
-
-        function shareLink(urlToShare, title) {
-          // Use the Web Share API (if it's available) to share the link
-          if (navigator.share) {
-            navigator.share({
-              title: title,
-              url: urlToShare
-            })
-              .then(function() {
-                console.log('Thanks for sharing!');
-              })
-              .catch(function(error) {
-                console.log('Error sharing:', error);
-              });
-          } else {
-            // If the Web Share API is not available, fall back to a URL-based approach
-            var shareUrl = 'https://twitter.com/share?url=' + encodeURIComponent(urlToShare);
-            window.open(shareUrl, '_blank');
-          }
-        }
+}
