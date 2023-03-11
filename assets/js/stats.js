@@ -1,5 +1,10 @@
 const shareButtons = [
   {
+    id: 'share-button',
+    title: '1 in 5 People In The US Have An STI. Something Must Be Done',
+    url: 'https://safechoiceusa.com/articles/1 in 5 People In The US Have An STI. Something Must Be Done..html'
+  },
+  {
     id: 'share-button2',
     title: '1 in 4 college students has an STI… We need to do something.',
     url: 'https://safechoiceusa.com/articles/1-in-4-college-students-has-an-STI-We-need-to-do-something...html'
@@ -14,6 +19,18 @@ const shareButtons = [
     title: 'The STD Epidemic Affecting America’s Youth',
     url: 'https://safechoiceusa.com/articles/The%20STD%20Epidemic%20Affecting%20America%E2%80%99s%20Youth.html'
   },
+  {
+    id: 'share-button5',
+    title: 'Effect of condom availability programs',
+    url: 'https://safechoiceusa.com/articles/Effect of condom availability programs.html'
+  },
+
+  {
+    id: 'share-button6',
+    title: 'Benefits of emergency contraceptives',
+    url: 'https://safechoiceusa.com/articles/Benefits of emergency contraceptives.html'
+  },
+
   {
     id: 'share-button7',
     title: 'What is SafeChoice?',
