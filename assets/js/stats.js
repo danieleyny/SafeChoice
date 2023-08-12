@@ -140,6 +140,12 @@ const shareButtons = [
     title: 'Oral contraceptive pill for primary dysmenorrhoea - PMC',
     url: 'https://safechoiceusa.com/articles/Oral contraceptive pill for primary dysmenorrhoea - PMC.html'
   },
+  ,
+  {
+    id: 'share-button28',
+    title: 'A Novel Approach to Enhancing Sexual Health in College Dormitories',
+    url: 'https://safechoiceusa.com/articles/A Novel Approach to Enhancing Sexual Health in College Dormitories.html'
+  },
 
 
 ];
