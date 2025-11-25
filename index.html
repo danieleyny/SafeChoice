@@ -1,842 +1,518 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="We are SafeChoice! A team dedicated to providing effective contraceptives to college dorms everywhere.">
-        <meta name="keywords" content="SafeChoice, SafeChoice, safechoiceusa, SafeChoice usa, safe sex products new york, contraceptive vending machine ny, basic contraceptive vending machine ny, birth control pills nyc, digital contraceptive vending machine nyc, levonorgestrel emergency contraceptive pill usa, levonorgestrel pill nyc, condoms nyc store, feminine hygiene products new york, ntampax feminine hygiene products nyc, kotex feminine products nyc, otc birth control nyc, nyquil pills in new york, buy advil pm in New york, emergency contraceptive near me, plan b, condoms, trojan, skyn, lyfestyle, contraceptive, vending machine, JavaScript, Web, Development, Kumala, Kumala Web Development, Daniel Eyny Web Developer, Daniel Eyny Kumala, Kumala Daniel Eyny, Kumala Website Development">
-        <meta name="author" content="Daniel Eyny">
-        <meta property="og:image" content="assets/img/safechoicelogosmaller.webp"/>
-        <meta property="og:image:alt" content="a photo of the SafeChoice usa logo" />
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeChoice Consulting | Custom Swag & Product Conceptualization</title>
     
-        <!--=============== FAVICON ===============-->
-        <link rel="shortcut icon" href="assets/img/SafeChoice.webp" type="image/x-icon">
-
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for elegance and smooth scrolling (Emerald Accent) */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f0f0f; /* Near-Black Charcoal Charcoal Background */
+            color: #e4e4e7; /* Zinc-200 Light Text */
+            overflow-x: hidden; /* Prevent horizontal scroll from absolute positioning */
+        }
+        .nav-link {
+            position: relative;
+            padding: 0.5rem 0;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: #34d399; /* Emerald-400 */
+            transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+            left: 0;
+        }
+        .card-glow {
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        /* New Emerald Glow Effect */
+        .card-glow:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px -12px rgba(52, 211, 153, 0.3), 0 10px 10px -5px rgba(52, 211, 153, 0.1);
+            border-color: #34d399; /* Emerald-400 */
+        }
+        /* Keyframe for subtle pulse effect */
+        @keyframes subtle-pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.01); opacity: 0.98; }
+        }
+        .animate-subtle-pulse {
+            animation: subtle-pulse 4s infinite ease-in-out;
+        }
         
-        <!--=============== BOXICONS ===============-->
-        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+        /* --- Scroll Animation Enhancements (Sleek) --- */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            /* Increased duration for a smoother, sleeker fade-in */
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
         
+        /* --- On-Load Hero Entrance Animation --- */
+        @keyframes hero-entrance {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
-        <!--=============== CSS ===============-->
-        <link rel="stylesheet" href="assets/css/styles.css">
+        .hero-text-animate {
+            opacity: 0; /* Start hidden */
+            /* Staggered animation: 1s duration, 0.2s delay, stays at the end state (forwards) */
+            animation: hero-entrance 1s ease-out 0.2s forwards;
+        }
 
-        <title>SafeChoice</title>
+        .hero-p-animate {
+            opacity: 0; /* Start hidden */
+            /* Staggered animation: 1s duration, 0.5s delay */
+            animation: hero-entrance 1s ease-out 0.5s forwards;
+        }
 
-        <link rel="apple-touch-icon" href="assets/img/SafeChoice.webp">
-        
+        /* Styles to prevent dragging and selection on images */
+        .no-select-drag {
+            user-select: none; /* Standard property for selection */
+            -webkit-user-select: none; /* Webkit browsers (Chrome, Safari) */
+            -webkit-user-drag: none; /* Prevent image dragging in Webkit */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+        }
+        /* Custom aspect ratio class (4:3) */
+        .aspect-4-3 {
+            padding-top: 75%; /* (Height / Width) * 100 = (600 / 800) * 100 = 75% */
+        }
 
-        <meta name="theme-color" content="hsl(196, 60%, 91%)">
-        
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="yes">
-        
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    
+        /* Hero Section Background Glow Effect - BOLDER VERSION */
+        .hero-glow-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none; /* Allow clicks to pass through */
+            z-index: 0; /* Keep it in the background */
+        }
 
+        .hero-glow-orb {
+            position: absolute;
+            width: 90vmax; /* Increased size */
+            height: 90vmax; /* Increased size */
+            background: radial-gradient(circle at center, rgba(52, 211, 153, 0.3) 0%, rgba(52, 211, 153, 0) 70%); /* Bolder gradient start */
+            border-radius: 50%;
+            animation: moveAndFade 18s infinite alternate ease-in-out; /* Slightly slower for more impact */
+            filter: blur(60px); /* Slightly less blur for more definition */
+            opacity: 0.85; /* Increased initial opacity */
+        }
 
-<link rel="preload" href="../img/shape-bg.webp" as="image" type="image/webp">
+        /* Keyframes for orb movement and fading - BOLDER VERSION */
+        @keyframes moveAndFade {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.85;
+            }
+            33% {
+                transform: translate(30%, 60%) scale(1.2); /* More aggressive scale and movement */
+                opacity: 0.75;
+            }
+            66% {
+                transform: translate(80%, -30%) scale(0.9); /* More aggressive scale and movement */
+                opacity: 0.9;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.85;
+            }
+        }
 
-        <!-- For Lemon font -->
-<link rel="preload" href="https://fonts.gstatic.com/s/lemon/v12/HI_EiYEVKqRMq0jBSZXAQ4-drat5.woff2" as="font" type="font/woff2" crossorigin>
+        /* Content should be above the glow */
+        .hero-content {
+            position: relative;
+            z-index: 10;
+        }
 
+    </style>
+</head>
+<body class="antialiased">
 
-
-
-    </head>
-
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-V3QE1KNP08"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-V3QE1KNP08');
-</script>
-
-    <body>
-        <div id="page-background" class="home__shape-bg"></div>
-
-
-
-        <!--==================== HEADER ====================-->
-        <header class="header" id="header">
-            
-            <nav class="nav container" >
-                <a href="#" class="nav__logo">
-                    Safe<span>Choice</span>
+    <!-- Header & Navigation --><header class="sticky top-0 z-50 bg-zinc-900/95 backdrop-blur-sm shadow-xl">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex justify-between items-center">
+                
+                <!-- Logo --><a href="#home" class="text-2xl font-extrabold text-emerald-400 tracking-tight">
+                    SafeChoice<span class="text-white"> Consulting</span>
                 </a>
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item">
-                            <a href="index.html" class="nav__link active-link">Home</a>
+                <!-- Desktop Menu --><div class="hidden lg:flex space-x-8 text-lg font-medium">
+                    <a href="#services" class="nav-link hover:text-emerald-400">Our Services</a>
+                    <a href="#value" class="nav-link hover:text-emerald-400">The SafeChoice Edge</a>
+                    <a href="#portfolio" class="nav-link hover:text-emerald-400">Portfolio Showcase</a>
+                    <a href="#contact" class="nav-link hover:text-emerald-400">Contact Us</a>
+                </div>
+
+                <!-- Mobile Menu Button (Hamburger) --><div class="lg:hidden">
+                    <button id="menu-button" class="cursor-pointer p-2 transition duration-300 hover:text-emerald-400" aria-label="Toggle navigation menu">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu Content (Initially hidden via JS/CSS class) --><div id="mobile-menu" class="hidden lg:hidden flex-col space-y-3 mt-4 text-center bg-zinc-800/95 p-4 rounded-xl shadow-xl transition-all duration-300 ease-in-out">
+                <a href="#services" class="text-base font-medium text-gray-100 hover:text-emerald-400 py-2">Our Services</a>
+                <a href="#value" class="text-base font-medium text-gray-100 hover:text-emerald-400 py-2">The SafeChoice Edge</a>
+                <a href="#portfolio" class="text-base font-medium text-gray-100 hover:text-emerald-400 py-2">Portfolio Showcase</a>
+                <a href="#contact" class="text-base font-medium text-gray-100 hover:text-emerald-400 py-2">Contact Us</a>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="max-w-7xl mx-auto">
+
+        <!-- Hero Section with Animated Background --><section id="home" class="relative py-24 lg:py-40 px-4 sm:px-6 lg:px-8 text-center bg-zinc-900 border-b border-emerald-500/20">
+            
+            <!-- Background Glow Effect --><div class="hero-glow-container">
+                <div class="hero-glow-orb"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto hero-content"> <!-- Added hero-content class for z-index -->
+                <!-- Applied hero-text-animate for initial on-load transition --><h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold leading-snug text-white mb-6 animate-subtle-pulse hero-text-animate">
+                    Swag That Speaks Volumes. <span class="text-emerald-400">On Budget.</span>
+                </h1>
+                <!-- Applied hero-p-animate for initial on-load transition --><p class="text-xl sm:text-2xl text-zinc-300 mb-10 hero-p-animate">
+                    We partner with ambitious startups, prestigious universities, and growing companies to conceptualize and create truly memorable, high-quality products that serve as the ultimate custom swag.
+                </p>
+                <!-- Applied hero-p-animate for initial on-load transition --><a href="#contact" class="inline-block px-12 py-4 text-xl font-bold text-zinc-900 bg-emerald-400 rounded-xl shadow-2xl shadow-emerald-500/30 hover:bg-emerald-300 transition duration-300 transform hover:scale-[1.05] active:scale-95 hero-p-animate">
+                    Start Your Swag Project
+                </a>
+            </div>
+        </section>
+
+        <!-- Services Section --><section id="services" class="py-20 px-4 sm:px-6 lg:px-8 bg-zinc-950 fade-in-section">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4">Our End-to-End Swag Creation Process</h2>
+                <p class="text-xl text-zinc-400">From concept development to final product delivery—we offer a streamlined experience.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Service 1 (with delay) --><div class="bg-zinc-900 p-8 rounded-2xl shadow-lg card-glow border border-zinc-700 fade-in-section delay-100">
+                    <div class="text-emerald-400 mb-4">
+                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v14c-1.745-.308-3.522-.5-5.32-.5-3.048 0-5.83.94-8.08 2.5zM21 6v14a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2h12a2 2 0 012 2z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-4">1. Conceptualize</h3>
+                    <p class="text-zinc-300">
+                        We transform your brand goals into tangible product ideas. Our focus is on relevance and impact, ensuring every piece of swag tells your story.
+                    </p>
+                </div>
+
+                <!-- Service 2 (with delay) --><div class="bg-zinc-900 p-8 rounded-2xl shadow-lg card-glow border border-zinc-700 fade-in-section delay-300">
+                    <div class="text-emerald-400 mb-4">
+                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 21h7a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2zm7-2l-3-3m0 0l-3-3m3 3L7 9m6 0h.01"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-4">2. Customize</h3>
+                    <p class="text-zinc-300">
+                        Precision customization of materials, colors, and branding details. We handle all proofs and prototyping for a flawless execution of your vision.
+                    </p>
+                </div>
+
+                <!-- Service 3 (with delay) --><div class="bg-zinc-900 p-8 rounded-2xl shadow-lg card-glow border border-zinc-700 fade-in-section delay-500">
+                    <div class="text-emerald-400 mb-4">
+                        <svg class="w-10 h-10 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm10-5a.5.5 0 11-1 0 .5.5 0 011 0z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-white mb-4">3. Create & Deliver</h3>
+                    <p class="text-zinc-300">
+                        We leverage our vetted supply chain for manufacturing, rigorous QC, packaging, and global logistics, delivering high-quality swag straight to your door.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Value Proposition Section --><section id="value" class="py-20 px-4 sm:px-6 lg:px-8 bg-zinc-900 fade-in-section">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="lg:order-2">
+                    <h2 class="text-4xl font-bold text-white mb-6">Why Choose <span class="text-emerald-400">SafeChoice</span>?</h2>
+                    <p class="text-xl text-zinc-300 mb-8">
+                        Our name is synonymous with reliability. We remove the uncertainty from product procurement by ensuring clarity, quality, and complete budget certainty from concept to completion.
+                    </p>
+
+                    <ul class="space-y-6">
+                        <!-- Value Prop 1 (with delay) --><li class="flex items-start fade-in-section delay-100">
+                            <svg class="w-6 h-6 text-emerald-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <div>
+                                <h4 class="text-xl font-semibold text-white">Guaranteed Budget Adherence</h4>
+                                <p class="text-zinc-400">Your budget is our primary constraint. We design and deliver products that meet your financial goals, always.</p>
+                            </div>
                         </li>
-                        <li class="nav__item">
-                            <a href="articles.html" class="nav__link">Articles</a>
+                        <!-- Value Prop 2 (with delay) --><li class="flex items-start fade-in-section delay-200">
+                            <svg class="w-6 h-6 text-emerald-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2v5m0 0H9m7.414-7.414A2 2 0 0012 7.172V5a2 2 0 00-2-2H7a2 2 0 00-2 2v4a2 2 0 002 2h3m5-7a2 2 0 002 2h3a2 2 0 002-2V5a2 2 0 00-2-2h-3a2 2 0 00-2 2v4z"></path></svg>
+                            <div>
+                                <h4 class="text-xl font-semibold text-white">Strategic & Useful Products</h4>
+                                <p class="text-zinc-400">We advise on high-utility products that recipients will keep and use, maximizing your brand's longevity.</p>
+                            </div>
                         </li>
-                        
-                        <li class="nav__item">
-                            <a href="products.html" class="nav__link">Our Products</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="contact.html" class="nav__link">Contact</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="login.html" class="nav__link-login">Login</a>
+                        <!-- Value Prop 3 (with delay) --><li class="flex items-start fade-in-section delay-300">
+                            <svg class="w-6 h-6 text-emerald-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14v6m-3-3h6M6 10h2m-2 4h2m-2 4h2M9 4h2m-2 4h2m-2 4h2m-2 4h2"></path></svg>
+                            <div>
+                                <h4 class="text-xl font-semibold text-white">Vetted Supplier Network</h4>
+                                <p class="text-zinc-400">Access our exclusive network of reliable, quality-focused manufacturers, eliminating the typical sourcing risks.</p>
+                            </div>
                         </li>
                     </ul>
-
-                    <div class="nav__close" id="nav-close">
-                        <i class='bx bx-x'></i>
-                    </div>
-
-                    <img src="assets/img/redleaf.webp" alt="Nav image" class="nav__img">
                 </div>
 
-                <!-- Toggle button -->
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu nav__menu-icon'></i>
-                </div>
-            </nav>
-        </header>
-
-        <!--==================== MAIN ====================-->
-        <main class="main">
-
-
-        
-
-            <!--==================== HOME ====================-->
-            <section class="home">
-                <div class="home__shape-small"></div>
-                <div class="home__shape-big"></div>
-
-                <div class="home__container container">
-                    <div class="home__data">
-                        <h1 class="home__title">
-                            Providing
-                            <span>SafeChoice</span>
-                            Products 24/7
-                        </h1>
-                        <p class="home__description">
-                            Accessible safe sex products <br>
-                            whenever you need them.
-                        </p>
-                        <a href="#about" class="home__button">
-                            Details
-                        </a>
-                    </div>
-    
-                    <div class="home__images">
-                        <img src="assets/img/waterbkg-removebg-preview.webp" alt="Image of water background" class="home__liquid">
-                        <div class="home__juice-animate">
-                            <img src="assets/img/safechoicemachine.webp" alt="Plan B image" class="home__juice">
-                        </div>
-                        <img src="assets/img/salmonflower-removebg-preview.webp" alt="Dark Pink Flower 1" class="home__apple1">
-                        <img src="assets/img/salmonflower-removebg-preview.webp" alt="Dark Pink Flower 2" class="home__apple2">
-                        <div>
-                            <img src="assets/img/pinkflower-removebg-preview.webp" alt="Light Pink Flower" class="home__leaf">
-                            <img src="assets/img/pinkflower-removebg-preview.webp" alt="Light Pink Flower 2" class="home__leaf">
-                            <img src="assets/img/pinkflower-removebg-preview.webp" alt="Light Pink Flower 3" class="home__leaf">
-                            <img src="assets/img/pinkflower-removebg-preview.webp" alt="Light Pink Flower 4" class="home__leaf">
-                            <img src="assets/img/pinkflower-removebg-preview.webp" alt="Light Pink Flower 5" class="home__leaf">
-                            <img src="assets/img/pinkflower-removebg-preview.webp" alt="Light Pink Flower 6" class="home__leaf">
+                <!-- GIF Image --><div class="lg:order-1 flex items-center justify-center">
+                    <!-- Added fade-in-section to the image container itself -->
+                    <div class="w-full relative rounded-2xl border-4 border-emerald-500/50 shadow-2xl overflow-hidden fade-in-section">
+                        <div class="relative aspect-4-3">
+                            <img 
+                                src="./assetsconsulting/thinkinggif.gif" 
+                                alt="Animated GIF of a person thinking, representing strategic thought" 
+                                class="absolute inset-0 w-full h-full object-cover no-select-drag rounded-xl"
+                                onerror="this.onerror=null;this.src='https://placehold.co/800x600/3f3f46/d4d4d8?text=Thinking+GIF+Loading+Error'"
+                            >
                         </div>
                     </div>
                 </div>
-            </section>
-<!--=============== End of Home ===============-->
+            </div>
+        </section>
 
-
-
-<!--==================== ABOUT ====================-->
-<section class="about section__about container__about" id="about">
-    <div class="about__container grid__about">
-        <img src="assets/img/blue Simple Illustrated Vending Machine With Boy Your Story.webp" alt="Vending Machine Display Image" class="about__img">
-
-        <div class="about__data">
-            <h2 class="section__title about__title">
-                What We Do
-            </h2>
-
-            <p class="about__description">
-                We provide dorms with contraceptive vending machines accessible 24/7. Our vending machines are fully supplied with all of the necessities for a safe sexual experience. Which ultimately leads to a cleaner college environment. At zero cost to universities, this is an all around solution to a rapidly growing issue.
-            </p>
-
-            <div class="about__details">
-                <p class="about__details-description">
-
-                    <i class="bx bx-check about__details-icon"></i>
-                    Creating a safer environment for students in dorms.
-                </p>
-                <p class="about__details-description">
-                    <i class="bx bx-check about__details-icon"></i>
-                    Meeting a demand directly backed by statistics.
-                </p>
-                <p class="about__details-description">
-                    <i class="bx bx-check about__details-icon"></i>
-                    Solving an issue directly backed by statistics.
-                </p>
-                <p class="about__details-description">
-                    <i class="bx bx-check about__details-icon"></i>
-                    Breaking the contraceptive taboo.
+        <!-- Portfolio Section (Track Record) --><section id="portfolio" class="py-20 px-4 sm:px-6 lg:px-8 bg-zinc-950 fade-in-section">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4">Our Track Record</h2>
+                <p class="text-xl text-zinc-400 max-w-3xl mx-auto">
+                    We turn everyday items into powerful brand ambassadors. Here are some client successes.
                 </p>
             </div>
 
-            <a href="contact.html#request" class="button--link button--flex">
-                <i class="bx bx-right-arrow-alt button__icon-right"></i> Request A Machine <i class="bx bx-left-arrow-alt button__icon"></i>
-            </a>
-        </div>
-    </div>
-</section>
-
-
-
-
-
-<!--=============== SERVICES ===============-->
-
-
-<section id="whatweprovide" class="services section__services">
-               
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 
-    <span class="section__subtitle">Dispensers & Vending Machines</span>
-    <h2 class="section__title">What We Provide</h2>
-
-    <div class="services__container container__services grid__services">
-        <div class="services__card">
-            <h3 class="services__title">Condoms</h3>
-
-            <span class="services__button">
-                More Info <i class='bx bx-right-arrow-alt services__icon'></i>
-            </span>
-        </div>
-
-
-
-
-        <div class="services__card2">
-            <h3 class="services__title">Levonorgestrel</h3>
-
-            <span class="services__button">
-                More Info <i class='bx bx-right-arrow-alt services__icon'></i>
-            </span>
-        </div>
-
-
-
-
-
-        <div class="services__card3">
-            <h3 class="services__title">Feminine Hygiene</h3>
-
-            <span class="services__button">
-                More Info <i class='bx bx-right-arrow-alt services__icon'></i>
-            </span>
-        </div>
-
-
-
-
-        <div class="services__card4">
-            <h3 class="services__title">OTC Medication</h3>
-
-            <span class="services__button">
-                More Info <i class='bx bx-right-arrow-alt services__icon'></i>
-            </span>
-        </div>
-
-    
-
-    </div>
-</section>
-
-
-
-<!--=============== Service Cards ===============-->
-<div class="services__modal modal__Z-index">
-    <div class="services__modal-content">
-        <i class='bx bx-x services__modal-close'></i>
-
-        <h3 class="services__modal-title">Benefits of Condoms</h3>
-        <p class="services__modal-description">
-            A supply of various brands and types of condoms will be provided within each vending machine and dispenser.
-        </p>
-
-        <ul class="services__modal-list">
-            <li class="services__modal-item">
-                <i class='bx bx-check services__modal-icon' ></i>
-                <p class="services__modal-info">
-                    Prevents the increasing spread of STDs.
-                </p>
-            </li>
-
-            <li class="services__modal-item">
-                <i class='bx bx-check services__modal-icon' ></i>
-                <p class="services__modal-info">
-                    Prevents accidental pregnancy.
-                </p>
-            </li>
-
-            <li class="services__modal-item">
-                <i class='bx bx-check services__modal-icon' ></i>
-                <p class="services__modal-info">
-                    Prevents the spread of human papillomavirus (HPV).
-                </p>
-            </li>
-
-            <li class="services__modal-item">
-                <i class='bx bx-check services__modal-icon' ></i>
-                <p class="services__modal-info">
-                    Reduce the risk of a UTI.
-                </p>
-            </li>
-
-            <li class="services__modal-item">
-                <i class='bx bx-check services__modal-icon' ></i>
-                <p class="services__modal-info">
-                    Easy to use and safe.
-                </p>
-            </li>
-
-            <li class="services__modal-item">
-                <i class='bx bx-check services__modal-icon' ></i>
-                <p class="services__modal-info">
-                    Cost effective and efficient.
-                </p>
-            </li>
-           
-        </ul>
-    </div>
-</div>
-
-
-
-
-
-
-<div class="services__modal .modal__Z-index">
-    <div class="services__modal-content">
-        <i class='bx bx-x services__modal-close'></i>
-
-        <h3 class="services__modal-title">Benefits of Levonorgestrel</h3>
-        <p class="services__modal-description">
-            A progestin — which can prevent ovulation, block fertilization or keep a fertilized egg from implanting in the uterus. Prevents pregnancy after unprotected sex or after another birth control method fails.  
-        </p>
-
-        <ul class="services__modal-list">
-            <li class="services__modal-item">
-                <i class='bx bx-check services__modal-icon' ></i>
-                <p class="services__modal-info">
-                    Prevents accidental pregancy.
-                </p>
-            </li>
-
-            <li class="services__modal-item">
-                <i class='bx bx-check services__modal-icon' ></i>
-                <p class="services__modal-info">
-                    Cost effective solution to accidental pregnancy.
-                </p>
-            </li>
-
-            <li class="services__modal-item">
-                <i class='bx bx-check services__modal-icon' ></i>
-                <p class="services__modal-info">
-                    Suitable for the treatment of menorrhagia.
-                </p>
-            </li>
-            
-            <li class="services__modal-item">
-                <i class='bx bx-check services__modal-icon' ></i>
-                <p class="services__modal-info">
-                    95% effective if taken within 24 hours
-                </p>
-            </li>
-            
-            <li class="services__modal-item">
-                <i class='bx bx-check services__modal-icon' ></i>
-                <p class="services__modal-info">
-                    89% effective if taken within 72 hours
-                </p>
-            </li>
-           
-        </ul>
-    </div>
-</div>
-
-
-
-
-<div class="services__modal modal__Z-index">
-    <div class="services__modal-content">
-        <i class='bx bx-x services__modal-close'></i>
-
-        <h3 class="services__modal-title">Benefits of Feminine Hygiene</h3>
-        <p class="services__modal-description">
-            Feminine hygiene products are personal care products used during menstruation, vaginal discharge, and other bodily functions related to the vulva and vagina.  
-        </p>
-
-        <ul class="services__modal-list">
-            <li class="services__modal-item">
-                <i class='bx bx-check services__modal-icon' ></i>
-                <p class="services__modal-info">
-                    Provides access to essential products for women.
-                </p>
-            </li>
-
-            <li class="services__modal-item">
-                <i class='bx bx-check services__modal-icon' ></i>
-                <p class="services__modal-info">
-                    Encourages positive hygiene.
-                </p>
-            </li>
-
-            <li class="services__modal-item">
-                <i class='bx bx-check services__modal-icon' ></i>
-                <p class="services__modal-info">
-                    Provided for the cheapest price in the neighborhood.
-                </p>
-            </li>
-            
-        </ul>
-    </div>
-</div>
-
-
-
-
-
-<div class="services__modal modal__Z-index">
-    <div class="services__modal-content">
-        <i class='bx bx-x services__modal-close'></i>
-
-        <h3 class="services__modal-title">Over The Counter Medication</h3>
-        <p class="services__modal-description">
-            We will provide over the counter (OTC) medication products. This will allow students and residents to easily access non prescription medications. OTC medications are used for symptomatic relief of minor health conditions, including headaches, coughs, colds, allergies, fever and more.    
-        </p>
-
-        <ul class="services__modal-list">
-            <li class="services__modal-item">
-                <i class='bx bx-check services__modal-icon' ></i>
-                <p class="services__modal-info">
-                    Easily Accessible 
-                </p>
-            </li>
-
-            <li class="services__modal-item">
-                <i class='bx bx-check services__modal-icon' ></i>
-                <p class="services__modal-info">
-                    Cost much less than prescription medications. 
-                </p>
-            </li>
-
-            <li class="services__modal-item">
-                <i class='bx bx-check services__modal-icon' ></i>
-                <p class="services__modal-info">
-                    Saves more than 42% a month according to bluecrossnc.com
-                </p>
-            </li>
-
-            <li class="services__modal-item">
-                <i class='bx bx-check services__modal-icon' ></i>
-                <p class="services__modal-info">
-                    No lines & no hassle
-                </p>
-            </li>
-            
-        </ul>
-    </div>
-</div>
-
-
-
-
-<!--=============== Service Cards End ===============-->
-<!--=============== End of SERVICES ===============-->
-
-
-
- <!--==================== Why We Do It ====================-->
- <div class="specialty section container" id="specialty">
-    <br/><br/></br><br/><br/></br>
-    <div class="specialty__container">
-            <h2 class="section__title">
-                Why We Do It
-            </h2>
-
-            
-
-        <div class="specialty__category">
-            <div class="specialty__group">
-                <img src="assets/img/protectionlogo.webp" alt="the logo to represent protection" class="specialty__img">
-
-                <h3 class="specialty__title">Prevention</h3>
-                <p class="specialty__description">
-                    STD rates are currently at an all time high. By providing products for safer sex we hope to help slow down and prevent the spread of STD's throughout our community. 
-                </p>
-            </div>
-
-            <div class="specialty__group">
-                <img src="assets/img/healthlogo.webp" alt="logo to represent health" class="specialty__img">
-
-                <h3 class="specialty__title">Health</h3>
-                <p class="specialty__description">
-                    We want to protect our women’s health and make them feel more comfortable within our community by providing what is necessary to keep up with good feminine hygiene.
-                </p>
-            </div>
-
-            <div class="specialty__group">
-                <img src="assets/img/emergencylogolarge (1).webp" alt="logo to represent emergency" class="specialty__img">
-
-                <h3 class="specialty__title">Emergency Contraception</h3>
-                <p class="specialty__description">
-                    It is important to provide emergency contraceptives for the times when protection fails. We will always make sure our locations always have them emergecy contraceptives available.
-                </p>
-            </div>
-            <div class="specialty_button_center">
-                <a href="articles.html" class="specialty__button">See Stats</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<br/><br/><br/><br/><br/><br/>
-<!--==================== Download PDF ====================-->
-<section class="celebrate section-celebrate container-celebrate" id="celebrate">
-    <div class="celebrate__container grid-celebrate">
-        <div class="celebrate__data">
-            <h2 class="section__title celebrate__title">
-                SafeChoice Proposal
-            </h2>
-            <p class="celebrate__description">
-                Check out our company proposal to discover more information and the purpose behind <a href="#" class="nav__logo"> Safe<span>Choice</span></a>. Understand our mission, vision and get a better idea of who we are and our game plan.
-            </p>
-            <a href="assets/SafeChoice Presentation.pdf" target="_blank" class="button-celebrate">Proposal<i class='bx bx-download generate-pdf' title="Generate PDF"></i></a>
-        </div>
-
-        <img src="assets/img/computerdispla.webp" alt="informational download display" class="celebrate__img">
-    </div>
-</section>
-
-
-
-
-<!--=============== Map Location ===============-->
-<br/><br/><br/><br/><br/><br/><br/><br/>
-<div id="locationsmap"></div>
-<br/><br/><br/>
-
-<div class="reachout__content">
-    <div class="reachout__data">
-        <span class="section__subtitle">Find Us</span>
-        <h2 class="section__title">
-            Our Available Locations<span>.</span>
-        </h2>
-        <p class="location__description">
-            We currently have  <span class="location__quicklink"> 7 </span> active SafeChoice vending machines. See all of our currently available machines and click the location nearest to you to receive more information about the location.
-        </p>
-    </div>
-    </div>
-
-
-
-
-
-    <br/><br/><br/>
-  
-      
-    
-<iframe src="https://www.google.com/maps/d/u/9/embed?mid=1LfDSTWWs8kFF2X0maUOi_nJZyfHqeyU&ehbc=2E312F" class="mapembed"></iframe>
-
-
-
-<!--=============== Map Location End ===============-->
-
-
-<!--=============== Partners ===============-->
-
-
-<div class="container__partners" id="ourpartners">
-    <br/><br/>
-    <h2 class="section__title">Clients We Work With</h2>
-    <section class="customer-logos slider">
-        <div class="slide"><img src="assets/img/TalCompanyLLC.webp" alt="Tal Company logo"></div>
-        <div class="slide"><img src="assets/img/nivrealty.webp" alt="NIV Realty logo"></div>
-        <div class="slide"><img src="assets/img/zmflp.webp" alt="ZM FLP logo"></div>
-        <div class="slide"><img src="assets/img/SYNlogo.webp" alt="SYN logo"></div>
-        <div class="slide"><img src="assets/img/ockonline.webp" alt="ock store logo"></div>
-        <div class="slide"><img src="assets/img/aaawholesalelogo.webp" alt="AAA wholesale logo"></div>
-        <div class="slide"><img src="assets/img/albroadwaydistribution.webp" alt="Al Broadway logo"></div>
-    </section>
-</div>
-
-        
-
-
-
-
-<!--==================== reachout ====================-->
-<section class="reachout section__reachout" id="reachout">
-    <div class="reachout__container container__reachout grid__reachout">
-        <div class="reachout__images">
-            <div class="reachout__orbe"></div>
-
-            <div class="reachout__img">
-                <img src="assets/img/studentpicturetest.webp" alt="students sitting on steps happy">
-            </div>
-        </div>
-
-        <div class="reachout__content">
-            <div class="reachout__data">
-                <span class="section__subtitle">Contact Us</span>
-                <h2 class="section__title">
-                    Easy to reach out to us<span>.</span>
-                </h2>
-                <p class="reachout__description">
-                    Reach out to us using our quick links below or head over to our <a class="reachout__quicklink" href="contact.html"> contact page </a> to use our contact form or to request a product.
-                </p>
-            </div>
-
-            <div class="reachout__card">
-
-
-                <div class="reachout__card-box">
-                    <div class="reachout__card-info">
-                        <i class='bx bxs-envelope'></i>
-                        
-                        <div>
-                            <h3 class="reachout__card-title">
-                                Email
-                            </h3>
-                            <p class="reachout__card-description">
-                                SafeChoiceUSA
-                            </p>
-                        </div>
+                <!-- Project 1: Levant - Construction (with delay) --><div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-700 card-glow fade-in-section delay-100">
+                    <div class="h-32 rounded-lg mb-4 overflow-hidden flex items-center justify-center bg-zinc-800"> 
+                        <img 
+                            src="./assetsconsulting/levant.png" 
+                            alt="Levant Logo Product Mockup (Construction Hard Hat)" 
+                            class="w-full h-full object-cover no-select-drag" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/128x128/3f3f46/d4d4d8?text=Levant+Logo'"
+                        >
                     </div>
-                    <a href="mailto:safechoiceusa@gmail.com">
-                        <button class="button-reachout reachout__card-button">
-                            Write Us Now
-                        </button>
-                    </a> 
-                </div>
-
-
-
-                <div class="reachout__card-box">
-                    <div class="reachout__card-info">
-                        <i class='bx bxs-phone-call'></i>
-                        
-                        <div>
-                            <h3 class="reachout__card-title">
-                                Call
-                            </h3>
-                            <p class="reachout__card-description">
-                                (646) 418-9226
-                            </p>
-                        </div>
-                    </div>
-                    <a href="tel:6464189226">
-                        <button class="button-reachout reachout__card-button">
-                            Call Now
-                        </button>
-                    </a>
-                </div>
-             
-
-                <div class="reachout__card-box">
-                    <div class="reachout__card-info">
-                        <i class='bx bxl-instagram' ></i>
-                        
-                        <div>
-                            <h3 class="reachout__card-title">
-                                Follow Us
-                            </h3>
-                            <p class="reachout__card-description">
-                                SafeChoiceUSA
-                            </p>
-                        </div>
-                    </div>
-                    <a href="https://www.instagram.com/safechoiceusa/?hl=en">
-                        <button class="button-reachout reachout__card-button">
-                            Follow Now
-                        </button>
-                    </a>
-                </div>
-
-                
-
-                <div class="reachout__card-box">
-                    <div class="reachout__card-info">
-                        <i class='bx bxs-message-rounded-dots' ></i>
-                        
-                        <div>
-                            <h3 class="reachout__card-title">
-                                Request Machine
-                            </h3>
-                            <p class="reachout__card-description">
-
-                            </p>
-                        </div>
-                    </div>
-                    <a href="contact.html#request">
-                    <button class="button-reachout reachout__card-button">
-                        Go To Form
-                    </button>
-                    </a>
+                    <h4 class="text-xl font-semibold mb-2 text-white">Levant - Branded Hard Hat</h4>
+                    <p class="text-sm text-zinc-400">High-quality, customizable hard hats with the Levant logo for site safety and brand visibility.</p>
                 </div>
                 
-
-
+                <!-- Project 2: Laundry Day - Laundry Service (with delay) --><div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-700 card-glow fade-in-section delay-200">
+                    <div class="h-32 rounded-lg mb-4 overflow-hidden flex items-center justify-center bg-zinc-800">
+                        <img 
+                            src="./assetsconsulting/laundryday.png" 
+                            alt="Laundry Day NYC Logo Product Mockup (Tote Bag)" 
+                            class="w-full h-full object-cover no-select-drag" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/128x128/3f3f46/d4d4d8?text=Laundry+Day+Logo'"
+                        >
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2 text-white">Laundry Day NYC - Custom Tote Bag</h4>
+                    <p class="text-sm text-zinc-400">Durable canvas tote bags with the Laundry Day NYC logo, perfect for customer convenience and brand exposure.</p>
+                </div>
+                
+                <!-- Project 3: Birchwood NY - Airbnb (with delay) --><div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-700 card-glow fade-in-section delay-300">
+                    <div class="h-32 rounded-lg mb-4 overflow-hidden flex items-center justify-center bg-zinc-800">
+                        <img 
+                            src="./assetsconsulting/birchwood.png" 
+                            alt="Birchwood NY Logo Product Mockup (Welcome Kit Item)" 
+                            class="w-full h-full object-cover no-select-drag" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/128x128/3f3f46/d4d4d8?text=Birchwood+Logo'"
+                        >
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2 text-white">Birchwood NY - Branded Welcome Kit</h4>
+                    <p class="text-sm text-zinc-400">Curated welcome kits for guests, including branded keychains and local guidebooks featuring the Birchwood NY logo.</p>
+                </div>
+                
+                <!-- Project 4: OCK Online - Vape Store (with delay) --><div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-700 card-glow fade-in-section delay-400">
+                    <div class="h-32 rounded-lg mb-4 overflow-hidden flex items-center justify-center bg-zinc-800">
+                        <img 
+                            src="./assetsconsulting/ockonline.png" 
+                            alt="OCK Online Logo Product Mockup (Vape Case)" 
+                            class="w-full h-full object-cover no-select-drag" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/128x128/3f3f46/d4d4d8?text=OCK+Logo'"
+                        >
+                    </div>
+                    <h4 class="text-xl font-semibold mb-2 text-white">OCK Online - Custom Vape Case</h4>
+                    <p class="text-sm text-zinc-400">Sleek, protective vape cases with the OCK Online logo, enhancing portability and brand recognition.</p>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
-
-
-
-
-      <!--==================== FOOTER ====================-->
-      <footer class="footer section-main">
-        <div class="footer__container container-main grid-main">
-            <div>
-                <a href="#" class="footer__logo">
-                    <img src="assets/img/SafeChoice.webp" alt="SafeChoice logo" class="footer__logo-img"> 
-                        Safe<span>Choice</span>
+             <div class="flex justify-center mt-12">
+                <a href="#contact" class="px-8 py-3 text-lg font-bold text-zinc-900 bg-emerald-500 rounded-xl shadow-lg shadow-emerald-500/40 hover:bg-emerald-400 transition duration-300 transform hover:scale-105 active:scale-95 fade-in-section delay-500">
+                    View More Case Studies
                 </a>
-
-                
             </div>
+        </section>
 
-            <div>
-                <h3 class="footer__title">Our Pages</h3>
+        <!-- Contact Section --><section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 bg-zinc-800 rounded-t-[3rem] shadow-inner border-t border-emerald-500/30 fade-in-section">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-white mb-4">Request a Budget-Aligned Proposal</h2>
+                    <p class="text-xl text-zinc-300">Share your vision and budget. We'll be in touch within one business day with relevant ideas.</p>
+                </div>
 
-                <ul class="footer__links">
-                  <li>
-                    <a href="index.html" class="footer__link">Home</a>
-                </li>
-                    
-                    <li>
-                        <a href="articles.html" class="footer__link">Blog</a>
-                    </li>
-                    <li>
-                        <a href="products.html" class="footer__link">Products</a>
-                    </li>
-                   
-                    <li>
-                        <a href="contact.html" class="footer__link">Contact</a>
-                    </li>
-                   
-                    
-                </ul>
+                <form id="contactForm" class="space-y-6 bg-zinc-900 p-8 rounded-2xl shadow-2xl border border-zinc-700">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-zinc-200 mb-1">Your Name</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-zinc-700 border border-zinc-600 rounded-lg text-white focus:ring-emerald-500 focus:border-emerald-500 transition duration-150">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-zinc-200 mb-1">Work Email</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-zinc-700 border border-zinc-600 rounded-lg text-white focus:ring-emerald-500 focus:border-emerald-500 transition duration-150">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="company" class="block text-sm font-medium text-zinc-200 mb-1">Company / Organization</label>
+                        <input type="text" id="company" name="company" required class="w-full px-4 py-3 bg-zinc-700 border border-zinc-600 rounded-lg text-white focus:ring-emerald-500 focus:border-emerald-500 transition duration-150">
+                    </div>
+
+                    <div>
+                        <label for="budget" class="block text-sm font-medium text-zinc-200 mb-1">Estimated Budget (Helpful for faster turnaround)</label>
+                        <select id="budget" name="budget" class="w-full px-4 py-3 bg-zinc-700 border border-zinc-600 rounded-lg text-white focus:ring-emerald-500 focus:border-emerald-500 transition duration-150 appearance-none">
+                            <option value="">Select a range...</option>
+                            <option value="under5k">Under $5,000</option>
+                            <option value="5k-15k">$5,000 - $15,000</option>
+                            <option value="15k-30k">$15,000 - $30,000</option>
+                            <option value="30kplus">$30,000+</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-zinc-200 mb-1">Project Details / Message</label>
+                        <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 bg-zinc-700 border border-zinc-600 rounded-lg text-white focus:ring-emerald-500 focus:border-emerald-500 transition duration-150"></textarea>
+                    </div>
+
+                    <div class="flex justify-center">
+                        <button type="submit" class="px-10 py-3 text-lg font-bold text-zinc-900 bg-emerald-400 rounded-xl shadow-lg shadow-emerald-500/40 hover:bg-emerald-300 transition duration-300 transform hover:scale-105 active:scale-95">
+                            Submit Inquiry
+                        </button>
+                    </div>
+                    <p id="formStatus" class="text-center text-sm font-semibold pt-4 text-emerald-400 hidden">Thank you for your inquiry! We will be in touch shortly.</p>
+                </form>
             </div>
+        </section>
 
-            <div>
-                <h3 class="footer__title">Our Sections</h3>
+    </main>
 
-                <ul class="footer__links">
-                    
-                    <li>
-                        <a href="#about" class="footer__link">What We Do</a>
-                    </li>
-                    <li>
-                        <a href="#whatweprovide" class="footer__link">What We Provide</a>
-                    </li>
-                    <li>
-                        <a href="#specialty" class="footer__link">Why We Do It</a>
-                    </li>
-                    <li>
-                      <a href="#ourpartners" class="footer__link">Our Partners</a>
-                  </li>
-                    <li>
-                      <a href="articles.html#blog" class="footer__link">Articles</a>
-                  </li>
-                  <li>
-                    <a href="contact.html#faqs" class="footer__link">FAQ</a>
-                </li>
-                  <li>
-                    <a href="contact.html#request" class="footer__link">Request A Machine</a>
-                </li>
-                    
-                    
-                </ul>
-            </div>
-
-
-            <div>
-                <h3 class="footer__title">Our Socials</h3>
-
-              
-                  <div class="social-icons">
-                    <a target="_blank" href="https://www.tiktok.com/@safechoiceusa">
-                      <i class="bx bxl-tiktok"></i>
-                    </a>
-                    <a target="_blank" href="https://www.instagram.com/safechoiceusa/?hl=en">
-                      <i class="bx bxl-instagram"></i>
-                    </a>
-                    <a target="_blank" href="https://www.linkedin.com/company/safechoiceusa/">
-                      <i class="bx bxl-linkedin"></i>
-                    </a>
-                    <a target="_blank" href="https://twitter.com/SafeChoiceUSA">
-                      <i class="bx bxl-twitter"></i>
-                    </a>
+    <!-- Footer --><footer class="bg-zinc-900 border-t border-zinc-700 mt-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-4 md:space-y-0">
+                <p class="text-zinc-400 text-sm">&copy; 2025 SafeChoice Consulting. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-zinc-400 hover:text-emerald-400 text-sm transition duration-300">Privacy Policy</a>
+                    <a href="#" class="text-zinc-400 hover:text-emerald-400 text-sm transition duration-300">Terms of Service</a>
                 </div>
             </div>
-
-            
-
-
-
-
         </div>
-
-                <span class="footer__copy"> <a title="SafeChoice Copyright Policy" href="assets/SafeChoice Copyright Policy.pdf" target="_blank" class="copywritepolicy">Copyright Policy</a> &#169; Eyny. All rights reserved <a href="assets/SafeChoice Privacy Policy.pdf" target="_blank" class="privacypolicy">Privacy Policy</a> </span>
-
     </footer>
 
+    <!-- JavaScript for interactivity --><script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- Mobile Menu Toggle ---
+            const menuButton = document.getElementById('menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
 
-        </main>
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
 
-
-        <script>
-    
-            $(document).ready(function(){
-                $('.customer-logos').slick({
-                    slidesToShow: 6,
-                    slidesToScroll: 1,
-                    autoplay: true,
-                    autoplaySpeed: 1000,
-                    arrows: false,
-                    dots: false,
-                    pauseOnHover:false,
-                    responsive: [{
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 4
-                        }
-                    }, {
-                        breakpoint: 520,
-                        settings: {
-                            slidesToShow: 2
-                        }
-                    }]
+            // Close mobile menu on link click
+            const navLinks = mobileMenu.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
                 });
             });
-        
-            </script>
-        
 
-     
+            // --- Scroll Visibility (Fade In Sections) ---
+            const sections = document.querySelectorAll('.fade-in-section');
 
-     
+            const options = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
 
-        <!--=============== GSAP ===============-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Check if the element has a delay class (e.g., delay-100, delay-200)
+                        const delayClass = Array.from(entry.target.classList).find(cls => cls.startsWith('delay-'));
+                        
+                        // Apply 'is-visible' directly or after a timeout based on the delay class
+                        if (delayClass) {
+                            // Extract delay time in ms (e.g., 'delay-300' -> 300)
+                            const delayMs = parseInt(delayClass.replace('delay-', ''), 10);
+                            setTimeout(() => {
+                                entry.target.classList.add('is-visible');
+                            }, delayMs);
+                        } else {
+                            entry.target.classList.add('is-visible');
+                        }
+                        
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, options);
 
-        
-        <!--=============== MAIN JS ===============-->
-        <script src="assets/js/main.js"></script>
-    </body>
+            sections.forEach(section => {
+                // Ensure elements without delay- classes are observed too
+                if (Array.from(section.classList).some(cls => cls.startsWith('delay-'))) {
+                    // Temporarily remove the delay-* class to let the element transition when it becomes visible
+                    // This relies on the delay being handled by the setTimeout above.
+                    // Tailwind CSS utilities like delay-X are primarily for CSS transition/animation property delays.
+                    // Since we're using JS for staggered activation, the CSS transition property already includes the transition time.
+                    // The delay classes work best when directly applied to CSS properties, but for stagger with IntersectionObserver,
+                    // we'll rely on the delay applied in the observer callback for non-aggressive entrance.
+                    // Re-applying the observer logic to respect the delay class via setTimeout.
+                    observer.observe(section);
+                } else {
+                     observer.observe(section);
+                }
+            });
+            
+            // --- Contact Form Submission (Placeholder) ---
+            const contactForm = document.getElementById('contactForm');
+            const formStatus = document.getElementById('formStatus');
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(event) {
+                    event.preventDefault(); 
+                    
+                    // Display success message
+                    formStatus.classList.remove('hidden');
+                    
+                    // Optional: Clear form fields
+                    this.reset();
+                    
+                    // Optional: Hide success message after a few seconds
+                    setTimeout(() => {
+                        formStatus.classList.add('hidden');
+                    }, 5000);
+                });
+            }
+
+        }); // End DOMContentLoaded
+    </script>
+</body>
 </html>
