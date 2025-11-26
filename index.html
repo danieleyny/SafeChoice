@@ -82,20 +82,7 @@
             animation: hero-entrance 1s ease-out 0.5s forwards;
         }
 
-        /* Styles to prevent dragging and selection on images */
-        .no-select-drag {
-            user-select: none; /* Standard property for selection */
-            -webkit-user-select: none; /* Webkit browsers (Chrome, Safari) */
-            -webkit-user-drag: none; /* Prevent image dragging in Webkit */
-            -moz-user-select: none; /* Firefox */
-            -ms-user-select: none; /* Internet Explorer/Edge */
-        }
-        /* Custom aspect ratio class (4:3) */
-        .aspect-4-3 {
-            padding-top: 75%; /* (Height / Width) * 100 = (600 / 800) * 100 = 75% */
-        }
-
-        /* Hero Section Background Glow Effect - BOLDER VERSION */
+        /* Hero Section Background Glow Effect */
         .hero-glow-container {
             position: absolute;
             top: 0;
@@ -109,27 +96,27 @@
 
         .hero-glow-orb {
             position: absolute;
-            width: 90vmax; /* Increased size */
-            height: 90vmax; /* Increased size */
-            background: radial-gradient(circle at center, rgba(52, 211, 153, 0.3) 0%, rgba(52, 211, 153, 0) 70%); /* Bolder gradient start */
+            width: 90vmax; 
+            height: 90vmax; 
+            background: radial-gradient(circle at center, rgba(52, 211, 153, 0.3) 0%, rgba(52, 211, 153, 0) 70%); 
             border-radius: 50%;
-            animation: moveAndFade 18s infinite alternate ease-in-out; /* Slightly slower for more impact */
-            filter: blur(60px); /* Slightly less blur for more definition */
-            opacity: 0.85; /* Increased initial opacity */
+            animation: moveAndFade 18s infinite alternate ease-in-out; 
+            filter: blur(60px); 
+            opacity: 0.85; 
         }
 
-        /* Keyframes for orb movement and fading - BOLDER VERSION */
+        /* Keyframes for orb movement and fading */
         @keyframes moveAndFade {
             0% {
                 transform: translate(-50%, -50%) scale(1);
                 opacity: 0.85;
             }
             33% {
-                transform: translate(30%, 60%) scale(1.2); /* More aggressive scale and movement */
+                transform: translate(30%, 60%) scale(1.2); 
                 opacity: 0.75;
             }
             66% {
-                transform: translate(80%, -30%) scale(0.9); /* More aggressive scale and movement */
+                transform: translate(80%, -30%) scale(0.9); 
                 opacity: 0.9;
             }
             100% {
@@ -144,6 +131,98 @@
             z-index: 10;
         }
 
+        /* Styles to prevent dragging and selection on images */
+        .no-select-drag {
+            user-select: none; 
+            -webkit-user-select: none; 
+            -webkit-user-drag: none; 
+            -moz-user-select: none; 
+            -ms-user-select: none; 
+        }
+        /* Custom aspect ratio class (4:3) */
+        .aspect-4-3 {
+            padding-top: 75%; 
+        }
+
+        /* --- LOGO GLITCH/STAGGER REVEAL (New Styles) --- */
+
+        /* Container to ensure words stay on one line and manages overflow */
+        .logo-container {
+            display: inline-flex;
+            overflow: hidden; 
+            line-height: 1; 
+        }
+
+        /* Initial state and transition for each word */
+        .logo-glitch-reveal {
+            opacity: 0;
+            transform: translateY(10px) scale(0.95);
+            filter: blur(2px) contrast(1.2);
+            position: relative;
+            /* Animation timing */
+            animation: glitch-snap 1.2s cubic-bezier(0.25, 0.45, 0.45, 0.94) forwards; /* Custom easing curve */
+        }
+
+        /* Set delay for the second word (Consulting) */
+        .logo-glitch-reveal:nth-child(2) {
+            animation-delay: 0.2s; /* Start Consulting slightly after SafeChoice */
+        }
+        
+        /* Keyframes for glitch-snap effect (broken/put-back-together feel) */
+        @keyframes glitch-snap {
+            0% {
+                opacity: 0;
+                transform: translateY(15px) rotate(2deg) skewX(5deg);
+                filter: blur(5px) contrast(1.5);
+                text-shadow: 0 0 5px rgba(52, 211, 153, 0.5);
+            }
+            30% {
+                opacity: 0.5;
+                transform: translateY(-5px) rotate(-1deg) skewX(-2deg);
+                filter: blur(1px) contrast(1);
+            }
+            60% {
+                opacity: 1;
+                transform: translateY(2px) rotate(0.5deg) skewX(1deg);
+                filter: blur(0.5px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) rotate(0) skewX(0);
+                filter: blur(0) contrast(1);
+                text-shadow: none;
+            }
+        }
+        
+        /* New Mobile Menu Item Styling (Vertical, Block-based) */
+        .mobile-nav-item {
+            display: block;
+            padding: 0.75rem 1rem; /* p-3 p-4 equivalent */
+            border-radius: 0.5rem; /* rounded-xl equivalent */
+            font-weight: 500; /* font-medium equivalent */
+            text-align: center;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Hover state for mobile items */
+        .mobile-nav-item:hover {
+            background-color: #34d399; /* Emerald-400 */
+            color: #1f2937; /* Gray-900 */
+        }
+
+        /* Active/Current item style for emphasis */
+        .mobile-nav-item:first-child { 
+            background-color: #065f46; /* Emerald-800 */
+            color: #ffffff; /* White */
+        }
+        
+        /* Force the whole menu to span width and center text */
+        #mobile-menu a {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+
     </style>
 </head>
 <body class="antialiased">
@@ -152,8 +231,9 @@
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div class="flex justify-between items-center">
                 
-                <!-- Logo --><a href="#home" class="text-2xl font-extrabold text-emerald-400 tracking-tight">
-                    SafeChoice<span class="text-white"> Consulting</span>
+                <!-- Logo with Glitch/Stagger Animation (Updated) --><a href="#home" class="text-2xl font-extrabold tracking-tight logo-container">
+                    <span class="logo-glitch-reveal text-emerald-400">SafeChoice</span>
+                    <span class="logo-glitch-reveal text-white ml-2">Consulting</span>
                 </a>
 
                 <!-- Desktop Menu --><div class="hidden lg:flex space-x-8 text-lg font-medium">
@@ -172,11 +252,13 @@
                 </div>
             </div>
             
-            <!-- Mobile Menu Content (Initially hidden via JS/CSS class) --><div id="mobile-menu" class="hidden lg:hidden flex-col space-y-3 mt-4 text-center bg-zinc-800/95 p-4 rounded-xl shadow-xl transition-all duration-300 ease-in-out">
-                <a href="#services" class="text-base font-medium text-gray-100 hover:text-emerald-400 py-2">Our Services</a>
-                <a href="#value" class="text-base font-medium text-gray-100 hover:text-emerald-400 py-2">The SafeChoice Edge</a>
-                <a href="#portfolio" class="text-base font-medium text-gray-100 hover:text-emerald-400 py-2">Portfolio Showcase</a>
-                <a href="#contact" class="text-base font-medium text-gray-100 hover:text-emerald-400 py-2">Contact Us</a>
+            <!-- Mobile Menu Content (Vertical List, Stylized) -->
+            <div id="mobile-menu" class="hidden lg:hidden flex-col space-y-2 mt-4 w-full p-4 bg-zinc-800 rounded-xl shadow-2xl border border-zinc-700 transition-all duration-300 ease-in-out">
+                <!-- Applied custom mobile-nav-item class for block styling -->
+                <a href="#services" class="mobile-nav-item text-gray-100 bg-zinc-700/50">Our Services</a>
+                <a href="#value" class="mobile-nav-item text-gray-100 bg-zinc-700/50">The SafeChoice Edge</a>
+                <a href="#portfolio" class="mobile-nav-item text-gray-100 bg-zinc-700/50">Portfolio Showcase</a>
+                <a href="#contact" class="mobile-nav-item text-gray-100 bg-zinc-700/50">Contact Us</a>
             </div>
         </nav>
     </header>
@@ -476,19 +558,8 @@
             }, options);
 
             sections.forEach(section => {
-                // Ensure elements without delay- classes are observed too
-                if (Array.from(section.classList).some(cls => cls.startsWith('delay-'))) {
-                    // Temporarily remove the delay-* class to let the element transition when it becomes visible
-                    // This relies on the delay being handled by the setTimeout above.
-                    // Tailwind CSS utilities like delay-X are primarily for CSS transition/animation property delays.
-                    // Since we're using JS for staggered activation, the CSS transition property already includes the transition time.
-                    // The delay classes work best when directly applied to CSS properties, but for stagger with IntersectionObserver,
-                    // we'll rely on the delay applied in the observer callback for non-aggressive entrance.
-                    // Re-applying the observer logic to respect the delay class via setTimeout.
-                    observer.observe(section);
-                } else {
-                     observer.observe(section);
-                }
+                // The observer handles visibility and staggered delay for scroll-in elements
+                observer.observe(section);
             });
             
             // --- Contact Form Submission (Placeholder) ---
