@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphic Pause | Natalie Eyny Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* --- CSS STYLES - BOLD/DYNAMIC THEME --- */
+        :root {
+            --clr-dark: #1e1e1e;
+            --clr-medium-dark: #2c2c2c; /* New dark shade for contrast */
+            --clr-light: #f4f4f4;
+            --clr-accent: #E55812; /* Brighter, dynamic orange/red accent */
+            --ff-primary: 'Montserrat', sans-serif;
+            --spacing: 3rem;
+            --border-radius: 4px;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: var(--clr-light);
+            color: var(--clr-dark);
+            font-family: var(--ff-primary);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        a {
+            color: var(--clr-dark);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--clr-accent);
+        }
+
+        h1, h2, h3 {
+            line-height: 1.2;
+        }
+
+        section {
+            padding: var(--spacing) 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem; /* Larger title */
+            margin-bottom: var(--spacing);
+            font-weight: 700; /* Bolder title */
+            text-transform: uppercase;
+            letter-spacing: 8px; /* Wider spacing */
+            color: var(--clr-medium-dark);
+        }
+
+        /* --- Header & Navigation --- */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem var(--spacing);
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+            background: rgba(244, 244, 244, 0.98);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Stronger shadow */
+        }
+
+        .logo {
+            font-size: 1.8rem; /* Bigger logo */
+            font-weight: 800;
+            letter-spacing: 3px;
+        }
+
+        .nav__list {
+            list-style: none;
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        .nav__link {
+            font-weight: 700;
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav__link:hover {
+            color: var(--clr-accent);
+        }
+
+        /* Mobile Navigation Toggle (Hamburger) */
+        .nav-toggle {
+            display: none; 
+            padding: 0.5em;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            right: 1.5rem;
+            top: 1.5rem;
+            z-index: 200;
+        }
+
+        .hamburger,
+        .hamburger::before,
+        .hamburger::after {
+            background: var(--clr-dark);
+            width: 2em;
+            height: 4px; /* Thicker lines */
+            border-radius: 1em;
+            transition: transform 250ms ease-in-out;
+        }
+        
+        /* ... (rest of hamburger CSS remains the same) ... */
+        .hamburger { display: block; position: relative; }
+        .hamburger::before, .hamburger::after { content: ''; position: absolute; left: 0; right: 0; }
+        .hamburger::before { top: 7px; } /* Adjusted spacing for thicker lines */
+        .hamburger::after { bottom: 7px; } /* Adjusted spacing for thicker lines */
+
+        /* --- Hero Section --- */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 var(--spacing);
+            text-align: center;
+            /* Added a gradient for dynamic background effect */
+            background: linear-gradient(135deg, var(--clr-light) 0%, #e0e0e0 100%);
+        }
+
+        .hero-content h2 {
+            font-size: 5rem; /* Larger main title */
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: var(--clr-accent); /* Accent color on title */
+        }
+
+        .hero-intro {
+            font-weight: 600; /* Bolder intro */
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 1rem;
+            color: var(--clr-medium-dark);
+        }
+
+        .hero-tagline {
+            font-size: 1.5rem; /* Bigger tagline */
+            font-weight: 700;
+            color: var(--clr-dark);
+            border-bottom: 3px solid var(--clr-accent); /* Dynamic underline effect */
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        /* --- Portfolio/Work Section --- */
+        .portfolio {
+            padding: var(--spacing) 0;
+            background: var(--clr-medium-dark); /* Darker background for work */
+            color: var(--clr-light);
+        }
+        
+        .portfolio .section-title {
+            color: var(--clr-light);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Adjusted min-width slightly */
+            gap: 2rem; /* Wider gaps */
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing);
+        }
+
+        .portfolio__item {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            border: 3px solid var(--clr-accent); /* Accent border on items */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Strong shadow for depth */
+        }
+
+        .portfolio__img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block; 
+            transition: transform 0.5s ease;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(var(--clr-accent), 0.9); /* Opaque accent overlay */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .portfolio__item:hover .overlay {
+            opacity: 1;
+        }
+
+        .portfolio__item:hover .portfolio__img {
+            transform: scale(1.08); /* More aggressive zoom effect */
+        }
+
+        .project-title {
+            font-size: 2rem; /* Larger project title */
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: var(--clr-light);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .project-category {
+            color: var(--clr-light);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        /* --- About & Contact Section --- */
+        .about, .contact {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: var(--spacing) var(--spacing);
+            text-align: center;
+        }
+        
+        .about p {
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            max-width: 600px;
+            padding: 1.25rem; /* Larger inputs */
+            margin-bottom: 1.5rem;
+            border: 2px solid var(--clr-medium-dark); /* Bolder border */
+            border-radius: var(--border-radius);
+            font-family: var(--ff-primary);
+            font-size: 1rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--clr-accent);
+            box-shadow: 0 0 0 3px rgba(var(--clr-accent), 0.3); /* Focus ring effect */
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 3rem; /* Larger button */
+            background: var(--clr-accent);
+            color: var(--clr-light);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 700;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: background 0.3s, transform 0.1s;
+            box-shadow: 0 4px 0 var(--clr-dark); /* 3D button effect */
+        }
+
+        .btn:hover {
+            background: #FF7B40; /* Slightly lighter on hover */
+        }
+        
+        .btn:active {
+            transform: translateY(4px); /* Press down effect */
+            box-shadow: 0 0 0 var(--clr-dark);
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            background: var(--clr-dark);
+            color: var(--clr-light);
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        /* --- 📱 Media Queries (Mobile Responsiveness) --- */
+        @media (max-width: 768px) {
+            :root {
+                --spacing: 1.5rem;
+            }
+
+            .nav-toggle { display: block; }
+
+            .nav {
+                position: fixed;
+                background: var(--clr-dark);
+                color: var(--clr-light);
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                transform: translateX(100%);
+                transition: transform 250ms ease-in-out;
+                z-index: 10;
+            }
+
+            .nav--open { transform: translateX(0); }
+
+            .nav__list {
+                flex-direction: column;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .nav__item {
+                margin: 1.5rem 0; /* More spacing for mobile links */
+            }
+
+            .nav__link {
+                color: var(--clr-light);
+                font-size: 2.2rem;
+                font-weight: 700;
+            }
+            
+            .nav__link:hover {
+                color: var(--clr-accent);
+            }
+            
+            /* Hamburger animation when menu is open */
+            .header.nav--open .hamburger { transform: rotate(0.625turn); }
+            .header.nav--open .hamburger::before { transform: rotate(90deg) translateX(-7px); }
+            .header.nav--open .hamburger::after { opacity: 0; }
+
+            /* Content Adjustments */
+            .hero-content h2 {
+                font-size: 3.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+                letter-spacing: 4px;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1 class="logo">Graphic Pause</h1>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <p class="hero-intro">Hello, I'm Natalie Eyny, the creative mind behind</p>
+            <h2>Graphic Pause</h2>
+            <p class="hero-tagline">Dynamic **Graphic Design** & Striking **Photography**.</p>
+        </div>
+    </section>
+
+    <section id="work" class="portfolio">
+        <h3 class="section-title">Selected Work</h3>
+        <div class="portfolio-grid">
+            <a href="#" class="portfolio__item">
+                <img src="images/placeholder-design-1.jpg" alt="Minimalist Branding Project" class="portfolio__img">
+                <div class="overlay">
+                    <p class="project-title">Corporate Identity</p>
+                    <p class="project-category">Branding</p>
+                </div>
+            </a>
+            <a href="#" class="portfolio__item">
+                <img src="images/placeholder-photo-2.jpg" alt="Monochromatic Street Photography" class="portfolio__img">
+                <div class="overlay">
+                    <p class="project-title">Urban Reflection</p>
+                    <p class="project-category">Photography</p>
+                </div>
+            </a>
+            <a href="#" class="portfolio__item">
+                <img src="images/placeholder-design-3.jpg" alt="Web Layout Design" class="portfolio__img">
+                <div class="overlay">
+                    <p class="project-title">E-Commerce UX</p>
+                    <p class="project-category">Web Design</p>
+                </div>
+            </a>
+            <a href="#" class="portfolio__item">
+                <img src="images/placeholder-photo-4.jpg" alt="Nature Macro Shot" class="portfolio__img">
+                <div class="overlay">
+                    <p class="project-title">Botanical Study</p>
+                    <p class="project-category">Fine Art Photo</p>
+                </div>
+            </a>
+            </div>
+    </section>
+
+    <section id="about" class="about">
+        <h3 class="section-title">About Natalie Eyny</h3>
+        <p>I believe design is about creating impact with **bold execution**. My approach blends **powerful graphic design** principles with an immersive photographer's eye for light, shadow, and **dynamic composition**. I specialize in creating **visual identities, impactful web experiences**, and **striking fine art photography** that captures attention and tells an unforgettable story.</p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h3 class="section-title">Let's Connect</h3>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Tell me about your dynamic project..." rows="5" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Graphic Pause. All rights reserved. | Design by **Natalie Eyny**.</p>
+    </footer>
+
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const header = document.querySelector('.header');
+        const nav = document.querySelector('.nav');
+        const navLinks = document.querySelectorAll('.nav__link');
+
+        // Toggle the mobile menu when the hamburger is clicked
+        navToggle.addEventListener('click', () => {
+            nav.classList.toggle('nav--open');
+            header.classList.toggle('nav--open'); 
+        });
+
+        // Close the mobile menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (nav.classList.contains('nav--open')) {
+                    nav.classList.remove('nav--open');
+                    header.classList.remove('nav--open'); 
+                }
+            })
+        })
+    </script>
+</body>
+</html>
